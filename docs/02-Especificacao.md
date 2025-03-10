@@ -8,10 +8,13 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
-![Persona 1- Sofia](https://github.com/user-attachments/assets/cb9ef455-8d34-4300-ab30-90075f4baf5a)
-![Persona 2- Carlos](https://github.com/user-attachments/assets/2e12b63b-a33f-45a9-903d-c22f590fd1a0)
-![Persona 3- Marcos](https://github.com/user-attachments/assets/e8636684-e7a5-4d5f-a4da-5bfa33f8c121)
-![Persona 4- Mariana](https://github.com/user-attachments/assets/fe5abbde-b52c-4236-9757-511051fe8e46)
+
+![Persona 1- Íris](https://github.com/user-attachments/assets/b7f02e01-fd8f-4c51-8f7b-18506cacd1ca)
+![Persona 2- Agnaldo](https://github.com/user-attachments/assets/b43e2ff6-805b-4be7-b374-8c2f333ca790)
+![Persona 3- Sofia](https://github.com/user-attachments/assets/cb9ef455-8d34-4300-ab30-90075f4baf5a)
+![Persona 4- Carlos](https://github.com/user-attachments/assets/2e12b63b-a33f-45a9-903d-c22f590fd1a0)
+![Persona 5- Marcos](https://github.com/user-attachments/assets/e8636684-e7a5-4d5f-a4da-5bfa33f8c121)
+![Persona 6- Mariana](https://github.com/user-attachments/assets/fe5abbde-b52c-4236-9757-511051fe8e46)
 
 
 ## Histórias de usuários
@@ -20,10 +23,12 @@ Com base na análise das personas, foram identificadas as seguintes histórias d
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Eu, Sofia, mãe de um aluno     | quero receber notificações em tempo real sobre a localização do Escolar| para garantir que meu filho está seguro e saber o horário de chegada e partida.|
-|Eu, Carlos, coordenador de vendas |quero comunicar mudanças de última hora nas rotas de ônibus | para ajustar rapidamente a logística de transporte e informar os participantes.  |
-|Eu, Marcos, diretor de escola|quero acompanhar em tempo real a localização dos ônibus escolares|para garantir a segurança dos alunos e planejar melhor os horários de entrada e saída.|
-|Eu, Mariana, professora|quero ter um canal de comunicação com os pais sobre o transporte escolar| para informar sobre alterações nos horários e garantir que os pais estejam cientes.
+|Eu, Íris, como administradora de empresa de transporte escolar e fretamento,|preciso monitorar a localização em tempo real dos ônibus escolares, receber relatórios detalhados sobre o desempenho dos motoristas e a utilização dos veículos,|para monitorar a eficiência operacional e identificar áreas de melhoria e garantir a segurança dos alunos e planejar melhor os horários de entrada e saída.|
+|Eu, Agnaldo como motorista de ônibus escolar e fretamento,|preciso ter acesso a rotas otimizadas e atualizações de tráfego em tempo real|para garantir que chegue aos destinos de forma rápida e segura, evitando atrasos.|
+|Eu, Sofia, mãe de um aluno, | quero receber notificações em tempo real sobre a localização do Escolar| para garantir que meu filho está seguro e saber o horário de chegada e partida.|
+|Eu, Carlos, coordenador de vendas, |quero comunicar mudanças de última hora nas rotas de ônibus | para ajustar rapidamente a logística de transporte e informar os participantes.  |
+|Eu, Marcos, diretor de escola,|quero acompanhar em tempo real a localização dos ônibus escolares|para garantir a segurança dos alunos e planejar melhor os horários de entrada e saída.|
+|Eu, Mariana, professora,|quero ter um canal de comunicação com os pais sobre o transporte escolar| para informar sobre alterações nos horários e garantir que os pais estejam cientes.
 
 
 
