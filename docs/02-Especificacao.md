@@ -40,33 +40,30 @@ As tabelas a seguir apresentam os requisitos funcionais e não funcionais que de
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| O sistema deve permitir a criação e otimização de rotas de transporte escolar. | ALTA | 
+|RF-002| O sistema deve fornecer atualizações em tempo real sobre condições de tráfego e possíveis desvios.  | MÉDIA |
+|RF-003| O sistema deve monitorar a localização dos veículos em tempo real.| ALTA |
+|RF-004| O sistema deve enviar notificações sobre problemas mecânicos e eventos de segurança.| MÉDIA |
+|RF-005| O sistema deve permitir que os usuários façam reservas de transporte escolar e fretamento online.| ALTA |
+|RF-006| O sistema deve processar pagamentos e fornecer recibos eletrônicos.| ALTA |
+|RF-007| O sistema deve oferecer uma plataforma de comunicação entre motoristas, administradores, pais e escolas.| MÉDIA |
+|RF-008| O sistema deve permitir o envio de notificações e alertas para os usuários.| MÉDIA |
+|RF-009| O sistema deve gerar relatórios detalhados sobre o desempenho dos motoristas e a utilização dos veículos.| ALTA |
+|RF-010| O sistema deve fornecer análises de dados para identificar áreas de melhoria e otimização.| ALTA |
 
 ### Requisitos não funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em dispositivos móveis | MÉDIA | 
-|RNF-002| Deve processar as requisições do usuário em no máximo 3 segundos |  BAIXA | 
+|RNF-001| O sistema deve garantir a proteção dos dados pessoais e financeiros dos usuários. | ALTA | 
+|RNF-002| O sistema deve ser capaz de processar informações e fornecer atualizações em tempo real de maneira eficiente.|  ALTA |
+|RNF-003| O sistema deve ser intuitivo e fácil de usar para todos os tipos de usuários, independentemente do nível de experiência tecnológica.|ALTA |
+|RNF-004| O sistema deve garantir a continuidade do serviço mesmo em caso de falhas técnicas.| MÉDIA |
+|RNF-005| O sistema deve ser capaz de lidar com o aumento do número de usuários e veículos à medida que a empresa cresce.| ALTA |
+|RNF-006| O sistema deve ser compatível com diferentes dispositivos e sistemas operacionais.| ALTA |
+|RNF-007| O sistema deve suportar integração com ferramentas de terceiros, como aplicativos de navegação e pagamento online.| ALTA |
 
-Com base nas histórias de usuários, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
-- [Requisitos funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos não funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-
-Lembre-se de que cada requisito deve corresponder a uma e somente uma característica-alvo da sua solução. Além disso, certifique-se de que todos os aspectos capturados nas histórias de usuários foram cobertos.
-
-> **Links úteis**:
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [Entenda o que são requisitos de software, a diferença entre requisito funcional e não funcional, e como identificar e documentar cada um deles](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
 
 ## Restrições
 
@@ -76,8 +73,14 @@ O projeto está restrito aos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|001| O projeto deverá ser entregue até o final do semestre |
-|002| O custo total do projeto não deve exceder o orçamento definido       |
+|001| A capacidade dos veículos deve ser adequada ao número de alunos e passageiros, respeitando as normas de segurança e conforto. |
+|002| Todos os motoristas devem seguir as leis de trânsito e regulamentações específicas para transporte escolar, incluindo limites de velocidade e sinalização.|
+|003| A empresa deve garantir uma conexão de internet estável e segura para o funcionamento dos sistemas de monitoramento e comunicação.|
+|004| Os sistemas devem ser compatíveis com diversos dispositivos e sistemas operacionais utilizados por motoristas, administradores, pais e escolas.|
+|005| A empresa deve cumprir as leis de proteção de dados pessoais, garantindo a privacidade e segurança das informações dos usuários.|
+|006| Todos os veículos e motoristas devem possuir as licenças e certificações necessárias para a operação de serviços de transporte escolar e fretamento.|
+|007| A empresa deve gerenciar os custos operacionais para garantir a viabilidade econômica dos serviços oferecidos.|
+|008| Sempre que possível, a empresa deve adotar práticas sustentáveis, como o uso de veículos elétricos ou híbridos.|
 
 ## Diagrama de casos de uso
 
