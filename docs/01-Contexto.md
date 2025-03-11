@@ -1,51 +1,28 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto. Visando contextualizar melhor o projeto e destacar sua importância para a disciplina, que é **extensionista**, acrescente todas as informações relevantes que julgar necessárias.
+Este projeto visa desenvolver um software para transporte escolar, buscando oferecer uma solução integrada e eficiente para o cadastro de usuários, gerenciamento de rotas, cobrança e comunicação entre os envolvidos no processo. Este sistema tem como objetivo facilitar a administração dessas informações, oferecendo uma plataforma que otimize o processo e ofereça mais segurança e transparência tanto para pais quanto para os gestores.
 
 ## Cliente 
-Nesta seção, devem ser apresentadas informações essenciais sobre o cliente (parceiro) para garantir um entendimento mais preciso do projeto como uma iniciativa extensionista.  
+O cliente deste projeto é uma empresa de transporte escolar localizada em Contagem. Sua missão é proporcionar serviços de transporte escolar seguro, confiável e acessível, A empresa enfrenta desafios relacionados à gestão manual dos dados. A missão da empresa é garantir que o transporte dos alunos seja realizado de forma pontual e segura, O porte da empresa é médio, atendendo a escolas e famílias em uma região urbana. O impacto social é significativo, pois a empresa atende a diversas crianças e jovens, contribuindo para a mobilidade e segurança da comunidade escolar.
 
-Recomenda-se incluir dados como missão, visão e valores da organização, além de seu ramo de atuação, porte, nicho de mercado e principais desafios enfrentados. Também é relevante fornecer informações sobre sua localização, histórico, impacto social e possíveis demandas específicas. Quanto mais detalhadas forem essas informações, mais embasada será a análise do contexto, permitindo uma abordagem estratégica e alinhada às necessidades do cliente.
 
 ## Problema
-Aqui, a equipe deve fornecer uma descrição detalhada do problema a ser resolvido. Não é o momento adequado para abordar questões técnicas relacionadas ao desenvolvimento da aplicação. O objetivo é compreender e comunicar de maneira precisa qual é o desafio ou necessidade que motiva a criação da aplicação.
-
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
-
-O grupo pode optar por fazer uso de ferramentas como Design Thinking, que permite uma visão completa do problema.
-
-> **Links úteis**:
-> - [Objetivos, problema de pesquisa e justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz certezas, suposições e dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+O principal problema a ser resolvido é a dificuldade em gerenciar as informações de transporte escolar, como o cadastro de usuários (pais e alunos), o controle de rotas e a cobrança dos serviços. Atualmente, muitas dessas informações são tratadas por outros meios digitais, o que gera erros e falta de transparência, além de dificultar a comunicação entre os envolvidos. Pais e motoristas muitas vezes têm dificuldade em acessar dados sobre os horários e rotas, e a cobrança não é gerida de forma eficiente. Esse cenário gera insatisfação, insegurança e perda de tempo para todos os envolvidos. A aplicação será usada no ambiente escolar, utilizando tecnologias como bancos de dados e interfaces amigáveis para garantir acessibilidade e eficácia na gestão das informações.
 
 ## Objetivos
 
-Aqui, você deve descrever os objetivos do trabalho, indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima.
+Objetivo Geral: Desenvolver uma plataforma digital para gestão de transporte escolar, otimizando o cadastro de usuários, rotas, horários e cobranças.
 
-Além disso, apresente alguns (pelo menos 3) objetivos específicos, dependendo de onde você pretende concentrar sua prática investigativa ou como deseja aprofundar seu trabalho.
- 
-> **Links úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Objetivos Específicos:
+
+1 - Criar um sistema de cadastro eficiente para pais e alunos.
+2 - Implementar funcionalidades para controle de rotas e horários em tempo real.
+3 - Desenvolver um módulo de cobrança e acompanhamento de pagamentos.
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
-
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+O desenvolvimento deste sistema justifica-se pela necessidade de modernizar e otimizar a gestão do transporte escolar, proporcionando maior segurança, transparência e agilidade. Com a automatização das funções de cadastro, controle de rotas e cobranças, espera-se que a empresa consiga melhorar sua eficiência operacional, além de oferecer um serviço mais confiável aos pais e alunos. A aplicação irá resolver problemas de comunicação e gestão de dados, otimizando o tempo e recursos da empresa e garantindo um transporte escolar mais seguro e organizado.
 
 ## Público-alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
-
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-> **Links úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público-alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+O público-alvo da aplicação são os pais de alunos, motoristas e a equipe administrativa da empresa de transporte escolar. Pais de alunos possuem diferentes níveis de familiaridade com tecnologia, sendo que muitos preferem interfaces simples e intuitivas. Motoristas, por sua vez, necessitam de um sistema que facilite o acesso às rotas e horários, além de fornecer informações claras sobre pagamentos. A equipe administrativa da empresa, responsável pela gestão das rotas e cobrança, será a principal usuária do sistema, exigindo uma interface robusta e eficiente para controle das informações.
