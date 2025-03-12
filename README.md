@@ -1,4 +1,6 @@
-# Nome do projeto
+<img src="/docs/images/LogoTransol .webp" alt="Transol" width="20%">
+
+# Transol Escolar e Fretamentos
 
 `CURSO: Análise e Desenvolvimento de Sistemas`
 
@@ -6,9 +8,9 @@
 
 `1º semestre/2025`
 
-O objetivo do meu projeto é criar um site de transporte escolar que visa o gerenciamento de informações sobre as plataformas de transporte e a cobrança de tarifas. A plataforma buscará otimizar a comunicação entre as partes envolvidas, oferecendo uma interface simples e eficiente para a gestão de rotas, horários e pagamentos, garantindo que tanto os usuários quanto os prestadores de serviço tenham uma experiência mais ágil e segura.
+O objetivo desse projeto é criar um site para uma empresa de transporte escolar que visa o gerenciamento de informações sobre as plataformas de transporte e a cobrança de tarifas. A plataforma buscará otimizar a comunicação entre as partes envolvidas, oferecendo uma interface simples e eficiente para a gestão de rotas, horários e pagamentos, garantindo que tanto os usuários quanto os prestadores de serviço tenham uma experiência mais ágil e segura.
 
-Além disso, o sistema visa implementar funcionalidades que melhorem o acompanhamento do transporte, como o controle de histórico de viagens e notificações sobre alterações nas rotas ou horários. A proposta é criar uma solução digital integrada que atenda às necessidades de pais e responsáveis que buscam segurança e confiabilidade no transporte escolar dos seus filhos.
+Além disso, o sistema visa implementar funcionalidades que melhorem o acompanhamento do transporte, como o controle de histórico de viagens e notificações sobre alterações nas rotas ou horários. A proposta é criar uma solução digital integrada que atenda às necessidades de pais e responsáveis que buscam segurança e confiabilidade no transporte escolar dos seus filhos, bem como auxilar nos processos internos da gestão da empresa.
 
 ## Integrantes
 
