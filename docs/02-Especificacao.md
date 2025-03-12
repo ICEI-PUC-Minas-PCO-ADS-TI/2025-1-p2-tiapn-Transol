@@ -40,28 +40,58 @@ As tabelas a seguir apresentam os requisitos funcionais e não funcionais que de
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| O sistema deve permitir a criação e otimização de rotas de transporte escolar. | ALTA | 
-|RF-002| O sistema deve fornecer atualizações em tempo real sobre condições de tráfego e possíveis desvios.  | MÉDIA |
-|RF-003| O sistema deve monitorar a localização dos veículos em tempo real.| ALTA |
-|RF-004| O sistema deve enviar notificações sobre problemas mecânicos e eventos de segurança.| MÉDIA |
-|RF-005| O sistema deve permitir que os usuários façam reservas de transporte escolar e fretamento online.| ALTA |
-|RF-006| O sistema deve processar pagamentos e fornecer recibos eletrônicos.| ALTA |
-|RF-007| O sistema deve oferecer uma plataforma de comunicação entre motoristas, administradores, pais e escolas.| MÉDIA |
-|RF-008| O sistema deve permitir o envio de notificações e alertas para os usuários.| MÉDIA |
-|RF-009| O sistema deve gerar relatórios detalhados sobre o desempenho dos motoristas e a utilização dos veículos.| ALTA |
-|RF-010| O sistema deve fornecer análises de dados para identificar áreas de melhoria e otimização.| ALTA |
+|RF-001| O sistema deve permitir login de administrador  | ALTA | 
+|RF-002| O sistema deve permitir login de cliente | ALTA |
+|RF-003| O sistema deve permitir login de motorista | ALTA |
+|RF-004| O administrador deve fazer o cadastro do cliente | ALTA |
+|RF-005| O administrador deve ser capaz de editar os dados do cliente | ALTA |
+|RF-006| O administrador deve ser capaz de excluir o cliente | ALTA |
+|RF-007| O administrador deve ser capaz de visualizar todos os dados do cliente | ALTA |
+|RF-008| O cliente deve ser capaz de enviar o recibo do pagamento  | ALTA |
+|RF-009| O cliente e o administrador devem ser capazes de visualizar todos os pagamentos feitos | ALTA |
+|RF-010| O cliente deve ser capaz de enviar mensagens para o administrador| ALTA |
+|RF-011| O sistema deve enviar mensagens com lembrete de pagamento ao cliente | ALTA |
+|RF-012| O sistema deve alterar o status do pagamento da mensalidade após o envio do comprovante | ALTA |
+|RF-013| O administrador deve ser capaz de cadastrar veículos | ALTA |
+|RF-014| O administrador deve ser capaz de editar os dados dos veículos | ALTA |
+|RF-015| O administrador deve ser capaz de excluir os veículos | ALTA |
+|RF-016| O administrador deve ser capaz de cadastrar motoristas  | ALTA |
+|RF-017| O administrador deve ser capaz de editar os dados dos motoristas | ALTA |
+|RF-018| O administrador deve ser capaz de excluir os motoristas | ALTA |
+|RF-019| O motorista deve ser capaz de atualizar a quilometragem do veículo  | ALTA |
+|RF-020| O motorista e o administrador devem ser capazes de atualizar dados de manutenção dos veículos | ALTA |
+|RF-021| O motorista deve ser capaz de visualizar os dados dos veículos | ALTA | 
+|RF-022| O administrador deve ser capaz de criar uma rota diária para cada motorista | ALTA |
+|RF-023| O administrador e o motorista devem ser capazes de visualizar as rotas criadas | ALTA |
+|RF-024| O sistema deve permitir a recuperação de senha do usuário | ALTA |
+|RF-025| O sistema deve permitir a alteração de senha por parte do usuário | ALTA |
+|RF-026| O sistema deve permitir a geração de relatórios financeiros | ALTA |
+|RF-027| O sistema deve permitir a exportação de dados | ALTA |
+|RF-028| O sistema deve permitir a criação de múltiplos administradores | ALTA |
+|RF-029| O sistema deve registrar o histórico de ações realizadas pelos administradores e motoristas | ALTA |
+|RF-030| O sistema deve permitir a atribuição de tarefas ou atividades para os motoristas | ALTA |
+|RF-031| O sistema deve permitir a visualização de relatórios de desempenho de motoristas | ALTA |
 
 ### Requisitos não funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve garantir a proteção dos dados pessoais e financeiros dos usuários. | ALTA | 
-|RNF-002| O sistema deve ser capaz de processar informações e fornecer atualizações em tempo real de maneira eficiente.|  ALTA |
-|RNF-003| O sistema deve ser intuitivo e fácil de usar para todos os tipos de usuários, independentemente do nível de experiência tecnológica.|ALTA |
-|RNF-004| O sistema deve garantir a continuidade do serviço mesmo em caso de falhas técnicas.| MÉDIA |
-|RNF-005| O sistema deve ser capaz de lidar com o aumento do número de usuários e veículos à medida que a empresa cresce.| ALTA |
-|RNF-006| O sistema deve ser compatível com diferentes dispositivos e sistemas operacionais.| ALTA |
-|RNF-007| O sistema deve suportar integração com ferramentas de terceiros, como aplicativos de navegação e pagamento online.| ALTA |
+|RNF-001| O sistema deve funcionar 24/7  | ALTA | 
+|RNF-002| O sistema deve mudar o status do pagamento depois do envio do recibo |  ALTA |
+|RNF-003| O sistema deve ser capaz de processar até 300 usuários simultâneos sem degradação de desempenho. |ALTA |
+|RNF-004| O tempo de resposta para cada operação (login, cadastro, consulta) não deve ultrapassar 10 segundos. | MÉDIA |
+|RNF-005| O sistema deve ser escalável para suportar o aumento de número de usuários e transações. | ALTA |
+|RNF-006| O sistema deve utilizar criptografia para proteger dados sensíveis, como senhas de usuários e informações de pagamento. | ALTA |
+|RNF-007| O sistema deve ter uma interface intuitiva e fácil de usar para todos os tipos de usuário. | ALTA |
+|RNF-008|O sistema deve ser acessível em dispositivos móveis e desktops. | ALTA |
+|RNF-009|O código do sistema deve seguir boas práticas de desenvolvimento e ser bem documentado, para facilitar futuras manutenções e atualizações. | ALTA |
+|RNF-010|O sistema deve permitir atualizações automáticas sem a necessidade de interrupção significativa dos serviços. | ALTA |
+|RNF-011| O sistema deve ser compatível com as versões mais recentes dos principais navegadores | ALTA |
+|RNF-012| O sistema deve ser compatível com sistemas operacionais amplamente utilizados, como Windows, Linux e macOS. | ALTA |
+|RNF-013| O sistema deve realizar backups automáticos regulares (diários ou semanais), com a capacidade de restaurar dados em caso de falha. | ALTA |
+|RNF-014| O sistema deve ser capaz de recuperar dados de transações realizadas, mesmo em caso de falhas técnicas. | ALTA |
+|RNF-015| O sistema deve estar em conformidade com a Lei Geral de Proteção de Dados (LGPD) e outras regulamentações de privacidade de dados aplicáveis. | ALTA |
+
 
 
 
