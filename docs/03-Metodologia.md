@@ -61,7 +61,7 @@ Atualizado em: 12/03/2025
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
 | Ana Caroline  | Introdução | 21/02/2025     |  13/03/2025 | 📝    |       |
-| Jefferson     | Diagrama de casos de uso    | 13/03/2025     | 13/03/2025 | ✔️    | 11/03/2025   |
+| Jefferson     | Diagrama de casos de uso    | 05/03/2025     | 13/03/2025 | ✔️    | 11/03/2025   |
 | Jefferson     | Documenacão de Contexto   | 21/02/2025 |  13/03/2025 | ✔️ | 12/03/2025	   | 
 | Lilianne      | Planejamento, Relatório e Apresentação  | 21/02/2025     | 13/03/2025 | 📝     |                 |
 | Mellyssa      | Personas 1  |    21/02/2025        | 13/03/2025 | 📝    |       |
