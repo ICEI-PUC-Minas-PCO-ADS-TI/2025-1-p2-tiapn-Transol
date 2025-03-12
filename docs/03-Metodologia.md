@@ -56,12 +56,14 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 
 #### Sprint 1
 
-Atualizado em: 21/04/2024
+Atualizado em: 12/03/2025
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
 | Ana Caroline  | Introdução | 21/02/2025     |  13/03/2025 | 📝    |       |
-| Jefferson     | Objetivos    | 21/02/2025     | 13/03/2025 | 📝    |                 |
+| Jefferson     | Diagrama de casos de uso    | 13/03/2025     | 13/03/2025 | ✔️    | 11/03/2025   |
+| Jefferson     | Documenacão de Contexto      | 13/03/2025  | ✔️    | 11/03/2025   |
+| 
 | Lilianne      | Planejamento, Relatório e Apresentação  | 21/02/2025     | 13/03/2025 | 📝     |                 |
 | Mellyssa      | Personas 1  |    21/02/2025        | 13/03/2025 | 📝    |       |
 | Tatiane       | Personas 1  |    21/02/2025       | 13/03/2025 | 📝    |       |
