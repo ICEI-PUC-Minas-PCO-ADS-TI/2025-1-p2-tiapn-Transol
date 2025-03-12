@@ -1,3 +1,7 @@
+<img src="/docs/images/LogoTransol .webp" alt="Transol" width="20%">
+
+
+
 # Introdução
 
 Este projeto visa desenvolver um software para transporte escolar, buscando oferecer uma solução integrada e eficiente para o cadastro de usuários, gerenciamento de rotas, cobrança e comunicação entre os envolvidos no processo. Este sistema tem como objetivo facilitar a administração dessas informações, oferecendo uma plataforma que otimize o processo e ofereça mais segurança e transparência tanto para pais quanto para os gestores.
