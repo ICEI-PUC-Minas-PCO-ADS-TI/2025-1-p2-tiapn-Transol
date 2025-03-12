@@ -62,7 +62,7 @@ Atualizado em: 12/03/2025
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
 | Ana Caroline  | Introdução | 21/02/2025     |  13/03/2025 | 📝    |       |
 | Jefferson     | Diagrama de casos de uso    | 13/03/2025     | 13/03/2025 | ✔️    | 11/03/2025   |
-| Jefferson     | Documenacão de Contexto      | 13/03/2025  | ✔️    | 11/03/2025   |
+| Jefferson     | Documenacão de Contexto   | 01/03/2025 |   | 13/03/2025  | ✔️    | 11/03/2025   |
 | Lilianne      | Planejamento, Relatório e Apresentação  | 21/02/2025     | 13/03/2025 | 📝     |                 |
 | Mellyssa      | Personas 1  |    21/02/2025        | 13/03/2025 | 📝    |       |
 | Tatiane       | Personas 1  |    21/02/2025       | 13/03/2025 | 📝    |       |
