@@ -2,14 +2,11 @@
 
 <span style="color:red">Pré-requisitos: <a href="01-Contexto.md"> Documentação de contexto</a></span>
 
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto.
-
 ## Personas
 
+<img src="https://github.com/user-attachments/assets/c47d5737-a9a0-4c98-8ce4-2c6c2ea5ccdc" alt="Persona 1- Íris" style="height: 30%; width: auto;">
 
-![Persona 1- Íris)](https://github.com/user-attachments/assets/c47d5737-a9a0-4c98-8ce4-2c6c2ea5ccdc)
+![Persona 1- Íris)](https://github.com/user-attachments/assets/c47d5737-a9a0-4c98-8ce4-2c6c2ea5ccdc) width="70%"
 ![Persona 2- Agnaldo](https://github.com/user-attachments/assets/b43e2ff6-805b-4be7-b374-8c2f333ca790)
 ![Persona 3- Sofia](https://github.com/user-attachments/assets/cb9ef455-8d34-4300-ab30-90075f4baf5a)
 ![Persona 4- Carlos](https://github.com/user-attachments/assets/2e12b63b-a33f-45a9-903d-c22f590fd1a0)
@@ -113,8 +110,7 @@ O projeto está restrito aos itens apresentados na tabela a seguir.
 |008| Sempre que possível, a empresa deve adotar práticas sustentáveis, como o uso de veículos elétricos ou híbridos.|
 
 ## Diagrama de casos de uso
-
-<img src="docs/images/CasodeUsoTransol.png" alt="Caso De Uso" width="20%">
+<img src="./images/CasodeUsoTransol.png" alt="Diagrama de casos de uso" width="70%">
 
  Principais casos de uso:
 - Login e recuperação de senha.
