@@ -114,4 +114,12 @@ O projeto está restrito aos itens apresentados na tabela a seguir.
 
 ## Diagrama de casos de uso
 
-<img src="docs/images/CasodeUsoTransol.png alt="Caso De Uso" width="20%">
+<img src="docs/images/CasodeUsoTransol.png" alt="Caso De Uso" width="20%">
+
+ Principais casos de uso:
+- Login e recuperação de senha.
+- Cadastro, edição e exclusão de clientes, motoristas e veículos.
+- Envio e visualização de comprovantes de pagamento.
+- Criação e visualização de rotas.
+- Geração de relatórios e exportação de dados.
+- Registro de histórico de ações.
