@@ -4,15 +4,12 @@
 
 ## Personas
 
-<img src="https://github.com/user-attachments/assets/c47d5737-a9a0-4c98-8ce4-2c6c2ea5ccdc" alt="Persona 1- Íris" style="height: 30%; width: auto;">
-
-![Persona 1- Íris)](https://github.com/user-attachments/assets/c47d5737-a9a0-4c98-8ce4-2c6c2ea5ccdc) width="70%"
-![Persona 2- Agnaldo](https://github.com/user-attachments/assets/b43e2ff6-805b-4be7-b374-8c2f333ca790)
-![Persona 3- Sofia](https://github.com/user-attachments/assets/cb9ef455-8d34-4300-ab30-90075f4baf5a)
-![Persona 4- Carlos](https://github.com/user-attachments/assets/2e12b63b-a33f-45a9-903d-c22f590fd1a0)
-![Persona 5- Marcos](https://github.com/user-attachments/assets/e8636684-e7a5-4d5f-a4da-5bfa33f8c121)
-![Persona 6- Mariana](https://github.com/user-attachments/assets/fe5abbde-b52c-4236-9757-511051fe8e46)
-
+<img src="./images/iris.jpg" alt="Persona 1- Íris" width="60%">
+<img src="./images/agnaldo.jpg" alt="Persona 2- Agnaldo" width="60%">
+<img src="./images/sofia.jpg" alt="Persona 3- Sofia" width="60%">
+<img src="./images/carlos.jpg" alt="Persona 4- Carlos" width="60%">
+<img src="./images/marcos.jpg" alt="Persona 5- Marcos" width="60%">
+<img src="./images/MARIANA.jpg" alt="Persona 6- Mariana" width="60%">
 
 ## Histórias de usuários
 
@@ -55,16 +52,16 @@ As tabelas a seguir apresentam os requisitos funcionais e não funcionais que de
 |RF-016| O administrador deve ser capaz de cadastrar motoristas  | ALTA |
 |RF-017| O administrador deve ser capaz de editar os dados dos motoristas | ALTA |
 |RF-018| O administrador deve ser capaz de excluir os motoristas | ALTA |
-|RF-019| O motorista deve ser capaz de atualizar a quilometragem do veículo  | ALTA |
-|RF-020| O motorista e o administrador devem ser capazes de atualizar dados de manutenção dos veículos | ALTA |
-|RF-021| O motorista deve ser capaz de visualizar os dados dos veículos | ALTA | 
+|RF-019| O motorista deve ser capaz de atualizar a quilometragem do veículo  | MEDIA |
+|RF-020| O motorista e o administrador devem ser capazes de atualizar dados de manutenção dos veículos | MEDIA |
+|RF-021| O motorista deve ser capaz de visualizar os dados dos veículos | MEDIA | 
 |RF-022| O administrador deve ser capaz de criar uma rota diária para cada motorista | ALTA |
-|RF-023| O administrador e o motorista devem ser capazes de visualizar as rotas criadas | ALTA |
+|RF-023| O administrador e o motorista devem ser capazes de visualizar as rotas criadas | MEDIA |
 |RF-024| O sistema deve permitir a recuperação de senha do usuário | ALTA |
 |RF-025| O sistema deve permitir a alteração de senha por parte do usuário | ALTA |
-|RF-026| O sistema deve permitir a geração de relatórios financeiros | ALTA |
-|RF-027| O sistema deve permitir a exportação de dados | ALTA |
-|RF-028| O sistema deve permitir a criação de múltiplos administradores | ALTA |
+|RF-026| O sistema deve permitir a geração de relatórios financeiros | BAIXA |
+|RF-027| O sistema deve permitir a exportação de dados | BAIXA |
+|RF-028| O sistema deve permitir a criação de múltiplos administradores | BAIXA |
 |RF-029| O sistema deve registrar o histórico de ações realizadas pelos administradores e motoristas | ALTA |
 |RF-030| O sistema deve permitir a atribuição de tarefas ou atividades para os motoristas | ALTA |
 |RF-031| O sistema deve permitir a visualização de relatórios de desempenho de motoristas | ALTA |
@@ -85,7 +82,7 @@ As tabelas a seguir apresentam os requisitos funcionais e não funcionais que de
 |RNF-010|O sistema deve permitir atualizações automáticas sem a necessidade de interrupção significativa dos serviços. | ALTA |
 |RNF-011| O sistema deve ser compatível com as versões mais recentes dos principais navegadores | ALTA |
 |RNF-012| O sistema deve ser compatível com sistemas operacionais amplamente utilizados, como Windows, Linux e macOS. | ALTA |
-|RNF-013| O sistema deve realizar backups automáticos regulares (diários ou semanais), com a capacidade de restaurar dados em caso de falha. | ALTA |
+|RNF-013| O sistema deve realizar backups automáticos regulares (diários ou semanais), com a capacidade de restaurar dados em caso de falha. | MEDIA |
 |RNF-014| O sistema deve ser capaz de recuperar dados de transações realizadas, mesmo em caso de falhas técnicas. | ALTA |
 |RNF-015| O sistema deve estar em conformidade com a Lei Geral de Proteção de Dados (LGPD) e outras regulamentações de privacidade de dados aplicáveis. | ALTA |
 
@@ -107,7 +104,7 @@ O projeto está restrito aos itens apresentados na tabela a seguir.
 |005| A empresa deve cumprir as leis de proteção de dados pessoais, garantindo a privacidade e segurança das informações dos usuários.|
 |006| Todos os veículos e motoristas devem possuir as licenças e certificações necessárias para a operação de serviços de transporte escolar e fretamento.|
 |007| A empresa deve gerenciar os custos operacionais para garantir a viabilidade econômica dos serviços oferecidos.|
-|008| Sempre que possível, a empresa deve adotar práticas sustentáveis, como o uso de veículos elétricos ou híbridos.|
+
 
 ## Diagrama de casos de uso
 <img src="./images/CasodeUsoTransol.png" alt="Diagrama de casos de uso" width="70%">
