@@ -28,8 +28,6 @@ Com base na análise das personas, foram identificadas as seguintes histórias d
 
 ## Requisitos
 
-As tabelas a seguir apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade dos requisitos, aplique uma técnica de priorização e detalhe como essa técnica foi aplicada.
-
 ### Requisitos funcionais
 
 |ID    | Descrição do Requisito  | Prioridade |
@@ -90,8 +88,6 @@ As tabelas a seguir apresentam os requisitos funcionais e não funcionais que de
 
 
 ## Restrições
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
 
 O projeto está restrito aos itens apresentados na tabela a seguir.
 
