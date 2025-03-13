@@ -1,4 +1,4 @@
-<img src="/docs/images/LogoTransol .webp" alt="Transol" width="20%">
+<img src="/docs/images/LogoTransol .webp" alt="Transol" width="40%">
 
 # Transol Escolar e Fretamentos
 
