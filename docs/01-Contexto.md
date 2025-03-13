@@ -19,9 +19,9 @@ Objetivo Geral: Desenvolver uma plataforma digital para gestão de transporte es
 
 Objetivos Específicos:
 
-1 - Criar um sistema de cadastro eficiente para pais e alunos.
-2 - Implementar funcionalidades para controle de rotas e horários em tempo real.
-3 - Desenvolver um módulo de cobrança e acompanhamento de pagamentos.
+1 - Criar um sistema de cadastro eficiente para pais e alunos.  
+2 - Implementar funcionalidades para controle de rotas e horários em tempo real.  
+3 - Desenvolver um módulo de cobrança e acompanhamento de pagamentos.  
 
 ## Justificativa
 
