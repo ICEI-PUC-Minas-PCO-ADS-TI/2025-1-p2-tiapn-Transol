@@ -39,10 +39,11 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 > Apresente a divisão de papéis entre os membros do grupo em cada Sprint. O desejável é que, em cada Sprint, o aluno assuma papéis diferentes na equipe. Siga o modelo do exemplo abaixo:
 
 #### Sprint 1
-- _Scrum master_: Liliane
-- Protótipos: AlunoY
-- Testes: AlunoK
-- Documentação: Jefferson 
+- _Scrum master_ e relatório: Lilianne
+- Diagrama de casos de uso e contexto: Jefferson
+- Apresentação: Anna Caroline e Melyssa
+- Personas, histórias de usuários e restrições : Tatiane
+- Requisitos funcionais e não funcionais: Todos
 
 #### Sprint 2
 - _Scrum master_: AlunaY
@@ -60,12 +61,11 @@ Atualizado em: 12/03/2025
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| Ana Caroline  | Introdução | 21/02/2025     |  13/03/2025 | 📝    |       |
-| Jefferson     | Diagrama de casos de uso    | 05/03/2025     | 13/03/2025 | ✔️    | 11/03/2025   |
-| Jefferson     | Documenacão de Contexto   | 21/02/2025 |  13/03/2025 | ✔️ | 12/03/2025	   | 
-| Lilianne      | Planejamento, Relatório e Apresentação  | 21/02/2025     | 13/03/2025 | 📝     |                 |
-| Mellyssa      | Personas 1  |    21/02/2025        | 13/03/2025 | 📝    |       |
-| Tatiane       | Personas 1  |    21/02/2025       | 13/03/2025 | 📝    |       |
+| Ana Caroline  | Apresentação | 21/02/2025     |  13/03/2025 | 📝    |       |
+| Jefferson     | Documenacão de Contexto e Diagrama de casos de uso | 21/02/2025 |  13/03/2025 | ✔️ | 12/03/2025	   | 
+| Lilianne      | Planejamento e Relatório   | 21/02/2025     | 13/03/2025 | ✔️    |13/03/2025                |
+| Mellyssa      | Apresentação  |    21/02/2025        | 13/03/2025 | 📝    |       |
+| Tatiane       | Personas, histórias de usuários e restrições |    21/02/2025       | 13/03/2025 | 📝    |       |
 
 #### Sprint 2
 
