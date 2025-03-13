@@ -103,7 +103,7 @@ O projeto está restrito aos itens apresentados na tabela a seguir.
 
 
 ## Diagrama de casos de uso
-<img src="./images/CasodeUsoTransol.png" alt="Diagrama de casos de uso" width="70%">
+<img src="./images/CasodeUsoTransol.png" alt="Diagrama de casos de uso" width="40%">
 
  Principais casos de uso:
 - Login e recuperação de senha.
