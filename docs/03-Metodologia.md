@@ -61,10 +61,10 @@ Atualizado em: 12/03/2025
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| Ana Caroline  | Apresentação | 21/02/2025     |  13/03/2025 | 📝    |       |
+| Ana Caroline  | Apresentação | 21/02/2025     |  13/03/2025 | ✔️    |       |
 | Jefferson     | Documenacão de Contexto e Diagrama de casos de uso | 21/02/2025 |  13/03/2025 | ✔️ | 12/03/2025	   | 
 | Lilianne      | Planejamento e Relatório   | 21/02/2025     | 13/03/2025 | ✔️    |13/03/2025                |
-| Mellyssa      | Apresentação  |    21/02/2025        | 13/03/2025 | 📝    |       |
+| Mellyssa      | Apresentação  |    21/02/2025        | 13/03/2025 | ✔️    |       |
 | Tatiane       | Personas, histórias de usuários e restrições |    21/02/2025       | 13/03/2025 | 📝    |       |
 
 #### Sprint 2
