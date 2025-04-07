@@ -46,10 +46,12 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 - Requisitos funcionais e não funcionais: Todos
 
 #### Sprint 2
-- _Scrum master_: AlunaY
-- Desenvolvedor _front-end_: AlunoX
-- Desenvolvedor _back-end_: AlunoK
-- Testes: AlunaZ
+- _Scrum master_ e relatório: Tatiane
+- Diagrama de casos de uso e TO-BE: Mellyssa
+- Apresentação: Lilianne
+- Relatório Extensão: Tatiane
+
+
 
 ###  Quadro de tarefas
 
@@ -65,7 +67,7 @@ Atualizado em: 12/03/2025
 | Jefferson     | Documenacão de Contexto e Diagrama de casos de uso | 21/02/2025 |  13/03/2025 | ✔️ | 12/03/2025	   | 
 | Lilianne      | Planejamento e Relatório   | 21/02/2025     | 13/03/2025 | ✔️    |13/03/2025                |
 | Mellyssa      | Apresentação  |    21/02/2025        | 13/03/2025 | ✔️    |    13/03/2025   |
-| Tatiane       | Personas, histórias de usuários e restrições |    21/02/2025       | 13/03/2025 | 📝    |       |
+| Tatiane       | Personas, histórias de usuários e restrições |    21/02/2025       | 13/03/2025 | ✔️    |    13/03/2025    |
 
 #### Sprint 2
 
@@ -73,10 +75,10 @@ Atualizado em: 21/04/2024
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| AlunaX        | Página inicial   | 01/02/2024     | 07/03/2024 | ✔️    | 05/02/2024      |
-| AlunaZ        | CSS unificado    | 03/02/2024     | 10/03/2024 | 📝    |                 |
-| AlunoY        | Página de login  | 01/02/2024     | 07/03/2024 | ⌛     |                 |
-| AlunoK        | Script de login  |  01/01/2024    | 12/03/2024 | ❌    |       |
+| Ana Caroline       | TO-BE, Relatório   | 20/03/2025     | 10/04/2025 | ✔️    | 10/04/2025      |
+| Lilianne           | Apresentação de Slides, correções GitHub   | 20/03/2025     | 10/04/2025  | ✔️     |  10/04/2025               |
+| Mellyssa         | TO-BE, Diagrama de casos de Uso  | 20/03/2025     | 10/04/2025 | ✔️     |  10/04/2025               |
+| Tatiane       | AS-IS, Histórias dos Usuários  |  20/03/2025     | 10/04/2025 | ✔️     |  10/04/2025     |
 
 
 Legenda:
@@ -114,8 +116,8 @@ Exemplo: os artefatos do projeto são desenvolvidos a partir de diversas platafo
 
 | Ambiente                            | Plataforma                         | Link de acesso                         |
 |-------------------------------------|------------------------------------|----------------------------------------|
-| Repositório de código fonte         | GitHub                             | http://....                            |
-| Documentos do projeto               | GitHub                             | http://....                            |
-| Projeto de interface                | Figma                              | http://....                            |
-| Gerenciamento do projeto            | GitHub Projects                    | http://....                            |
+| Repositório de código fonte         | GitHub                             |[ http://....](https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2025-1-p2-tiapn-Transol/tree/main/src)                            |
+| Documentos do projeto               | GitHub                             | [http://....](https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2025-1-p2-tiapn-Transol/tree/main/docs)                            |
+| Projeto de interface                | Figma                              | [http://....](https://www.figma.com/)                            |
+| Gerenciamento do projeto            | GitHub Projects                    |[ http://....  ](https://github.com/orgs/ICEI-PUC-Minas-PCO-ADS-TI/projects/33)                          |
 | Hospedagem                          | Vercel                             | http://....                            |
