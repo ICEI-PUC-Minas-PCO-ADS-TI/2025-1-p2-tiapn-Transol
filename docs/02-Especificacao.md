@@ -63,13 +63,13 @@ Com base na análise das personas, foram identificadas as seguintes histórias d
 |RF-029| O sistema deve registrar o histórico de ações realizadas pelos administradores e motoristas | ALTA |
 |RF-030| O sistema deve permitir a atribuição de tarefas ou atividades para os motoristas | ALTA |
 |RF-031| O sistema deve permitir a visualização de relatórios de desempenho de motoristas | ALTA |
+|RF-032| O sistema deve mudar o status do pagamento depois do envio do recibo |  ALTA |
 
 ### Requisitos não funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
 |RNF-001| O sistema deve funcionar 24/7  | ALTA | 
-|RNF-002| O sistema deve mudar o status do pagamento depois do envio do recibo |  ALTA |
 |RNF-003| O sistema deve ser capaz de processar até 300 usuários simultâneos sem degradação de desempenho. |ALTA |
 |RNF-004| O tempo de resposta para cada operação (login, cadastro, consulta) não deve ultrapassar 10 segundos. | MÉDIA |
 |RNF-005| O sistema deve ser escalável para suportar o aumento de número de usuários e transações. | ALTA |
