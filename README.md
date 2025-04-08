@@ -15,7 +15,6 @@ Além disso, o sistema visa implementar funcionalidades que melhorem o acompanha
 ## Integrantes
 
 * Ana Caroline Resende Gomes 
-* Jefferson Santos Costa 
 * Lilianne Patrícia Soares Maia
 * Mellyssa Meireles dos Santos 
 * Tatiane de Miranda Mares Oliveira 
