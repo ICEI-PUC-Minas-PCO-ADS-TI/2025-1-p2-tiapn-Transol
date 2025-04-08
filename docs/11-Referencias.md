@@ -3,7 +3,7 @@
 
 - ANDRICH, E. G.; CRUZ, J. A. W. Gestão Financeira Moderna: Uma Abordagem Prática. São Paulo: InterSaberes, 2013. 
 
-- BRASIL. Ministério da Educação. Plano Nacional de Educação (PNE). Brasília: MEC, 2020. Disponível em: https://pne.mec.gov.br/. Acesso em: 07 abr. 2025. 
+- BRASIL. Ministério da Educação. Plano Nacional de Educação (PNE). Brasília: MEC, 2020. Disponível em: [https://pne.mec.gov.br/](https://pne.mec.gov.br/assistencia-tecnica/programas-do-mec-metas). Acesso em: 07 abr. 2025. 
 
 - INSTITUTO DE PESQUISA ECONÔMICA APLICADA (IPEA). Condições de transporte limitam acesso ao ensino público nas 20 maiores cidades brasileiras. Brasília: IPEA, 2022. Disponível em: https://www.ipea.gov.br/portal/categorias/45-todas-as-noticias/noticias/13730-condicoes-de-transporte-limitam-acesso-ao-ensino-publico-nas-20-maiores-cidades-brasileiras. Acesso em: 07 abr. 2025. 
 
