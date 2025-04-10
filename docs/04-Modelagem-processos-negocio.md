@@ -4,7 +4,7 @@
 
 
 
-## Modelagem da situação atual (Modelagem AS IS)
+## Modelagem da situação atual (Modelagem AS-IS)
 
   Atualmente, a Transol, ainda utiliza processos manuais e sistemas desconectados para gerenciar suas operações diárias. A comunicação entre os administradores, motoristas e responsáveis pelos alunos é feita por mensagens enviadas por WhatsApp e registros em planilhas eletrônicas ou até mesmo em cadernos físicos. Essa forma de operação gera diversos problemas para a empresa. A ausência de um controle centralizado dificulta o gerenciamento eficiente das informações dos clientes, dos pagamentos realizados e das rotas diárias. Além disso, o acompanhamento da manutenção dos veículos e da quilometragem atualizada é feito de forma esporádica, o que compromete a confiabilidade dos dados e a segurança da frota.
 Outro ponto crítico é a inexistência de um registro histórico organizado, o que dificulta a realização de auditorias internas ou qualquer tipo de análise gerencial. A comunicação com os pais e responsáveis pelos alunos também sofre com atrasos e falhas, o que pode comprometer a confiança no serviço prestado. O processo de pagamento, por sua vez, não é automatizado: os responsáveis precisam enviar os comprovantes por WhatsApp, e a conferência é feita manualmente pelos administradores, aumentando o risco de erros e de perda de informações. Além disso, o cadastro de motoristas e veículos ainda é feito de forma manual, sem integração com bancos de dados oficiais ou sistemas públicos, o que exige verificações adicionais e aumenta a burocracia no dia a dia da empresa.
@@ -12,15 +12,15 @@ O processo de planejamento de viagem na Transol é realizado de forma manual e e
 resuma esse texto para a metade, porem sem perder muito conteudo.
 
 
-## Contratação de transporte escolar-ASIS
+## Contratação de transporte escolar-AS-IS
 ![Contratação de transporte escolar-ASIS](./images/Contratação_ASIS.png "Modelo BPMN do Processo 1.") 
 
-## Planejamento de Viagens-ASIS
+## Planejamento de Viagens-AS-IS
 ![Planejamento de Viagens-ASIS](./images/PlanejamentoDeViagens_ASIS.png "Modelo BPMN do Processo 2.")
 
 
 
-## Descrição geral da proposta (Modelagem TO BE)
+## Descrição geral da proposta (Modelagem TO-BE)
 
 ### Contratação de Serviços de Transporte Escolar
 
@@ -45,6 +45,13 @@ O atendente só entra se for necessário, como em casos de dúvidas ou se o paga
 #### Alinhamento com os objetivos do negócio
 
 Esse novo processo ajuda o serviço de transporte escolar a crescer, atendendo mais pessoas com mais agilidade e organização. Também melhora a comunicação e a experiência de quem contrata.
+
+## Contratação de transporte escolar-TO-BE
+![Contratação de transporte escolar-TO-BE](./images/ContrataçãoTOBE.png "Modelo BPMN do Processo 1.") 
+
+## Planejamento de Viagens-TO-BE
+![Planejamento de Viagens-TO-BE](./images/PlanejamentoDeViagens_TOBE.png "Modelo BPMN do Processo 2.")
+
 
 ## Modelagem dos processos
 
