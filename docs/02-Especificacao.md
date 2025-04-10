@@ -72,19 +72,19 @@ Eu, Thiago,| como supervisor de operações,|preciso analisar indicadores de des
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
 |RNF-001| O sistema deve funcionar 24/7  | ALTA | 
-|RNF-003| O sistema deve ser capaz de processar até 300 usuários simultâneos sem degradação de desempenho. |ALTA |
-|RNF-004| O tempo de resposta para cada operação (login, cadastro, consulta) não deve ultrapassar 10 segundos. | MÉDIA |
-|RNF-005| O sistema deve ser escalável para suportar o aumento de número de usuários e transações. | ALTA |
-|RNF-006| O sistema deve utilizar criptografia para proteger dados sensíveis, como senhas de usuários e informações de pagamento. | ALTA |
-|RNF-007| O sistema deve ter uma interface intuitiva e fácil de usar para todos os tipos de usuário. | ALTA |
-|RNF-008|O sistema deve ser acessível em dispositivos móveis e desktops. | ALTA |
-|RNF-009|O código do sistema deve seguir boas práticas de desenvolvimento e ser bem documentado, para facilitar futuras manutenções e atualizações. | ALTA |
-|RNF-010|O sistema deve permitir atualizações automáticas sem a necessidade de interrupção significativa dos serviços. | ALTA |
-|RNF-011| O sistema deve ser compatível com as versões mais recentes dos principais navegadores | ALTA |
-|RNF-012| O sistema deve ser compatível com sistemas operacionais amplamente utilizados, como Windows, Linux e macOS. | ALTA |
-|RNF-013| O sistema deve realizar backups automáticos regulares (diários ou semanais), com a capacidade de restaurar dados em caso de falha. | MEDIA |
-|RNF-014| O sistema deve ser capaz de recuperar dados de transações realizadas, mesmo em caso de falhas técnicas. | ALTA |
-|RNF-015| O sistema deve estar em conformidade com a Lei Geral de Proteção de Dados (LGPD) e outras regulamentações de privacidade de dados aplicáveis. | ALTA |
+|RNF-002| O sistema deve ser capaz de processar até 300 usuários simultâneos sem degradação de desempenho. |ALTA |
+|RNF-003| O tempo de resposta para cada operação (login, cadastro, consulta) não deve ultrapassar 10 segundos. | MÉDIA |
+|RNF-004| O sistema deve ser escalável para suportar o aumento de número de usuários e transações. | ALTA |
+|RNF-005| O sistema deve utilizar criptografia para proteger dados sensíveis, como senhas de usuários e informações de pagamento. | ALTA |
+|RNF-006| O sistema deve ter uma interface intuitiva e fácil de usar para todos os tipos de usuário. | ALTA |
+|RNF-007|O sistema deve ser acessível em dispositivos móveis e desktops. | ALTA |
+|RNF-008|O código do sistema deve seguir boas práticas de desenvolvimento e ser bem documentado, para facilitar futuras manutenções e atualizações. | ALTA |
+|RNF-009|O sistema deve permitir atualizações automáticas sem a necessidade de interrupção significativa dos serviços. | ALTA |
+|RNF-010| O sistema deve ser compatível com as versões mais recentes dos principais navegadores | ALTA |
+|RNF-011| O sistema deve ser compatível com sistemas operacionais amplamente utilizados, como Windows, Linux e macOS. | ALTA |
+|RNF-012| O sistema deve realizar backups automáticos regulares (diários ou semanais), com a capacidade de restaurar dados em caso de falha. | MEDIA |
+|RNF-013| O sistema deve ser capaz de recuperar dados de transações realizadas, mesmo em caso de falhas técnicas. | ALTA |
+|RNF-014| O sistema deve estar em conformidade com a Lei Geral de Proteção de Dados (LGPD) e outras regulamentações de privacidade de dados aplicáveis. | ALTA |
 
 
 
