@@ -14,7 +14,7 @@ Com o tema do projeto definido, escolham alguns processos no contexto de negóci
 
 ## Descrição geral da proposta (Modelagem TO BE)
 
-### Contratação do Serviços de Transporte Escolar
+### Contratação de Serviços de Transporte Escolar
 
 A partir da identificação dos gargalos do modelo AS-IS, observou-se que o processo atual de contratação do serviço de transporte escolar é altamente manual, dependente de interações via WhatsApp, e apresenta baixa padronização nas etapas de atendimento, verificação de disponibilidade, cálculo de valor, envio de contrato e confirmação de pagamento.
 
