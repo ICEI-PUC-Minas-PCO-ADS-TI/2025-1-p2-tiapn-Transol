@@ -5,10 +5,10 @@
 
 ## Slides
 ### Sprint 1
-[Apresentação Transol.pdf](presentation/Apresentaçao Transol.pdf)
+[Apresentação Transol Sprint 1.pdf](/presentation/ApresentaçaoTransol-1.pdf)
 
 ### Sprint 2
-[Apresentação Transol.pdf](presentation/ApresentaçaoTransol2.pdf)
+[Apresentação Transol Sprint 2.pdf](/presentation/ApresentaçaoTransol-2.pdf)
 
 ## Vídeo
 
