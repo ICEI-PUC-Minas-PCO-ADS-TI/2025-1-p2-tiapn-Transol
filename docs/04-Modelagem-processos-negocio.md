@@ -14,7 +14,7 @@ Com o tema do projeto definido, escolham alguns processos no contexto de negóci
 
 ## Descrição geral da proposta (Modelagem TO BE)
 
-#### Contratação de Serviços de Transporte Escolar
+### Contratação de Serviços de Transporte Escolar
 
 A partir da identificação dos gargalos do modelo AS-IS, observou-se que o processo atual de contratação do serviço de transporte escolar é altamente manual, dependente de interações via WhatsApp, e apresenta baixa padronização nas etapas de atendimento, verificação de disponibilidade, cálculo de valor, envio de contrato e confirmação de pagamento.
 
@@ -22,7 +22,7 @@ A proposta de solução (modelo TO-BE) busca melhorar a eficiência operacional 
 
 O atendente é acionado apenas em situações específicas, como dúvidas do cliente ou falha na confirmação automática do pagamento, reduzindo a carga de trabalho manual e aumentando a escalabilidade do serviço.
 
-### Oportunidades de melhoria
+#### Oportunidades de melhoria
 
 - Redução do tempo total de atendimento.
 - Automatização de tarefas repetitivas.
@@ -30,13 +30,13 @@ O atendente é acionado apenas em situações específicas, como dúvidas do cli
 - Maior controle e rastreabilidade das informações.
 - Liberação do atendente para atividades mais estratégicas.
 
-### Limites da solução
+#### Limites da solução
 
 - Casos de exceção ainda exigirão intervenção humana (ex: pagamentos não identificados automaticamente).
 - A solução requer infraestrutura mínima (formulário digital, sistema de regras de negócio e integração com pagamento).
 - Clientes com menor familiaridade digital podem apresentar dificuldade no uso inicial.
 
-### Alinhamento com os objetivos do negócio
+#### Alinhamento com os objetivos do negócio
 
 A proposta está alinhada com os objetivos de crescimento e eficiência do serviço de transporte escolar, permitindo maior escalabilidade, melhor organização operacional, redução de erros humanos e melhor experiência para o cliente final.
 
