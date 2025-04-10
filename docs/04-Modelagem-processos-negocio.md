@@ -50,7 +50,7 @@ Esse novo processo ajuda o serviço de transporte escolar a crescer, atendendo m
 
 [PROCESSO 1 - Contratação de transporte escolar](/docs/processes/processo-1-CONTRATAÇÃO-DE-TRANSPORTE-ESCOLAR.md "Detalhamento do processo 1.")
 
-[PROCESSO 2 - Planejamento de viagens](/docs/processes/docs/processes/processo-2-PLANEJAMENTO-DE-VIAGENS.md "Detalhamento do processo 2.")
+[PROCESSO 2 - Planejamento de viagens](/docs/processes/processo-2-PLANEJAMENTO-DE-VIAGENS.md "Detalhamento do processo 2.")
 
 
 
@@ -62,9 +62,10 @@ Use o seguinte modelo:
 
 | **Indicador** | **Objetivos** | **Descrição** | **Fonte de dados** | **Fórmula de cálculo** |
 | ---           | ---           | ---           | ---             | ---             |
-| Percentual de reclamações | Avaliar quantitativamente as reclamações | Percentual de reclamações em relação ao total de atendimentos | Tabela Reclamações | número total de reclamações / número total de atendimentos |
-| Taxa de requisições atendidas | Melhorar a prestação de serviços medindo a porcentagem de requisições atendidas| Mede a % de requisições atendidas na semana | Tabela Solicitações | (número de requisições atendidas / número total de requisições) * 100 |
-| Taxa de entrega de material | Manter controle sobre os materiais que estão sendo entregues | Mede % de material entregue dentro do mês | Tabela Pedidos | (número de pedidos entregues / número total de pedidos) * 100 |
-
+| Percentual de reclamações | Avaliar a satisfação dos clientes | Mede a proporção de reclamações em relação ao total de atendimentos | Tabela Reclamações | (nº total de reclamações / nº total de atendimentos) * 100 |
+| Taxa de confirmação de pagamento | Verificar a eficiência no processo de validação de pagamentos| Mede a % de comprovantes de pagamento confirmados no sistema | Tabela Pagamentos | (nº de comprovantes validados / nº total de comprovantes enviados) * 100 |
+| Cumprimento de rotas | Acompanhar a execução das rotas planejadas | Mede quantas rotas foram concluídas conforme o planejamento | Tabela Rotas | (nº de rotas concluídas / nº total de rotas planejadas) * 100 |
+Frequência de manutenção preventiva	| Garantir a manutenção regular da frota	| Mede a regularidade da manutenção preventiva dos veículos	| Tabela Veículos / Manutenção | (nº de manutenções realizadas / nº de manutenções programadas) * 100 | 
+Tempo médio de resposta	| Avaliar a agilidade no atendimento a solicitações | Tempo médio entre o recebimento da solicitação e o retorno/resolução | Tabela Solicitações | soma dos tempos de resposta / nº total de solicitações | 
 
 Obs.: todas as informações necessárias para gerar os indicadores devem estar no diagrama de classe a ser apresentado posteriormente.
