@@ -50,8 +50,8 @@ Esse novo processo ajuda o serviço de transporte escolar a crescer, atendendo m
 
 [PROCESSO 1 - Contratação de transporte escolar](/docs/processes/processo-1-CONTRATAÇÃO-DE-TRANSPORTE-ESCOLAR "Detalhamento do processo 1.")
 
-[PROCESSO 2 - Planejamento de viagens](../processes/docs/processes/processo-2-PLANEJAMENTO-DE-VIAGENS.md "Detalhamento do processo 2.")
-/docs/processes/processo-1-CONTRATAÇÃO-DE-TRANSPORTE-ESCOLAR
+[PROCESSO 2 - Planejamento de viagens](/docs/processes/docs/processes/processo-2-PLANEJAMENTO-DE-VIAGENS "Detalhamento do processo 2.")
+
 
 
 ## Indicadores de desempenho
