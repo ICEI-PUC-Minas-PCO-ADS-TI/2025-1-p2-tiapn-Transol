@@ -5,7 +5,7 @@ Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN._
 
 
 
-![Planejamento de Viagens-ASIS](../images/PlanejamentoDeViagens_ASIS.png "Modelo BPMN do Processo 2.")
+
 ![Planejamento de Viagens-TOBE](../images/PlanejamentoDeViagens_TOBE.png "Modelo BPMN do Processo 2.")
 
 #### Detalhamento das atividades
