@@ -14,11 +14,32 @@ Com o tema do projeto definido, escolham alguns processos no contexto de negóci
 
 ## Descrição geral da proposta (Modelagem TO BE)
 
-Tendo identificado os gargalos dos modelos AS-IS, apresentem uma descrição da proposta de solução, buscando maior eficiência com a introdução da tecnologia. Abordem também os limites dessa solução e seu alinhamento com as estratégias e objetivos do contexto de negócio escolhido.
+##Contratação do Serviços de Transporte Escolar
 
-Cole aqui os modelos da solução proposta (modelo TO-BE), elaborados com o apoio da ferramenta baseada em BPMN utilizada na disciplina. Cada processo identificado deve ter seu modelo TO-BE específico. Descrevam as oportunidades de melhoria de cada processo da solução proposta.
+A partir da identificação dos gargalos do modelo AS-IS, observou-se que o processo atual de contratação do serviço de transporte escolar é altamente manual, dependente de interações via WhatsApp, e apresenta baixa padronização nas etapas de atendimento, verificação de disponibilidade, cálculo de valor, envio de contrato e confirmação de pagamento.
 
-Apresente aqui uma descrição da sua proposta, abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente também as oportunidades de melhoria.
+A proposta de solução (modelo TO-BE) busca melhorar a eficiência operacional por meio da introdução de automações. O processo se inicia com o atendimento via WhatsApp, onde o cliente recebe um link para preenchimento de um formulário com os dados necessários. A partir desse ponto, o sistema assume automaticamente as verificações de disponibilidade, cálculo do valor da mensalidade e envio do contrato junto com a chave PIX. Após o pagamento, o sistema realiza a verificação e, se confirmado, finaliza o processo com a inclusão do aluno na rota e o envio da confirmação para o cliente.
+
+O atendente é acionado apenas em situações específicas, como dúvidas do cliente ou falha na confirmação automática do pagamento, reduzindo a carga de trabalho manual e aumentando a escalabilidade do serviço.
+
+### Oportunidades de melhoria
+
+- Redução do tempo total de atendimento.
+- Automatização de tarefas repetitivas.
+- Padronização no processo de contratação.
+- Maior controle e rastreabilidade das informações.
+- Liberação do atendente para atividades mais estratégicas.
+
+### Limites da solução
+
+- Casos de exceção ainda exigirão intervenção humana (ex: pagamentos não identificados automaticamente).
+- A solução requer infraestrutura mínima (formulário digital, sistema de regras de negócio e integração com pagamento).
+- Clientes com menor familiaridade digital podem apresentar dificuldade no uso inicial.
+
+### Alinhamento com os objetivos do negócio
+
+A proposta está alinhada com os objetivos de crescimento e eficiência do serviço de transporte escolar, permitindo maior escalabilidade, melhor organização operacional, redução de erros humanos e melhor experiência para o cliente final.
+
 
 ## Modelagem dos processos
 
