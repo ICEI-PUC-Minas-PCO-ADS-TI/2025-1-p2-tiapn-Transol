@@ -2,15 +2,23 @@
 
 <span style="color:red">Pré-requisitos: <a href="02-Especificacao.md"> Especificação do projeto</a></span>
 
-> **Links úteis**:
-> - [Modelagem de processos AS-IS x TO-BE](https://dheka.com.br/modelagem-as-is-to-be/)
-> - [20 dicas práticas de modelagem de processos](https://dheka.com.br/20-dicas-praticas-de-modelagem-de-processos/)
+
 
 ## Modelagem da situação atual (Modelagem AS IS)
 
-Apresente uma descrição textual de como os sistemas atuais resolvem o problema que seu projeto se propõe a resolver. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional.
+  Atualmente, a Transol, ainda utiliza processos manuais e sistemas desconectados para gerenciar suas operações diárias. A comunicação entre os administradores, motoristas e responsáveis pelos alunos é feita por mensagens enviadas por WhatsApp e registros em planilhas eletrônicas ou até mesmo em cadernos físicos. Essa forma de operação gera diversos problemas para a empresa. A ausência de um controle centralizado dificulta o gerenciamento eficiente das informações dos clientes, dos pagamentos realizados e das rotas diárias. Além disso, o acompanhamento da manutenção dos veículos e da quilometragem atualizada é feito de forma esporádica, o que compromete a confiabilidade dos dados e a segurança da frota.
+Outro ponto crítico é a inexistência de um registro histórico organizado, o que dificulta a realização de auditorias internas ou qualquer tipo de análise gerencial. A comunicação com os pais e responsáveis pelos alunos também sofre com atrasos e falhas, o que pode comprometer a confiança no serviço prestado. O processo de pagamento, por sua vez, não é automatizado: os responsáveis precisam enviar os comprovantes por WhatsApp, e a conferência é feita manualmente pelos administradores, aumentando o risco de erros e de perda de informações. Além disso, o cadastro de motoristas e veículos ainda é feito de forma manual, sem integração com bancos de dados oficiais ou sistemas públicos, o que exige verificações adicionais e aumenta a burocracia no dia a dia da empresa.
+O processo de planejamento de viagem na Transol é realizado de forma manual e envolve diversas etapas que demandam tempo e atenção por parte dos administradores. Inicialmente, é necessário verificar a disponibilidade de motoristas e veículos, o que é feito por meio de consultas informais, geralmente via mensagens ou ligações. Em seguida, as rotas são elaboradas  utilizando ferramentas como Google Maps de forma independente, sem integração com um sistema central. As rotas planejadas são então registradas em planilhas ou cadernos, e comunicadas aos motoristas por meio de aplicativos de mensagens, o que pode gerar atrasos e inconsistências. Caso haja qualquer alteração, problema com um veículo, todo o processo precisa ser refeito manualmente, o que aumenta o risco de falhas e retrabalho.
+resuma esse texto para a metade, porem sem perder muito conteudo.
 
-Com o tema do projeto definido, escolham alguns processos no contexto de negócios. Para ilustrar os potenciais ganhos com a automatização, imaginem processos manuais, ineficientes e/ou com muitas idas e vindas, gerando, assim, retrabalho. Colem aqui os modelos dos processos atuais (modelo AS-IS), elaborados com o apoio da ferramenta baseada em BPMN utilizada na disciplina.
+
+## Contratação de transporte escolar-ASIS
+![Contratação de transporte escolar-ASIS](./images/Contratação_ASIS.png "Modelo BPMN do Processo 1.") 
+
+## Planejamento de Viagens-ASIS
+![Planejamento de Viagens-ASIS](./images/PlanejamentoDeViagens_ASIS.png "Modelo BPMN do Processo 2.")
+
+
 
 ## Descrição geral da proposta (Modelagem TO BE)
 
@@ -40,9 +48,9 @@ Esse novo processo ajuda o serviço de transporte escolar a crescer, atendendo m
 
 ## Modelagem dos processos
 
-[PROCESSO 1 - Nome do processo](./processes/processo-1-nome-do-processo.md "Detalhamento do processo 1.")
+[PROCESSO 1 - Contratação de transporte escolar](./processes/processo-1-CONTRATAÇÃO-DE-TRANSPORTE-ESCOLAR.md "Detalhamento do processo 1.")
 
-[PROCESSO 2 - Nome do processo](./processes/processo-2-nome-do-processo.md "Detalhamento do processo 2.")
+[PROCESSO 2 - Planejamento de viagens](./processes/docs/processes/processo-2-PLANEJAMENTO-DE-VIAGENS.md "Detalhamento do processo 2.")
 
 
 ## Indicadores de desempenho
