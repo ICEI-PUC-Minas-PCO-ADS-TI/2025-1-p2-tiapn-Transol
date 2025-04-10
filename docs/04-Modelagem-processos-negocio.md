@@ -16,30 +16,29 @@ Com o tema do projeto definido, escolham alguns processos no contexto de negóci
 
 ### Contratação de Serviços de Transporte Escolar
 
-A partir da identificação dos gargalos do modelo AS-IS, observou-se que o processo atual de contratação do serviço de transporte escolar é altamente manual, dependente de interações via WhatsApp, e apresenta baixa padronização nas etapas de atendimento, verificação de disponibilidade, cálculo de valor, envio de contrato e confirmação de pagamento.
+Depois de analisar o processo atual (AS-IS), foi possível ver que ele é muito manual, depende de várias conversas no WhatsApp e tem etapas repetitivas. Tudo isso deixa o atendimento mais demorado e confuso.
 
-A proposta de solução (modelo TO-BE) busca melhorar a eficiência operacional por meio da introdução de automações. O processo se inicia com o atendimento via WhatsApp, onde o cliente recebe um link para preenchimento de um formulário com os dados necessários. A partir desse ponto, o sistema assume automaticamente as verificações de disponibilidade, cálculo do valor da mensalidade e envio do contrato junto com a chave PIX. Após o pagamento, o sistema realiza a verificação e, se confirmado, finaliza o processo com a inclusão do aluno na rota e o envio da confirmação para o cliente.
+A proposta do novo processo (TO-BE) é deixar tudo mais rápido e organizado usando a tecnologia. O cliente continua entrando em contato pelo WhatsApp, mas já recebe um link com um formulário para preencher os dados. A partir daí, o sistema cuida de tudo: verifica se tem vaga, calcula o valor da mensalidade, gera o contrato e envia a chave PIX para o pagamento. Depois que o cliente paga, o sistema confirma e avisa que o aluno foi incluído na rota da van.
 
-O atendente é acionado apenas em situações específicas, como dúvidas do cliente ou falha na confirmação automática do pagamento, reduzindo a carga de trabalho manual e aumentando a escalabilidade do serviço.
+O atendente só entra se for necessário, como em casos de dúvidas ou se o pagamento não for identificado automaticamente. Isso ajuda a equipe a ganhar tempo e focar em outras tarefas importantes.
 
 #### Oportunidades de melhoria
 
-- Redução do tempo total de atendimento.
-- Automatização de tarefas repetitivas.
-- Padronização no processo de contratação.
-- Maior controle e rastreabilidade das informações.
-- Liberação do atendente para atividades mais estratégicas.
+- Atendimento mais rápido e com menos esforço.
+- Menos erros e mais organização nas informações.
+- Processo padronizado, sem vai-e-volta.
+- Atendente disponível para casos mais importantes.
+- Melhor experiência para o cliente.
 
 #### Limites da solução
 
-- Casos de exceção ainda exigirão intervenção humana (ex: pagamentos não identificados automaticamente).
-- A solução requer infraestrutura mínima (formulário digital, sistema de regras de negócio e integração com pagamento).
-- Clientes com menor familiaridade digital podem apresentar dificuldade no uso inicial.
+- Se o pagamento não for identificado automaticamente, o atendente precisa verificar.
+- É necessário ter um sistema e internet para usar o formulário e as automações.
+- Algumas pessoas podem ter dificuldade com tecnologia.
 
 #### Alinhamento com os objetivos do negócio
 
-A proposta está alinhada com os objetivos de crescimento e eficiência do serviço de transporte escolar, permitindo maior escalabilidade, melhor organização operacional, redução de erros humanos e melhor experiência para o cliente final.
-
+Esse novo processo ajuda o serviço de transporte escolar a crescer, atendendo mais pessoas com mais agilidade e organização. Também melhora a comunicação e a experiência de quem contrata.
 
 ## Modelagem dos processos
 
