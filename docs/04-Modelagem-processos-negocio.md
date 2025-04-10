@@ -48,9 +48,9 @@ Esse novo processo ajuda o serviço de transporte escolar a crescer, atendendo m
 
 ## Modelagem dos processos
 
-[PROCESSO 1 - Contratação de transporte escolar](/docs/processes/processo-1-CONTRATAÇÃO-DE-TRANSPORTE-ESCOLAR "Detalhamento do processo 1.")
+[PROCESSO 1 - Contratação de transporte escolar](/docs/processes/processo-1-CONTRATAÇÃO-DE-TRANSPORTE-ESCOLAR.md "Detalhamento do processo 1.")
 
-[PROCESSO 2 - Planejamento de viagens](/docs/processes/docs/processes/processo-2-PLANEJAMENTO-DE-VIAGENS "Detalhamento do processo 2.")
+[PROCESSO 2 - Planejamento de viagens](/docs/processes/docs/processes/processo-2-PLANEJAMENTO-DE-VIAGENS.md "Detalhamento do processo 2.")
 
 
 
