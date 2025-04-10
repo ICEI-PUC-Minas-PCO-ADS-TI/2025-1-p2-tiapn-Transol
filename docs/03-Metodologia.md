@@ -48,8 +48,10 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 #### Sprint 2
 - _Scrum master_ e relatório: Tatiane
 - Diagrama de casos de uso e TO-BE: Mellyssa
+- AS-IS e TO-BE Ana Caroline
 - Apresentação: Lilianne
 - Relatório Extensão: Tatiane
+- Atualizações GitHub - Todas
 
 
 
@@ -78,7 +80,7 @@ Atualizado em: 21/04/2024
 | Ana Caroline       | TO-BE, Relatório   | 20/03/2025     | 10/04/2025 | ✔️    | 10/04/2025      |
 | Lilianne           | Apresentação de Slides, correções GitHub   | 20/03/2025     | 10/04/2025  | ✔️     |  10/04/2025               |
 | Mellyssa         | TO-BE, Diagrama de casos de Uso  | 20/03/2025     | 10/04/2025 | ✔️     |  10/04/2025               |
-| Tatiane       | AS-IS, Histórias dos Usuários  |  20/03/2025     | 10/04/2025 | ✔️     |  10/04/2025     |
+| Tatiane       | AS-IS, Histórias dos Usuários,  Relatório  |  20/03/2025     | 10/04/2025 | ✔️     |  10/04/2025     |
 
 
 Legenda:
