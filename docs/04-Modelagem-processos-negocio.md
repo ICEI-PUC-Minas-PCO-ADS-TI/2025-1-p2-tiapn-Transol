@@ -49,7 +49,7 @@ Esse novo processo ajuda o serviço de transporte escolar a crescer, atendendo m
 ## Contratação de transporte escolar-TO-BE
 ![Contratação de transporte escolar-TO-BE](./images/ContrataçãoTOBE.png "Modelo BPMN do Processo 1.") 
 
-### Planejamento de Viagens
+## Planejamento de Viagens
 Depois de analisar o processo atual (AS-IS), foi possível perceber que ele é totalmente manual, com várias trocas de mensagens no WhatsApp e etapas que exigem acompanhamento constante do atendente. Isso torna o atendimento mais demorado, aumenta o risco de falhas (como esquecer uma confirmação ou errar no orçamento) e dificulta a organização das informações.
 
 A proposta do novo processo (TO-BE) é automatizar essas etapas usando a tecnologia para oferecer mais agilidade e controle. O cliente continua entrando em contato pelo WhatsApp, mas já recebe um link com um formulário onde preenche os dados da viagem. A partir desse ponto, o sistema realiza todo o processo: verifica a disponibilidade de veículo e motorista, gera o orçamento automaticamente e envia para o cliente. Se aprovado, o sistema já fornece os dados para pagamento via PIX. Após a confirmação, o próprio sistema organiza a rota e horário, prepara a equipe e envia todas as informações ao cliente.
@@ -81,42 +81,6 @@ Esse novo processo ajuda o serviço de planejamento de viagens a crescer com mai
 ## Modelagem dos processos
 
 [PROCESSO 1 - Contratação de transporte escolar](/docs/processes/processo-1-CONTRATAÇÃO-DE-TRANSPORTE-ESCOLAR.md "Detalhamento do processo 1.")
-
-
-
-
-
-### Planejamento de Viagens
-Depois de analisar o processo atual (AS-IS), foi possível perceber que ele é totalmente manual, com várias trocas de mensagens no WhatsApp e etapas que exigem acompanhamento constante do atendente. Isso torna o atendimento mais demorado, aumenta o risco de falhas (como esquecer uma confirmação ou errar no orçamento) e dificulta a organização das informações.
-
-A proposta do novo processo (TO-BE) é automatizar essas etapas usando a tecnologia para oferecer mais agilidade e controle. O cliente continua entrando em contato pelo WhatsApp, mas já recebe um link com um formulário onde preenche os dados da viagem. A partir desse ponto, o sistema realiza todo o processo: verifica a disponibilidade de veículo e motorista, gera o orçamento automaticamente e envia para o cliente. Se aprovado, o sistema já fornece os dados para pagamento via PIX. Após a confirmação, o próprio sistema organiza a rota e horário, prepara a equipe e envia todas as informações ao cliente.
-
-O atendente entra apenas em casos específicos, como quando o sistema não identifica o pagamento ou se não houver disponibilidade direta. Isso libera tempo para a equipe se concentrar em atendimentos estratégicos ou excepcionais.
-
-#### Oportunidades de melhoria
-- Atendimento mais rápido e com menos esforço manual.
-- Redução de erros operacionais e retrabalho.
-- Processo padronizado, com histórico organizado.
-- Atendente disponível apenas quando necessário.
-- Experiência mais fluida e profissional para o cliente.
-
-#### Limites da solução
-Se o pagamento não for identificado automaticamente, o atendente precisa intervir.
-
-É necessário internet e um sistema funcional para operar o novo processo.
-
-Algumas pessoas podem ter dificuldades com formulários e tecnologia.
-
-#### Alinhamento com os objetivos do negócio
-Esse novo processo ajuda o serviço de planejamento de viagens a crescer com mais agilidade, padronização e escalabilidade. Também melhora a comunicação, reduz o tempo de resposta e proporciona uma experiência mais organizada e moderna ao cliente.
-
-
-
-
-
-
-
-
 
 [PROCESSO 2 - Planejamento de viagens](/docs/processes/processo-2-PLANEJAMENTO-DE-VIAGENS.md "Detalhamento do processo 2.")
 
