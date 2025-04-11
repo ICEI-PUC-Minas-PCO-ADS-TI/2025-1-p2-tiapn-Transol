@@ -105,12 +105,28 @@ O projeto está restrito aos itens apresentados na tabela a seguir.
 
 
 ## Diagrama de casos de uso
-<img src="./images/CasodeUsoTransol.png" alt="Diagrama de casos de uso" width="40%">
+![UML Diagrama de caso de uso](https://github.com/user-attachments/assets/6640e1fe-90b1-49c1-a55a-2561928dd3c5)
+
 
  Principais casos de uso:
-- Login e recuperação de senha.
-- Cadastro, edição e exclusão de clientes, motoristas e veículos.
-- Envio e visualização de comprovantes de pagamento.
-- Criação e visualização de rotas.
-- Geração de relatórios e exportação de dados.
-- Registro de histórico de ações.
+   [Administrador, Cliente, Motorista] → Realizar login
+   [Administrador] → Cadastrar cliente
+   [Administrador] → Editar dados do cliente
+   [Administrador] → Excluir cliente
+   [Administrador] → Visualizar dados do cliente
+   [Cliente] → Enviar mensagem para administrador
+   [Sistema] → Enviar lembrete de pagamento
+   [Administrador] → Responder mensagens
+   [Cliente] → Enviar recibo de pagamento
+   [Cliente, Administrador] → Visualizar pagamentos
+   [Sistema] → Atualizar status do pagamento
+   [Administrador] → Cadastrar veículo
+   [Administrador] → Editar dados do veículo
+   [Administrador] → Excluir veículo
+   [Motorista] → Visualizar dados do veículo
+   [Motorista] → Atualizar quilometragem
+   [Motorista, Administrador] → Atualizar manutenção
+   [Administrador] → Atribuir tarefas ao motorista
+   [Administrador] → Ver relatórios de desempenho
+   [Administrador, Motorista] → Visualizar rotas
+   
