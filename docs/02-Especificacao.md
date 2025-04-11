@@ -110,23 +110,42 @@ O projeto está restrito aos itens apresentados na tabela a seguir.
 
  Principais casos de uso:
    [Administrador, Cliente, Motorista] → Realizar login
+   
    [Administrador] → Cadastrar cliente
+   
    [Administrador] → Editar dados do cliente
+   
    [Administrador] → Excluir cliente
+   
    [Administrador] → Visualizar dados do cliente
+   
    [Cliente] → Enviar mensagem para administrador
+   
    [Sistema] → Enviar lembrete de pagamento
+   
    [Administrador] → Responder mensagens
+   
    [Cliente] → Enviar recibo de pagamento
+   
    [Cliente, Administrador] → Visualizar pagamentos
+   
    [Sistema] → Atualizar status do pagamento
+   
    [Administrador] → Cadastrar veículo
+   
    [Administrador] → Editar dados do veículo
+   
    [Administrador] → Excluir veículo
+   
    [Motorista] → Visualizar dados do veículo
+   
    [Motorista] → Atualizar quilometragem
+   
    [Motorista, Administrador] → Atualizar manutenção
+   
    [Administrador] → Atribuir tarefas ao motorista
+   
    [Administrador] → Ver relatórios de desempenho
+   
    [Administrador, Motorista] → Visualizar rotas
    
