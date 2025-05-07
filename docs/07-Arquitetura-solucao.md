@@ -108,8 +108,6 @@ A Vercel permite deploy contínuo diretamente do repositório no GitHub, facilit
 
 O banco de dados utilizado é o MongoDB, hospedado na nuvem através do MongoDB Atlas, garantindo alta disponibilidade, escalabilidade e segurança para o armazenamento das informações do sistema.
 
-## Qualidade de software
-
 ## Qualidade de Software
 
 No desenvolvimento do sistema de transporte escolar e fretamento, foram priorizados os seguintes pontos de qualidade:
