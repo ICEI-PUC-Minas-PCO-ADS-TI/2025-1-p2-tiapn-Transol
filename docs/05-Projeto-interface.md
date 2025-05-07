@@ -17,9 +17,16 @@ O fluxo do usuário se divide em três, a partir de tipos de logins diferentes. 
 
 ![Diagrama de fluxo Transol](images/Diagrama_de_fluxo_do_usuario_Transol.png)
 
+## Link para o protótipo interativo 
+> - [protótipo interativo Transol](https://www.figma.com/proto/xlIznOchEOCRdWxV29P7ub/Transol?page-id=0%3A1&node-id=123-84&p=f&viewport=413%2C1042%2C0.25&t=ewmA8ZE3FgucOyes-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2)
+>
+
+
+
 
 
 ## Wireframes
+
 ### Home Page
 <img src="./images/home.png" alt="Home Page" width="30%">
 
