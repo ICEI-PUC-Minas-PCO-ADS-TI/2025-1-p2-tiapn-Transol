@@ -13,8 +13,9 @@ A plataforma será composta por uma aplicação web com frontend e backend separ
 - Gestão de rotas, veículos, horários e agendamentos;
 - Histórico de transporte por aluno;
 - Integração com métodos de pagamento.
-
-![Arquitetura da Solução](images/arquitetura.png)
+<div align="center">
+    <img src="./images/ArquiteturaDaSolução.png" alt="Modelo ER" width="30%">
+</div>
 
 ## Diagrama de classes
 
@@ -38,7 +39,7 @@ Apresente o modelo de dados por meio de um modelo relacional que contemple todos
 
 ### Esquema relacional
 
-<img src="./images/Esquema Relacional.jpeg" alt="Esquema Relacional" width="90%">
+<img src="./images/EsquemaRelacional.jpeg" alt="Esquema Relacional" width="90%">
 
 ### Modelo físico
 
@@ -101,23 +102,30 @@ Esse script deverá ser incluído em um arquivo .sql na pasta [de scripts SQL](.
 
 ## Hospedagem
 
-Explique como a hospedagem e o lançamento da plataforma foram realizados.
+A aplicação está totalmente hospedada na Vercel, incluindo tanto o frontend (desenvolvido com HTML, CSS, JavaScript e React) quanto o backend (desenvolvido com .NET e C#).
 
-> **Links úteis**:
-> - [Website com GitHub Pages](https://pages.github.com/)
-> - [Programação colaborativa com Repl.it](https://repl.it/)
-> - [Getting started with Heroku](https://devcenter.heroku.com/start)
-> - [Publicando seu site no Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
+A Vercel permite deploy contínuo diretamente do repositório no GitHub, facilitando o desenvolvimento, atualização e publicação do sistema de forma rápida e confiável.
+
+O banco de dados utilizado é o MongoDB, hospedado na nuvem através do MongoDB Atlas, garantindo alta disponibilidade, escalabilidade e segurança para o armazenamento das informações do sistema.
 
 ## Qualidade de software
 
-Conceituar qualidade é uma tarefa complexa, mas ela pode ser vista como um método gerencial que, por meio de procedimentos disseminados por toda a organização, busca garantir um produto final que satisfaça às expectativas dos stakeholders.
+## Qualidade de Software
 
-No contexto do desenvolvimento de software, qualidade pode ser entendida como um conjunto de características a serem atendidas, de modo que o produto de software atenda às necessidades de seus usuários. Entretanto, esse nível de satisfação nem sempre é alcançado de forma espontânea, devendo ser continuamente construído. Assim, a qualidade do produto depende fortemente do seu respectivo processo de desenvolvimento.
+No desenvolvimento do sistema de transporte escolar e fretamento, foram priorizados os seguintes pontos de qualidade:
 
-A norma internacional ISO/IEC 25010, que é uma atualização da ISO/IEC 9126, define oito características e 30 subcaracterísticas de qualidade para produtos de software. Com base nessas características e nas respectivas subcaracterísticas, identifique as subcaracterísticas que sua equipe utilizará como base para nortear o desenvolvimento do projeto de software, considerando alguns aspectos simples de qualidade. Justifique as subcaracterísticas escolhidas pelo time e elenque as métricas que permitirão à equipe avaliar os objetos de interesse.
+- **Manutenção fácil:**  
+  O sistema será feito de forma organizada, com o código separado por partes. Isso ajuda na hora de corrigir erros, adicionar novas funções ou mudar algo no futuro sem quebrar o resto.
 
-> **Links úteis**:
-> - [ISO/IEC 25010:2011 - Systems and Software Engineering — Systems and Software Quality Requirements and Evaluation (SQuaRE) — System and Software Quality Models](https://www.iso.org/standard/35733.html/)
-> - [Análise sobre a ISO 9126 – NBR 13596](https://www.tiespecialistas.com.br/analise-sobre-iso-9126-nbr-13596/)
-> - [Qualidade de software - Engenharia de Software](https://www.devmedia.com.br/qualidade-de-software-engenharia-de-software-29/18209)
+- **Boa usabilidade:**  
+  A ideia é que qualquer pessoa consiga usar o sistema sem precisar de ajuda. Tudo será claro, direto e funcional — tanto em computador quanto no celular.
+
+- **Segurança dos dados:**  
+  Como o sistema lida com informações pessoais (alunos, pais, motoristas), tudo será tratado com cuidado. As informações ficarão protegidas contra acessos indevidos.
+
+- **Funcionamento estável:**  
+  O sistema precisa estar sempre disponível, principalmente nos horários de entrada e saída da escola. A estabilidade vai garantir que ninguém fique sem acesso quando mais precisa.
+
+- **Acesso em qualquer lugar:**  
+  O sistema será compatível com diferentes dispositivos e navegadores. Assim, o usuário consegue acessar de onde estiver, com praticidade e sem travamentos.
+
