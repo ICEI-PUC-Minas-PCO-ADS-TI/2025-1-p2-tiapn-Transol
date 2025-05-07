@@ -1,8 +1,18 @@
 # Arquitetura da solução
 
-<span style="color:red">Pré-requisitos: <a href="05-Projeto-interface.md"> Projeto de interface</a></span>
+A plataforma será composta por uma aplicação web com frontend e backend separados. A arquitetura utiliza o modelo **cliente-servidor** e será acessada diretamente pelo navegador.
 
-Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
+- O **frontend** será desenvolvido com **React**, utilizando **HTML**, **CSS** e **JavaScript**, e ficará hospedado na **Vercel**.
+- O **backend** será implementado com **C# e .NET**, responsável por processar as regras de negócio do sistema, como cadastro de alunos, rotas, motoristas, veículos e agendamentos.
+- O banco de dados utilizado será o **MySQL**, armazenando as informações essenciais da aplicação.
+- As IDEs utilizadas no projeto serão o **Visual Studio Code** (frontend) e o **Visual Studio** (backend).
+
+### Funcionalidades principais
+
+- Cadastro e autenticação de usuários (pais/responsáveis, motoristas, administradores);
+- Gestão de rotas, veículos, horários e agendamentos;
+- Histórico de transporte por aluno;
+- Integração com métodos de pagamento.
 
 ![Arquitetura da Solução](images/arquitetura.png)
 
@@ -24,10 +34,7 @@ Apresente o modelo de dados por meio de um modelo relacional que contemple todos
 
 ### Modelo ER
 
-O Modelo ER representa, por meio de um diagrama, como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.
 
-> **Links úteis**:
-> - [Como fazer um diagrama entidade relacionamento](https://www.lucidchart.com/pages/pt/como-fazer-um-diagrama-entidade-relacionamento)
 
 ### Esquema relacional
 
