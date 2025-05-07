@@ -34,8 +34,6 @@ Apresente o modelo de dados por meio de um modelo relacional que contemple todos
 
 ### Modelo ER
 
-
-
 <img src="./images/Transol.drawio (1).png" alt="Modelo ER" width="90%">
 
 ### Esquema relacional
@@ -99,17 +97,13 @@ Esse script deverá ser incluído em um arquivo .sql na pasta [de scripts SQL](.
 
 ## Tecnologias
 
-Descreva qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
-
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
-
-
-| **Dimensão**   | **Tecnologia**  |
-| ---            | ---             |
-| Front-end      | HTML + CSS + JS + React |
-| Back-end       | Node.js         |
-| SGBD           | MySQL           |
-| Deploy         | Vercel          |
+| **Dimensão**    | **Tecnologia**                          |
+|-----------------|------------------------------------------|
+| Front-end       | HTML, CSS, JavaScript, React             |
+| Back-end        | C#, .NET                                 |
+| SGBD            | MySQL                                    |
+| IDEs            | Visual Studio Code, Visual Studio        |
+| Deploy          | Vercel                                   |
 
 
 ## Hospedagem
