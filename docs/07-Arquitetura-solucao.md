@@ -43,48 +43,138 @@ Apresente o modelo de dados por meio de um modelo relacional que contemple todos
 
 ### Modelo físico
 
-Insira aqui o script de criação das tabelas do banco de dados.
-
-Veja um exemplo:
-
 ```sql
--- Criação da tabela Medico
-CREATE TABLE Medico (
-    MedCodigo INTEGER PRIMARY KEY,
-    MedNome VARCHAR(100)
-);
 
--- Criação da tabela Paciente
-CREATE TABLE Paciente (
-    PacCodigo INTEGER PRIMARY KEY,
-    PacNome VARCHAR(100)
-);
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
--- Criação da tabela Consulta
-CREATE TABLE Consulta (
-    ConCodigo INTEGER PRIMARY KEY,
-    MedCodigo INTEGER,
-    PacCodigo INTEGER,
-    Data DATE,
-    FOREIGN KEY (MedCodigo) REFERENCES Medico(MedCodigo),
-    FOREIGN KEY (PacCodigo) REFERENCES Paciente(PacCodigo)
-);
+CREATE SCHEMA IF NOT EXISTS `db_transol` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+USE `db_transol`;
 
--- Criação da tabela Medicamento
-CREATE TABLE Medicamento (
-    MdcCodigo INTEGER PRIMARY KEY,
-    MdcNome VARCHAR(100)
-);
+CREATE TABLE IF NOT EXISTS `administrador` (
+  `ID_Administrador` SMALLINT NOT NULL AUTO_INCREMENT,
+  `Nome` VARCHAR(50) NOT NULL,
+  `CPF` VARCHAR(20) NOT NULL,
+  `RG` VARCHAR(20) NOT NULL,
+  `Telefone` INT NOT NULL,
+  PRIMARY KEY (`ID_Administrador`)
+) ENGINE=InnoDB;
 
--- Criação da tabela Prescricao
-CREATE TABLE Prescricao (
-    ConCodigo INTEGER,
-    MdcCodigo INTEGER,
-    Posologia VARCHAR(200),
-    PRIMARY KEY (ConCodigo, MdcCodigo),
-    FOREIGN KEY (ConCodigo) REFERENCES Consulta(ConCodigo),
-    FOREIGN KEY (MdcCodigo) REFERENCES Medicamento(MdcCodigo)
-);
+CREATE TABLE IF NOT EXISTS `escola` (
+  `ID_Escola` SMALLINT NOT NULL AUTO_INCREMENT,
+  `Nome` VARCHAR(50) NOT NULL,
+  `Endereço` VARCHAR(45),
+  PRIMARY KEY (`ID_Escola`)
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS `aluno` (
+  `ID_Aluno` SMALLINT NOT NULL AUTO_INCREMENT,
+  `Nome` VARCHAR(50) NOT NULL,
+  `Escola` VARCHAR(20) NOT NULL,
+  `D_Nasc` DATE NOT NULL,
+  `Entrada` TIME NOT NULL,
+  `Saída` TIME NOT NULL,
+  `ID_Cliente` SMALLINT NOT NULL,
+  PRIMARY KEY (`ID_Aluno`),
+  FOREIGN KEY (`ID_Cliente`) REFERENCES `cliente` (`ID_Cliente`)
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS `escolar` (
+  `ID_Escolar` SMALLINT NOT NULL AUTO_INCREMENT,
+  `Data_Início` DATE NOT NULL,
+  `Mensalidade` DECIMAL(10,0) NOT NULL,
+  `Turno` SMALLINT NOT NULL,
+  `ID_Aluno` SMALLINT NOT NULL,
+  `ID_Escola` SMALLINT NOT NULL,
+  PRIMARY KEY (`ID_Escolar`),
+  FOREIGN KEY (`ID_Aluno`) REFERENCES `aluno` (`ID_Aluno`),
+  FOREIGN KEY (`ID_Escola`) REFERENCES `escola` (`ID_Escola`)
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS `fretamento` (
+  `ID_Fretamento` SMALLINT NOT NULL AUTO_INCREMENT,
+  `Destino` VARCHAR(40) NOT NULL,
+  `Bairro` VARCHAR(30) NOT NULL,
+  `D_Saída` DATE NOT NULL,
+  `D_Retorno` DATE NOT NULL,
+  `Qte_Passageiros` INT NOT NULL,
+  PRIMARY KEY (`ID_Fretamento`)
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS `tipo_serviço` (
+  `ID_Tipo_Serviço` SMALLINT NOT NULL AUTO_INCREMENT,
+  `Nome` VARCHAR(50) NOT NULL,
+  `Descrição` VARCHAR(50) NOT NULL,
+  `ID_Fretamento` SMALLINT NOT NULL,
+  `ID_Escolar` SMALLINT NOT NULL,
+  PRIMARY KEY (`ID_Tipo_Serviço`),
+  FOREIGN KEY (`ID_Escolar`) REFERENCES `escolar` (`ID_Escolar`),
+  FOREIGN KEY (`ID_Fretamento`) REFERENCES `fretamento` (`ID_Fretamento`)
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS `cliente` (
+  `ID_Cliente` SMALLINT NOT NULL AUTO_INCREMENT,
+  `Nome` VARCHAR(50) NOT NULL,
+  `CPF` VARCHAR(20) NOT NULL,
+  `RG` VARCHAR(20) NOT NULL,
+  `Telefone` INT NOT NULL,
+  `Endereço` VARCHAR(45),
+  `ID_Administrador` SMALLINT NOT NULL,
+  `ID_Tipo_Serviço` SMALLINT NOT NULL,
+  PRIMARY KEY (`ID_Cliente`),
+  FOREIGN KEY (`ID_Administrador`) REFERENCES `administrador` (`ID_Administrador`),
+  FOREIGN KEY (`ID_Tipo_Serviço`) REFERENCES `tipo_serviço` (`ID_Tipo_Serviço`)
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS `contrato` (
+  `ID_Contrato` SMALLINT NOT NULL AUTO_INCREMENT,
+  `Valor_serviço` DECIMAL(10,0) NOT NULL,
+  `Status` VARCHAR(20) NOT NULL,
+  `D_Emissão` DATE NOT NULL,
+  `D_Viagem` DATE NOT NULL,
+  `Kilômetro` FLOAT NOT NULL,
+  `C_ID_Cliente` SMALLINT NOT NULL,
+  `ID_TServiço` SMALLINT NOT NULL,
+  PRIMARY KEY (`ID_Contrato`),
+  FOREIGN KEY (`C_ID_Cliente`) REFERENCES `cliente` (`ID_Cliente`),
+  FOREIGN KEY (`ID_TServiço`) REFERENCES `contrato` (`ID_Contrato`)
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS `motorista` (
+  `ID_Motorista` SMALLINT NOT NULL AUTO_INCREMENT,
+  `Nome` VARCHAR(50) NOT NULL,
+  `CPF` VARCHAR(20) NOT NULL,
+  `RG` VARCHAR(20) NOT NULL,
+  `Habilitação` VARCHAR(20) NOT NULL,
+  `Telefone` INT NOT NULL,
+  `Endereço` VARCHAR(45),
+  PRIMARY KEY (`ID_Motorista`)
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS `veiculo` (
+  `ID_Veiculo` SMALLINT NOT NULL AUTO_INCREMENT,
+  `Modelo` VARCHAR(40) NOT NULL,
+  `Tipo` VARCHAR(30) NOT NULL,
+  `Capacidade` SMALLINT NOT NULL,
+  `ID_TipoServ` SMALLINT NOT NULL,
+  PRIMARY KEY (`ID_Veiculo`),
+  FOREIGN KEY (`ID_TipoServ`) REFERENCES `tipo_serviço` (`ID_Tipo_Serviço`)
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS `veiculo_motorista` (
+  `ID_Veiculo` SMALLINT NOT NULL,
+  `ID_Motorista` SMALLINT NOT NULL,
+  `Data_Hora` DATETIME NOT NULL,
+  `Turno` INT NOT NULL,
+  PRIMARY KEY (`ID_Veiculo`, `ID_Motorista`),
+  FOREIGN KEY (`ID_Veiculo`) REFERENCES `veiculo` (`ID_Veiculo`),
+  FOREIGN KEY (`ID_Motorista`) REFERENCES `motorista` (`ID_Motorista`)
+) ENGINE=InnoDB;
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 ```
 Esse script deverá ser incluído em um arquivo .sql na pasta [de scripts SQL](../src/db).
 
