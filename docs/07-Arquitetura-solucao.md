@@ -34,8 +34,9 @@ Apresente o modelo de dados por meio de um modelo relacional que contemple todos
 
 ### Modelo ER
 
-![image](https://github.com/user-attachments/assets/d28d5978-6ff5-4dca-b96d-62b7a5d7ef4e)
 
+
+<img src="./images/Transol.drawio (1).png" alt="Modelo ER" width="90%">
 
 ### Esquema relacional
 
