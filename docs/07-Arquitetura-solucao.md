@@ -38,14 +38,7 @@ Apresente o modelo de dados por meio de um modelo relacional que contemple todos
 
 ### Esquema relacional
 
-O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
- 
-
-![Exemplo de um modelo relacional](images/modelo_relacional.png "Exemplo de modelo relacional.")
----
-
-> **Links úteis**:
-> - [Criando um modelo relacional - documentação da IBM](https://www.ibm.com/docs/pt-br/cognos-analytics/12.0.0?topic=designer-creating-relational-model)
+<img src="./images/Esquema Relacional.jpeg" alt="Esquema Relacional" width="90%">
 
 ### Modelo físico
 
