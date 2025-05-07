@@ -7,37 +7,63 @@
  ## User flow
 
 O fluxo do usuário se divide em três, a partir de tipos de logins diferentes. São eles o administrador do sistema, o cliente e o motorista, Cada um com suas telas e permissões pertinentes ao seu uso.
-![Exemplo de user flow](images/Fluxo_do_usuario.png)
+
+![Fluxo do usuário Transol](images/Fluxo_do_usuario.png)
 
 
 
 ### Diagrama de fluxo
 
-O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema interativo, muitas vezes sem a necessidade de desenhar o design das telas da interface. Isso permite que o design das interações seja bem planejado e tenha impacto na qualidade do design do wireframe interativo que será desenvolvido logo em seguida.
 
-O diagrama de fluxo pode ser desenvolvido com “boxes” que possuem, internamente, a indicação dos principais elementos de interface — tais como menus e acessos — e funcionalidades, como editar, pesquisar, filtrar e configurar, além da conexão entre esses boxes a partir do processo de interação.
+![Diagrama de fluxo Transol](images/Diagrama_de_fluxo_do_usuario_Transol.png)
 
-![Exemplo de diagrama de fluxo](images/diagrama_fluxo.jpg)
 
-> **Links úteis**:
-> - [Como criar um diagrama de fluxo de usuário](https://www.lucidchart.com/blog/how-to-make-a-user-flow-diagram)
-> - [Fluxograma online: seis sites para fazer gráfico sem instalar nada](https://www.techtudo.com.br/listas/2019/03/fluxograma-online-seis-sites-para-fazer-grafico-sem-instalar-nada.ghtml)
 
 ## Wireframes
+### Home Page
+<img src="./images/home.png" alt="Home Page" width="30%">
 
-São protótipos usados no design de interface para sugerir a estrutura de um site web e seu relacionamento entre suas páginas. Um wireframe web é uma ilustração que mostra o layout dos elementos fundamentais na interface.
+### Login
+<img src="./images/login.png" alt="Login" width="30%">
 
-![Exemplo de wireframe](images/wireframe.png)
- 
-> **Links úteis**:
-> - [Protótipos: baixa, média ou alta fidelidade?](https://medium.com/ladies-that-ux-br/prot%C3%B3tipos-baixa-m%C3%A9dia-ou-alta-fidelidade-71d897559135)
-> - [Protótipos vs wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)
-> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
+### Contato
+<img src="./images/contato.png" alt="contato" width="30%">
+
+### ADM - Main Page
+<img src="./images/ADM-main.png" alt="ADM Main" width="30%">
+
+### ADM - Busca
+<img src="./images/ADM-buscar.png" alt="Buscar" width="30%">
+
+### ADM - Editar Cliente
+<img src="./images/ADM-editar-cliente.png" alt="ADM Editar Cliente" width="30%">
+
+### ADM - Editar Motorista
+<img src="./images/ADM-Editar-motorista.png" alt="ADM Editar Motorista" width="30%">
+
+### ADM - Editar Veículo
+<img src="./images/ADM-Editar-Veiculo.png" alt="ADM Editar Veículo" width="30%">
+
+### ADM - Criar Rota
+<img src="./images/ADM-Criar-Rota.png" alt="ADM Criar Rota" width="30%">
+
+### Cliente/ADM - Perfil
+<img src="./images/Cliente-Main.png" alt="Cliente Main" width="30%">
+<img src="./images/Cliente-Main-2.png" alt="Cliente Main" width="30%">
+
+### Cliente - Adicionar Comprovante
+<img src="./images/Cliente-Inserir-Recibo.png" alt="Cliente Adicionar Comprovante" width="30%">
+
+
+### Motorista/ADM - Main Page
+<img src="./images/Motorista-Main.png" alt="Motorista - Main Page" width="30%">
+
+### Motorista/ADM - Visualizar Rota
+<img src="./images/Visualizar-Rota.png" alt="Motorista - Visualizar Rota" width="30%">
+
+### Motorista/ADM - Dados do Veículo
+<img src="./images/Visualizar-Veiculo.png" alt="Motorista - Dados do Veículo" width="30%">
+
 
 
 ## Interface do sistema
