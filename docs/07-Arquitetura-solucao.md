@@ -27,12 +27,11 @@ O diagrama de classes ilustra graficamente a estrutura do software e como cada u
 
 ##  Modelo de dados
 
-O desenvolvimento da solução proposta requer a existência de bases de dados que permitam realizar o cadastro de dados e os controles associados aos processos identificados, assim como suas recuperações.
+O desenvolvimento da solução proposta pela Transol Escolar e Fretamento requer a existência de bases de dados que permitam realizar o cadastro de dados e os controles associados aos processos identificados, assim como suas recuperações.
 
-Utilizando a notação do DER (Diagrama Entidade-Relacionamento), elabore um modelo, usando alguma ferramenta, que contemple todas as entidades e atributos associados às atividades dos processos identificados. Deve ser gerado um único DER que suporte todos os processos escolhidos, visando, assim, uma base de dados integrada. O modelo deve contemplar também o controle de acesso dos usuários (partes interessadas nos processos) de acordo com os papéis definidos nos modelos do processo de negócio.
+Utilizando a notação do DER (Diagrama Entidade-Relacionamento), foi elaborado um modelo que contempla todas as entidades e atributos associados às atividades dos processos identificados. Foi gerado um único DER que suporta todos os processos escolhidos, visando, assim, uma base de dados integrada. O modelo também contempla o controle de acesso dos usuários (partes interessadas nos processos) de acordo com os papéis definidos nos modelos do processo de negócio.
 
-Apresente o modelo de dados por meio de um modelo relacional que contemple todos os conceitos e atributos apresentados na modelagem dos processos.
-
+O modelo de dados é apresentado por meio de um modelo relacional que contempla todos os conceitos e atributos apresentados na modelagem dos processos.
 ### Modelo ER
 
 <img src="./images/Transol.drawio (1).png" alt="Modelo ER" width="90%">
