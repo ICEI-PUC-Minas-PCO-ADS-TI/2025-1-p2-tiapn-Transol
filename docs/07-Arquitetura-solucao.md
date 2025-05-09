@@ -21,7 +21,8 @@ A plataforma será composta por uma aplicação web com frontend e backend separ
 
 O diagrama de classes ilustra graficamente a estrutura do software e como cada uma das classes estará interligada. Essas classes servem de modelo para materializar os objetos que serão executados na memória.
 
-![image](https://github.com/user-attachments/assets/13184a02-0d66-4ab9-ac7e-b55a96569876)
+![image](https://github.com/user-attachments/assets/3f42e2a1-be48-4fdc-91c0-3ba989076042)
+
 
 
 ##  Modelo de dados
