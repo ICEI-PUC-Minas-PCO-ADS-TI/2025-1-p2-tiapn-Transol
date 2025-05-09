@@ -53,7 +53,12 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 - Relatório Extensão: Tatiane
 - Atualizações GitHub - Todas
 
-
+#### Sprint 3
+- _Scrum master_ e Projeto de banco de dados: Tatiane
+- Pojeto de inteface, Template Padrão e Apresentação: Lilianne
+- Jornada do Usuário: Ana Caroline
+- Relatório Extensão e Diagrama de Classes: Mellyssa
+- Atualizações GitHub - Todas
 
 ###  Quadro de tarefas
 
@@ -81,6 +86,19 @@ Atualizado em: 21/04/2024
 | Lilianne           | Apresentação de Slides, correções GitHub   | 20/03/2025     | 10/04/2025  | ✔️     |  10/04/2025               |
 | Mellyssa         | TO-BE, Diagrama de casos de Uso  | 20/03/2025     | 10/04/2025 | ✔️     |  10/04/2025               |
 | Tatiane       | AS-IS, Histórias dos Usuários,  Relatório  |  20/03/2025     | 10/04/2025 | ✔️     |  10/04/2025     |
+
+
+#### Sprint 3
+
+Atualizado em: 08/05/2024
+
+
+| Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
+| :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
+| Ana Caroline       | Jornada do Usuário   | 12/04/2025    | 09/05/2025 | ✔️    | 09/05/2025      |
+| Lilianne           | Pojeto de inteface, Template Padrão e Apresentação   |  12/04/2025    | 09/05/2025 | ✔️    | 09/05/2025      |
+| Mellyssa         | Relatório Extensão e Diagrama de Classes  |  12/04/2025    | 09/05/2025 | ✔️    | 09/05/2025      |
+| Tatiane       | Projeto de banco de dados |  12/04/2025    | 09/05/2025 | ✔️    | 09/05/2025      |
 
 
 Legenda:
@@ -118,8 +136,8 @@ Exemplo: os artefatos do projeto são desenvolvidos a partir de diversas platafo
 
 | Ambiente                            | Plataforma                         | Link de acesso                         |
 |-------------------------------------|------------------------------------|----------------------------------------|
-| Repositório de código fonte         | GitHub                             |[ http://....](https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2025-1-p2-tiapn-Transol/tree/main/src)                            |
-| Documentos do projeto               | GitHub                             | [http://....](https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2025-1-p2-tiapn-Transol/tree/main/docs)                            |
-| Projeto de interface                | Figma                              | [http://....](https://www.figma.com/)                            |
-| Gerenciamento do projeto            | GitHub Projects                    |[ http://....  ](https://github.com/orgs/ICEI-PUC-Minas-PCO-ADS-TI/projects/33)                          |
+| Repositório de código fonte         | GitHub                             |[GitHub Transol](https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2025-1-p2-tiapn-Transol/tree/main/src)                            |
+| Documentos do projeto               | GitHub                             | [Documentos do projeto Transol  ](https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2025-1-p2-tiapn-Transol/tree/main/docs)                            |
+| Projeto de interface                | Figma                              | [Projeto de interface Transol](https://www.figma.com/)                            |
+| Gerenciamento do projeto            | GitHub Projects                    |[ Gerenciamento do projeto Transol ](https://github.com/orgs/ICEI-PUC-Minas-PCO-ADS-TI/projects/33)                          |
 | Hospedagem                          | Vercel                             | http://....                            |
