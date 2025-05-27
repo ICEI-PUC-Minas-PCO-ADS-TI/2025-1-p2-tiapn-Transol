@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel Administrador - Transol</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+   <link href="/transol-main/assets/css/adm.css" rel="stylesheet">
+
+</head>
+<body>
+<body>
+
+  <div class="container">
+
+    <header>
+      <img src="/transol-main/assets/img/logo.png" alt="Logo Transol" class="logo">
+      <h2 class="admin-title">Administrador - Iris Meireles</h2>
+    </header>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Buscar cliente...">
+      <a href="cadastrar-cliente.html" class="bg-yellow-500 text-white px-4 py-2 rounded-xl">
+<button id="addClientBtn">Cadastrar Cliente</button></a>
+    </div>
+
+    <div class="section">
+      <h3>Clientes Cadastrados</h3>
+      <ul class="client-list" id="clientList"></ul>
+    </div>
+
+    <div class="section">
+      <h3>Notificações de Orçamentos</h3>
+      <ul id="notificacoes" class="notifications"></ul>
+    </div>
+
+  </div>
+
+  <!-- Seu script Firebase + JS de busca vem aqui -->
+  <script type="module" src="/transol-main/assets/js/firebase-script.js"></script>
+  <script src="/transol-main/assets/js/clientes.js"></script>
+
+</body>
+
+
+</body>
+</html>
