@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Transol</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="/transol-main/assets/css/login.css" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="login-container">
+    <img src="/transol-main/assets/img/logo.png" alt="Logo Transol" />
+
+    <div class="input-container">
+        <i class="fas fa-user icon"></i>
+        <input type="text" placeholder="Email" required>
+      </div>
+
+     <div class="input-container">
+  <i class="fas fa-lock icon"></i>
+  <input type="password" placeholder="Senha" required id="password">
+  <i class="fas fa-eye toggle-password" id="togglePassword"></i>
+</div>
+
+
+    <div class="remember">
+      <input type="checkbox" id="remember" />
+      <label for="remember">Lembrar de mim</label>
+    </div>
+<div>
+    <button class="login-btn">LOGIN</button>
+</div><br>
+
+    <div class="links">
+      <a href="index.html">Voltar</a><br>
+      <a href="#">Esqueceu a senha?</a>
+    </div>
+  </div>
+  <script src="assets/js/login.js"></script>
+</body>
+</html>

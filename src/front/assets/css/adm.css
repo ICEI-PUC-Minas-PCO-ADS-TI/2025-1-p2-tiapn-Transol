@@ -1,0 +1,89 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.admin-title {
+  color: #054A0B;
+  font-size: 20px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.search-bar input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 60%;
+  min-width: 250px;
+}
+
+.search-bar button {
+  padding: 10px 16px;
+  background-color: #ffc107;
+  color: #054A0B;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.search-bar button:hover {
+  background-color: #ffb300;
+}
+
+.section {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.section h3 {
+  color: #054A0B;
+  margin-bottom: 15px;
+  border-left: 5px solid #ffc107;
+  padding-left: 10px;
+}
+
+.client-list li,
+.notifications li {
+  background: #f0f0f0;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: left;
+  list-style: none;
+}
+
+.notifications li {
+  background: #fff8e1;
+  border-left: 4px solid #ffc107;
+}
