@@ -1,0 +1,51 @@
+# Arquivo de ambiente (MUITO IMPORTANTE - já estava)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# Dependências (CRÍTICO)
+node_modules/
+jspm_packages/
+
+# Arquivos de log
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Diretórios de output de build/testes (adicionar se você usar)
+# dist/
+# build/
+# coverage/
+# .nyc_output/
+
+# Arquivos do Sistema Operacional
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Arquivos de Configuração de IDEs/Editores (opcional, mas bom)
+# .idea/
+# .vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Outros
+# *.tsbuildinfo
