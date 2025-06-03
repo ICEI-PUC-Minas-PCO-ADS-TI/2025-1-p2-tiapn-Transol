@@ -3,7 +3,17 @@
 
 <span style="color:red">Pré-requisitos: <a href="02-Especificacao.md"> Especificação do projeto</a></span>
 
-Descreva aqui a metodologia de trabalho do grupo para abordar o problema. Inclua definições sobre os ambientes de trabalho utilizados pela equipe para desenvolver o projeto. Isso abrange a relação dos ambientes utilizados, a estrutura para a gestão do código-fonte, além da definição do processo e das ferramentas por meio dos quais a equipe se organiza (gestão de equipes).
+
+A metodologia de trabalho adotada pelo grupo foi baseada no framework ágil Scrum, visando promover uma organização eficiente das atividades, entregas contínuas e melhorias incrementais ao longo do desenvolvimento do projeto. Foram realizadas reuniões semanais para alinhamento, planejamento e acompanhamento das tarefas, além de revisões constantes para garantir a qualidade e a aderência às necessidades do cliente. As atividades foram organizadas por meio de um quadro Kanban, utilizando o GitHub Projects, que permitiu à equipe acompanhar o andamento de cada tarefa, priorizar demandas e visualizar os estágios de desenvolvimento.
+
+O desenvolvimento do sistema foi realizado em ambientes configurados individualmente por cada membro da equipe, além de ambientes compartilhados na nuvem para testes. As tecnologias utilizadas incluem React.js para o desenvolvimento do frontend, .NET para o backend e MySQL como banco de dados. A integração entre as diferentes partes do sistema foi feita de maneira estruturada, garantindo consistência e segurança no armazenamento e no processamento dos dados.
+
+Para a gestão do código-fonte, utilizou-se o GitHub, onde foi organizado um repositório centralizado que contempla as pastas de frontend, backend e documentação técnica. Foram adotadas boas práticas de versionamento, como a criação de branches por funcionalidade e a utilização de pull requests, possibilitando revisões de código e o controle rigoroso das alterações realizadas. Isso garantiu a rastreabilidade e a integridade do código ao longo do desenvolvimento.
+
+Na organização da equipe e na gestão do projeto, foram empregadas ferramentas como Figma, utilizado para a construção dos protótipos e definição da interface do usuário, e Google Drive, para o compartilhamento de documentos e arquivos. A comunicação da equipe foi facilitada por meio do WhatsApp, para interações rápidas e diárias, e pelo Microsoft Teams, utilizado para reuniões semanais e orientações com a professora.
+
+O processo de desenvolvimento seguiu etapas bem definidas, começando pelo levantamento de requisitos, que envolveu entrevistas com o cliente e a construção de personas e histórias de usuários. Na sequência, foi feita a modelagem dos processos atuais (AS-IS) e dos processos futuros (TO-BE), seguida pela definição dos requisitos funcionais e não funcionais. O desenvolvimento ocorreu de forma incremental, incluindo a criação dos protótipos, desenvolvimento das funcionalidades do backend e frontend, além da implementação do banco de dados. 
+
 
 ## Controle de versão
 
@@ -36,8 +46,6 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 
 ###  Divisão de papéis
 
-> Apresente a divisão de papéis entre os membros do grupo em cada Sprint. O desejável é que, em cada Sprint, o aluno assuma papéis diferentes na equipe. Siga o modelo do exemplo abaixo:
-
 #### Sprint 1
 - _Scrum master_ e relatório: Lilianne
 - Diagrama de casos de uso e contexto: Jefferson
@@ -60,9 +68,15 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 - Relatório Extensão e Diagrama de Classes: Mellyssa
 - Atualizações GitHub - Todas
 
+  #### Sprint 3
+- _Scrum master_: Ana Caroline
+- Feedback e integração com o banco: Lilianne
+- Documentação: Ana Caroline
+- Front End: Mellyssa
+- Backend: Tatiane
+
 ###  Quadro de tarefas
 
-> Apresente a divisão de tarefas entre os membros do grupo e o acompanhamento da execução, conforme o exemplo abaixo.
 
 #### Sprint 1
 
