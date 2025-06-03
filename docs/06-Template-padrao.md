@@ -21,4 +21,4 @@ A tipografia adotada é a Open Sans, conhecida por sua legibilidade e estilo mod
 
 
 
-### ** Este template deve ser utilizado em todas as telas e materiais visuais do sistema Transol, garantindo uma comunicação coesa, clara e profissional com os usuários.
+#### ** Este template deve ser utilizado em todas as telas e materiais visuais do sistema Transol, garantindo uma comunicação coesa, clara e profissional com os usuários.
