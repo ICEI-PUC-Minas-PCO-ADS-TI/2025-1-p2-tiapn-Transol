@@ -6,6 +6,11 @@
 
 Este projeto visa desenvolver um software para transporte escolar, buscando oferecer uma solução integrada e eficiente para o cadastro de usuários, gerenciamento de rotas, cobrança e comunicação entre os envolvidos no processo. Este sistema tem como objetivo facilitar a administração dessas informações, oferecendo uma plataforma que otimize o processo e ofereça mais segurança e transparência tanto para pais quanto para os gestores.
 
+
+## Contexto
+A crescente demanda por serviços de transporte escolar de qualidade, aliada à complexidade da gestão manual de dados, justifica o desenvolvimento deste projeto. Empresas do setor enfrentam desafios significativos para garantir a segurança, pontualidade e eficiência do transporte de alunos. A falta de ferramentas integradas resulta em erros no cadastro de usuários, dificuldades no controle de rotas e problemas na gestão de cobranças, gerando insatisfação para pais e motoristas, além de perdas de tempo e recursos para as empresas. A implementação de uma solução digital se faz necessária para modernizar e otimizar esses processos, oferecendo uma plataforma robusta que atenda às necessidades de um mercado em constante evolução e contribua para a segurança e mobilidade da comunidade escolar.
+
+
 ## Cliente 
 O cliente deste projeto é uma empresa de transporte escolar localizada em Contagem. Sua missão é proporcionar serviços de transporte escolar seguro, confiável e acessível, A empresa enfrenta desafios relacionados à gestão manual dos dados. A missão da empresa é garantir que o transporte dos alunos seja realizado de forma pontual e segura, O porte da empresa é médio, atendendo a escolas e famílias em uma região urbana. O impacto social é significativo, pois a empresa atende a diversas crianças e jovens, contribuindo para a mobilidade e segurança da comunidade escolar.
 
@@ -15,13 +20,13 @@ O principal problema a ser resolvido é a dificuldade em gerenciar as informaç�
 
 ## Objetivos
 
-Objetivo Geral: Desenvolver uma plataforma digital para gestão de transporte escolar, otimizando o cadastro de usuários, rotas, horários e cobranças.
+Objetivo Geral: Desenvolver uma plataforma digital integrada para a gestão de transporte escolar, otimizando o cadastro de usuários, o gerenciamento de rotas e horários, e o acompanhamento de pagamentos, visando aumentar a eficiência operacional e a satisfação dos envolvidos.
 
-Objetivos Específicos:
+Já os objetivos específicos são:
 
-1 - Criar um sistema de cadastro eficiente para pais e alunos.  
-2 - Implementar funcionalidades para controle de rotas e horários em tempo real.  
-3 - Desenvolver um módulo de cobrança e acompanhamento de pagamentos.  
+- Criar um sistema de cadastro eficiente para pais e alunos.  
+- Implementar funcionalidades para controle de rotas e horários em tempo real.  
+- Desenvolver um módulo de cobrança e acompanhamento de pagamentos.  
 
 ## Justificativa
 
