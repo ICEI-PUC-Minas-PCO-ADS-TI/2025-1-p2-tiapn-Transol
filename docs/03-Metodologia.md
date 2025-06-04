@@ -33,14 +33,10 @@ Quanto à gerência de issues, o projeto adota a seguinte convenção para etiqu
 - `enhancement`: uma funcionalidade precisa ser melhorada
 - `feature`: uma nova funcionalidade precisa ser introduzida
 
-Discuta como a configuração do projeto foi feita na ferramenta de versionamento escolhida. Exponha como a gestão de tags, merges, commits e branches é realizada. Discuta também como a gestão de issues foi feita.
+O projeto foi configurado no GitHub, utilizando um repositório organizado por pastas de frontend, backend e documentação. A gestão do código foi feita por meio de branches, onde cada funcionalidade ou correção era desenvolvida em um branch próprio, posteriormente integrado ao branch principal (main) através de pull requests, garantindo revisão antes do merge.
 
-> **Links úteis**:
-> - [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
-> - [Git e GitHub](https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA)
-> - [Comparando fluxos de trabalho](https://www.atlassian.com/br/git/tutorials/comparing-workflows)
-> - [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
-> - [The gitflow workflow - in less than 5 mins](https://www.youtube.com/watch?v=1SXpE08hvGs)
+As tags foram utilizadas para marcar versões importantes do projeto, facilitando a organização das entregas. Os commits seguiram um padrão descritivo, permitindo rastrear facilmente as alterações realizadas. As issues foram utilizadas para registrar tarefas, requisitos e problemas, contendo descrições detalhadas, critérios de aceite e checklists. Cada issue estava vinculada ao quadro Kanban do GitHub Projects, garantindo controle e acompanhamento das atividades da equipe durante todo o desenvolvimento.
+
 
 ## Planejamento do projeto
 
@@ -73,7 +69,7 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 - Feedback e integração com o banco: Lilianne
 - Documentação: Ana Caroline
 - Front End: Mellyssa
-- Backend: Tatiane
+- Back End: Tatiane
 
 ###  Quadro de tarefas
 
@@ -92,7 +88,7 @@ Atualizado em: 12/03/2025
 
 #### Sprint 2
 
-Atualizado em: 21/04/2024
+Atualizado em: 21/04/2025
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
@@ -104,7 +100,7 @@ Atualizado em: 21/04/2024
 
 #### Sprint 3
 
-Atualizado em: 08/05/2024
+Atualizado em: 08/05/2025
 
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
@@ -115,6 +111,20 @@ Atualizado em: 08/05/2024
 | Tatiane       | Projeto de banco de dados |  12/04/2025    | 09/05/2025 | ✔️    | 09/05/2025      |
 
 
+#### Sprint 4
+
+Atualizado em: 05/06/2025
+
+
+| Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
+| :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
+| Ana Caroline       |  Cadastro de Clientes e Notificações/UI/UX  | 10/05/2025    |04/06/2025 | ✔️    | 04/06/2025      |
+| Lilianne           | Fluxo de Autenticação e Perfil do Cliente  | 10/05/2025    |04/06/2025 | ✔️    | 04/06/2025      |
+| Mellyssa         | Gerenciamento de Clientes pelo Administrador  |  10/05/2025    |04/06/2025 | ✔️    | 04/06/2025      |
+| Tatiane       | Infraestrutura de Banco de Dados e Modelos Core |  10/05/2025    |04/06/2025 | ✔️    | 04/06/2025      |
+
+
+
 Legenda:
 - ✔️: terminado
 - 📝: em execução
@@ -122,21 +132,14 @@ Legenda:
 - ❌: não iniciado
 
 
-> **Links úteis**:
-> - [11 passos essenciais para implantar Scrum no seu projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
-> - [Os papéis do Scrum e a verdade sobre cargos nessa técnica](https://www.atlassian.com/br/agile/scrum/roles)
+
 
 ### Processo
+A equipe adotou a metodologia ágil Scrum, organizando o trabalho em sprints com duração média de uma a duas semanas. Foi utilizado o GitHub Projects como quadro Kanban, com as colunas Backlog, A Fazer, Em Execução e Feito, permitindo o acompanhamento do andamento do projeto e do status das tarefas. As atividades foram descritas em issues, vinculadas a branches específicos para garantir o controle de versão. Reuniões semanais foram realizadas para planejamento, acompanhamento e retrospectiva, proporcionando organização, visibilidade e controle eficiente do desenvolvimento, além de melhorar a colaboração entre os integrantes.
 
-Coloque informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo deverá fazer uso do recurso de gerenciamento de projeto oferecido pelo GitHub, que permite acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
- 
-> **Links úteis**:
-> - [Planejamento e gestão ágil de projetos](https://pucminas.instructure.com/courses/87878/pages/unidade-2-tema-2-utilizacao-de-ferramentas-para-controle-de-versoes-de-software)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards)
-> - [Project management, made simple](https://github.com/features/project-management/)
-> - [Como criar backlogs no GitHub](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
-> - [Tutorial slack](https://slack.com/intl/en-br/)
+
+<img src="/docs/images/backlog TRANSOL.png" alt="GitHub Projects Transol" width="60%">
+
 
 ## Relação de ambientes de trabalho
 
@@ -144,9 +147,8 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas. Tod
 
 ### Ferramentas
 
-Liste todas as ferramentas que foram empregadas no projeto, justificando a escolha delas, sempre que possível.
 
-Exemplo: os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
+Os artefatos do projeto foram desenvolvidos utilizando diferentes plataformas, e a seguir é apresentada uma tabela que relaciona cada ambiente utilizado com sua respectiva finalidade no desenvolvimento do sistema.
 
 | Ambiente                            | Plataforma                         | Link de acesso                         |
 |-------------------------------------|------------------------------------|----------------------------------------|
@@ -154,4 +156,5 @@ Exemplo: os artefatos do projeto são desenvolvidos a partir de diversas platafo
 | Documentos do projeto               | GitHub                             | [Documentos do projeto Transol  ](https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2025-1-p2-tiapn-Transol/tree/main/docs)                            |
 | Projeto de interface                | Figma                              | [Projeto de interface Transol](https://www.figma.com/)                            |
 | Gerenciamento do projeto            | GitHub Projects                    |[ Gerenciamento do projeto Transol ](https://github.com/orgs/ICEI-PUC-Minas-PCO-ADS-TI/projects/33)                          |
+| Desenvolvimento do projeto | Visual Studio Code | <a href="src/README.md">Código</a>                         |
 | Hospedagem                          | Vercel                             | http://....                            |
