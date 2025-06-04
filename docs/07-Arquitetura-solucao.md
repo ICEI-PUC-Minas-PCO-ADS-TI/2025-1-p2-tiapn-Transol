@@ -14,7 +14,7 @@ A plataforma será composta por uma aplicação web com frontend e backend separ
 - Histórico de transporte por aluno;
 - Integração com métodos de pagamento.
 <div align="center">
-    <img src="./images/ArquiteturaDaSolução.png" alt="Modelo ER" width="30%">
+    <img src="./images/ArquiteturaSolucaoTransol.png" alt="Arquiteura da Solução" width="60%">
 </div>
 
 ## Diagrama de classes
