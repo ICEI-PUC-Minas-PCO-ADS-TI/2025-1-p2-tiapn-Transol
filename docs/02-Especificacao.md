@@ -105,8 +105,8 @@ O projeto está restrito aos itens apresentados na tabela a seguir.
 
 
 ## Diagrama de casos de uso
-![UML Diagrama de caso de uso](https://github.com/user-attachments/assets/6640e1fe-90b1-49c1-a55a-2561928dd3c5)
 
+ <img src="./images/Diagrama_CSU_TRANSOL.png" alt="UML Diagrama de caso de uso" width="80%">
 
  Principais casos de uso:
    [Administrador, Cliente, Motorista] → Realizar login
