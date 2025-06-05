@@ -37,49 +37,35 @@ Segue o protótipo interativo feito no Figma
 
 ## Wireframes
 
-### Home Page
-<img src="./images/home.png" alt="Home Page" width="30%">
+### Home, Login e Contato
 
-### Login
-<img src="./images/login.png" alt="Login" width="30%">
+| Home | Login | Contato | 
+|------|-------|---------|
+| <img src="./images/home.png" alt="Home Page" width="200"/> | <img src="./images/login.png" alt="Login" width="165"/> | <img src="./images/contato.png" alt="Contato" width="160"/> |
 
-### Contato
-<img src="./images/contato.png" alt="contato" width="30%">
+---
 
-### ADM - Main Page
-<img src="./images/ADM-main.png" alt="ADM Main" width="30%">
+###  ADM - Main - ADM - Busca, Editar Cliente, Editar Motorista e Editar Veículo
 
-### ADM - Busca
-<img src="./images/ADM-buscar.png" alt="Buscar" width="30%">
+| ADM - Main | Busca | Editar Cliente | Editar Motorista | Editar Veículo |
+|-------|----------------|------------------|----------------|----------------|
+| <img src="./images/ADM-main.png" alt="ADM Main" width="200"/>| <img src="./images/ADM-buscar.png" alt="ADM Buscar" width="180"/> | <img src="./images/ADM-editar-cliente.png" alt="ADM Editar Cliente" width="180"/> | <img src="./images/ADM-Editar-motorista.png" alt="ADM Editar Motorista" width="180"/> | <img src="./images/ADM-Editar-Veiculo.png" alt="ADM Editar Veículo" width="180"/> |
 
-### ADM - Editar Cliente
-<img src="./images/ADM-editar-cliente.png" alt="ADM Editar Cliente" width="30%">
+---
 
-### ADM - Editar Motorista
-<img src="./images/ADM-Editar-motorista.png" alt="ADM Editar Motorista" width="30%">
+### ADM - Criar Rota, Cliente Perfil 1, Cliente Perfil 2 e Adicionar Comprovante
 
-### ADM - Editar Veículo
-<img src="./images/ADM-Editar-Veiculo.png" alt="ADM Editar Veículo" width="30%">
+| Criar Rota | Cliente Perfil 1 | Cliente Perfil 2 | Adicionar Comprovante |
+|-------------|-------------------|------------------|------------------------|
+| <img src="./images/ADM-Criar-Rota.png" alt="ADM Criar Rota" width="180"/> | <img src="./images/Cliente-Main.png" alt="Cliente Main" width="180"/> | <img src="./images/Cliente-Main-2.png" alt="Cliente Main 2" width="180"/> | <img src="./images/Cliente-Inserir-Recibo.png" alt="Cliente Adicionar Comprovante" width="180"/> |
 
-### ADM - Criar Rota
-<img src="./images/ADM-Criar-Rota.png" alt="ADM Criar Rota" width="30%">
+---
 
-### Cliente/ADM - Perfil
-<img src="./images/Cliente-Main.png" alt="Cliente Main" width="30%">
-<img src="./images/Cliente-Main-2.png" alt="Cliente Main" width="30%">
+### Motorista/ADM - Main, Visualizar Rota, Dados do Veículo
 
-### Cliente - Adicionar Comprovante
-<img src="./images/Cliente-Inserir-Recibo.png" alt="Cliente Adicionar Comprovante" width="30%">
-
-
-### Motorista/ADM - Main Page
-<img src="./images/Motorista-Main.png" alt="Motorista - Main Page" width="30%">
-
-### Motorista/ADM - Visualizar Rota
-<img src="./images/Visualizar-Rota.png" alt="Motorista - Visualizar Rota" width="30%">
-
-### Motorista/ADM - Dados do Veículo
-<img src="./images/Visualizar-Veiculo.png" alt="Motorista - Dados do Veículo" width="30%">
+| Motorista Main | Visualizar Rota | Dados do Veículo |  
+|----------------|------------------|-------------------|
+| <img src="./images/Motorista-Main.png" alt="Motorista Main" width="180"/> | <img src="./images/Visualizar-Rota.png" alt="Visualizar Rota" width="180"/> | <img src="./images/Visualizar-Veiculo.png" alt="Dados do Veículo" width="180"/> |  
 
 
 
