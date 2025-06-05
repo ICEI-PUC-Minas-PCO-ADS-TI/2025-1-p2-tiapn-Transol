@@ -17,6 +17,8 @@ Esse novo processo ajuda o serviço de transporte escolar a crescer, atendendo m
 
 
 
+<img src="./images/planejamento-viagens-asis.png" alt="Planejamento AS IS" width="50%">
+
 
 ![Contratação de transporte escolar-TOBE](../images/ContrataçãoTOBE.png "Modelo BPMN do Processo 1.") 
 
