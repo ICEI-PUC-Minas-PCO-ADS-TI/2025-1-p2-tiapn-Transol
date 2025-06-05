@@ -60,31 +60,81 @@ _* **Link** - campo que armazena uma URL_
 
 _* **Tabela** - campo formado por uma matriz de valores_
 
-**Nome da atividade 1**
+## Processo 2 – Planejamento de Viagens
 
-| **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
-| ---             | ---              | ---            | ---               |
-| [Nome do campo] | [tipo de dados]  |                |                   |
-| ***Exemplo:***  |                  |                |                   |
-| login           | Caixa de Texto   | formato de e-mail |                |
-| senha           | Caixa de Texto   | mínimo de 8 caracteres |           |
+### Atividade 1 – Preenchimento do Formulário de Viagem
 
-| **Comandos**         |  **Destino**                   | **Tipo** |
-| ---                  | ---                            | ---               |
-| [Nome do botão/link] | Atividade/processo de destino  | (default/cancel/  ) |
-| ***Exemplo:***       |                                |                   |
-| entrar               | Fim do Processo 1              | default           |
-| cadastrar            | Início do proceso de cadastro  |                   |
+| **Campo**             | **Tipo**         | **Restrições**                             | **Valor default** |
+|-----------------------|------------------|--------------------------------------------|-------------------|
+| Nome do responsável   | Caixa de Texto   | Obrigatório                                | —                 |
+| CPF                   | Caixa de Texto   | Formato CPF (000.000.000-00)               | —                 |
+| Telefone              | Caixa de Texto   | Obrigatório – Formato (XX) XXXXX-XXXX      | —                 |
+| Local de partida      | Caixa de Texto   | Obrigatório                                | —                 |
+| Destino               | Caixa de Texto   | Obrigatório                                | —                 |
+| Data da viagem        | Data             | Obrigatório                                | —                 |
+| Hora da viagem        | Hora             | Obrigatório                                | —                 |
+| Quantidade de alunos  | Número           | Obrigatório                                | —                 |
+| Observações           | Área de Texto    | Opcional                                   | —                 |
 
+| **Comandos**           | **Destino**                     | **Tipo**  |
+|------------------------|----------------------------------|-----------|
+| Enviar formulário      | Verificar disponibilidade       | default   |
+| Cancelar               | Fim do processo                 | cancel    |
 
-**Nome da atividade 2**
+---
 
-| **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
-| ---             | ---              | ---            | ---               |
-| [Nome do campo] | [tipo de dados]  |                |                   |
-|                 |                  |                |                   |
+### Atividade 2 – Verificar Disponibilidade de Veículo e Motorista
 
-| **Comandos**         |  **Destino**                   | **Tipo**          |
-| ---                  | ---                            | ---               |
-| [Nome do botão/link] | Atividade/processo de destino  | (default/cancel/  ) |
-|                      |                                |                   |
+| **Campo**             | **Tipo**         | **Restrições** | **Valor default** |
+|-----------------------|------------------|----------------|-------------------|
+| Data da viagem        | Data             | —              | —                 |
+| Hora da viagem        | Hora             | —              | —                 |
+| Local de partida      | Caixa de Texto   | —              | —                 |
+| Destino               | Caixa de Texto   | —              | —                 |
+
+| **Comandos**             | **Destino**                    | **Tipo**  |
+|--------------------------|---------------------------------|-----------|
+| Recursos disponíveis     | Gerar orçamento                | default   |
+| Recursos indisponíveis   | Fim do processo                | cancel    |
+
+---
+
+### Atividade 3 – Gerar Orçamento
+
+| **Campo**         | **Tipo** | **Restrições** | **Valor default**       |
+|-------------------|----------|----------------|-------------------------|
+| Valor total       | Número   | Gerado automático | Calculado pelo sistema |
+
+| **Comandos**       | **Destino**             | **Tipo**  |
+|--------------------|--------------------------|-----------|
+| Aceitar orçamento  | Enviar dados para PIX    | default   |
+| Recusar orçamento  | Fim do processo          | cancel    |
+
+---
+
+### Atividade 4 – Pagamento
+
+| **Campo**          | **Tipo** | **Restrições** | **Valor default**       |
+|--------------------|----------|----------------|-------------------------|
+| Chave PIX          | Link     | —              | Gerado pelo sistema     |
+
+| **Comandos**         | **Destino**                        | **Tipo**  |
+|----------------------|-------------------------------------|-----------|
+| Pagamento efetuado   | Organização da viagem              | default   |
+| Pagamento não identificado | Atendimento manual          | cancel    |
+
+---
+
+### Atividade 5 – Organização da Viagem
+
+| **Campo**             | **Tipo**        | **Restrições**                             | **Valor default**           |
+|-----------------------|-----------------|--------------------------------------------|-----------------------------|
+| Rota atribuída        | Caixa de Texto  | Gerado automático                          | —                           |
+| Veículo designado     | Caixa de Texto  | Gerado automático                          | —                           |
+| Motorista responsável | Caixa de Texto  | Gerado automático                          | —                           |
+| Horário da viagem     | Data e Hora     | Gerado automático                          | —                           |
+
+| **Comandos**         | **Destino**           | **Tipo**  |
+|----------------------|------------------------|-----------|
+| Finalizar planejamento | Fim do processo      | default   |
+| Cancelar              | Fim do processo       | cancel    |
