@@ -15,6 +15,8 @@ Depois de analisar o processo atual (AS-IS), foi possível ver que ele é muito 
 ### Alinhamento com os objetivos do negócio
 Esse novo processo ajuda o serviço de transporte escolar a crescer, atendendo mais pessoas com mais agilidade e organização. Também melhora a comunicação e a experiência de quem contrata.
 
+![image](https://github.com/user-attachments/assets/82d3dc67-5c63-4532-9169-bcf27aa8f218)
+![image](https://github.com/user-attachments/assets/6d367e26-ff6e-48d8-a28b-13e6038d15a4)
 
 
 <img src="./images/planejamento-viagens-asis.png" alt="Planejamento AS IS" width="50%">
