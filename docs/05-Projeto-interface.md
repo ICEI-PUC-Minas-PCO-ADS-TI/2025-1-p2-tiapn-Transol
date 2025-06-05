@@ -13,11 +13,21 @@ O fluxo do usuário se divide em três, a partir de tipos de logins diferentes. 
 
 
 ### Diagrama de fluxo
+Este diagrama de fluxo representa o funcionamento do sistema da Transol, mostrando os caminhos que os diferentes perfis de usuários percorrem. Ele começa na tela de login, que direciona para três perfis: Cliente, Motorista e Administrador.
 
+- O Cliente pode visualizar e atualizar dados, enviar comprovantes de pagamento e preencher formulários.
+- O Motorista acessa suas rotas, visualiza veículos, adiciona quilometragem e registros de manutenção.
+- O Administrador gerencia cadastros de clientes e motoristas, edita dados, cria rotas e atribui veículos.
+
+Todos os fluxos convergem para o encerramento dos processos, representando a conclusão das atividades no sistema.
 
 ![Diagrama de fluxo Transol](images/Diagrama_de_fluxo_do_usuario_Transol.png)
 
 ## Link para o protótipo interativo 
+
+Segue o protótipo interativo feito no Figma
+
+
 > - [protótipo interativo Transol](https://www.figma.com/proto/xlIznOchEOCRdWxV29P7ub/Transol?page-id=0%3A1&node-id=123-84&p=f&viewport=413%2C1042%2C0.25&t=ewmA8ZE3FgucOyes-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2)
 >
 
