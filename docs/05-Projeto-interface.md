@@ -41,7 +41,7 @@ Segue o protótipo interativo feito no Figma
 
 | Home | Login | Contato | 
 |------|-------|---------|
-| <img src="./images/home.png" alt="Home Page" width="200"/> | <img src="./images/login.png" alt="Login" width="165"/> | <img src="./images/contato.png" alt="Contato" width="160"/> |
+| <img src="./images/home.png" alt="Home Page" width="205"/> | <img src="./images/login.png" alt="Login" width="165"/> | <img src="./images/contato.png" alt="Contato" width="160"/> |
 
 ---
 
@@ -49,7 +49,7 @@ Segue o protótipo interativo feito no Figma
 
 | ADM - Main | Busca | Editar Cliente | Editar Motorista | Editar Veículo |
 |-------|----------------|------------------|----------------|----------------|
-| <img src="./images/ADM-main.png" alt="ADM Main" width="200"/>| <img src="./images/ADM-buscar.png" alt="ADM Buscar" width="180"/> | <img src="./images/ADM-editar-cliente.png" alt="ADM Editar Cliente" width="180"/> | <img src="./images/ADM-Editar-motorista.png" alt="ADM Editar Motorista" width="180"/> | <img src="./images/ADM-Editar-Veiculo.png" alt="ADM Editar Veículo" width="180"/> |
+| <img src="./images/ADM-main.png" alt="ADM Main" width="225"/>| <img src="./images/ADM-buscar.png" alt="ADM Buscar" width="215"/> | <img src="./images/ADM-editar-cliente.png" alt="ADM Editar Cliente" width="190"/> | <img src="./images/ADM-Editar-motorista.png" alt="ADM Editar Motorista" width="205"/> | <img src="./images/ADM-Editar-Veiculo.png" alt="ADM Editar Veículo" width="200"/> |
 
 ---
 
@@ -57,7 +57,7 @@ Segue o protótipo interativo feito no Figma
 
 | Criar Rota | Cliente Perfil 1 | Cliente Perfil 2 | Adicionar Comprovante |
 |-------------|-------------------|------------------|------------------------|
-| <img src="./images/ADM-Criar-Rota.png" alt="ADM Criar Rota" width="180"/> | <img src="./images/Cliente-Main.png" alt="Cliente Main" width="180"/> | <img src="./images/Cliente-Main-2.png" alt="Cliente Main 2" width="180"/> | <img src="./images/Cliente-Inserir-Recibo.png" alt="Cliente Adicionar Comprovante" width="180"/> |
+| <img src="./images/ADM-Criar-Rota.png" alt="ADM Criar Rota" width="190"/> | <img src="./images/Cliente-Main.png" alt="Cliente Main" width="165"/> | <img src="./images/Cliente-Main-2.png" alt="Cliente Main 2" width="153"/> | <img src="./images/Cliente-Inserir-Recibo.png" alt="Cliente Adicionar Comprovante" width="170"/> |
 
 ---
 
@@ -65,7 +65,7 @@ Segue o protótipo interativo feito no Figma
 
 | Motorista Main | Visualizar Rota | Dados do Veículo |  
 |----------------|------------------|-------------------|
-| <img src="./images/Motorista-Main.png" alt="Motorista Main" width="180"/> | <img src="./images/Visualizar-Rota.png" alt="Visualizar Rota" width="180"/> | <img src="./images/Visualizar-Veiculo.png" alt="Dados do Veículo" width="180"/> |  
+| <img src="./images/Motorista-Main.png" alt="Motorista Main" width="175"/> | <img src="./images/Visualizar-Rota.png" alt="Visualizar Rota" width="215"/> | <img src="./images/Visualizar-Veiculo.png" alt="Dados do Veículo" width="215"/> |  
 
 
 
