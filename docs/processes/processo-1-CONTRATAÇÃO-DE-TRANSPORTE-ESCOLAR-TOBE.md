@@ -15,16 +15,10 @@ Depois de analisar o processo atual (AS-IS), foi possível ver que ele é muito 
 ### Alinhamento com os objetivos do negócio
 Esse novo processo ajuda o serviço de transporte escolar a crescer, atendendo mais pessoas com mais agilidade e organização. Também melhora a comunicação e a experiência de quem contrata.
 
-![image](https://github.com/user-attachments/assets/82d3dc67-5c63-4532-9169-bcf27aa8f218)
+
 ![image](https://github.com/user-attachments/assets/6d367e26-ff6e-48d8-a28b-13e6038d15a4)
-![image](https://github.com/user-attachments/assets/8f24d612-bc47-40b4-af41-1ea601b8ca35)
-![image](https://github.com/user-attachments/assets/68b2efea-daff-44ac-bc29-58dfafce17d8)
 
 
-<img src="./images/planejamento-viagens-asis.png" alt="Planejamento AS IS" width="50%">
-
-
-![Contratação de transporte escolar-TOBE](../images/ContrataçãoTOBE.png "Modelo BPMN do Processo 1.") 
 
 #### Detalhamento das atividades
 
@@ -58,31 +52,61 @@ _* **Link** - campo que armazena uma URL_
 _* **Tabela** - campo formado por uma matriz de valores_
 
 
-**Nome da atividade 1**
+## Processo 1 – Contratação de Transporte Escolar
 
-| **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
-| ---             | ---              | ---            | ---               |
-| [Nome do campo] | [tipo de dados]  |                |                   |
-| ***Exemplo:***  |                  |                |                   |
-| login           | Caixa de Texto   | formato de e-mail |                |
-| senha           | Caixa de Texto   | mínimo de 8 caracteres |           |
+### Atividade 1 – Preenchimento do Formulário de Contratação
+| Campo               | Tipo           | Restrições                          | Valor default |
+| ------------------- | -------------- | ------------------------------------ | --------------|
+| Nome do responsável | Caixa de Texto | Obrigatório                         | —             |
+| CPF                 | Caixa de Texto | Formato CPF (000.000.000-00)        | —             |
+| Telefone            | Caixa de Texto | Obrigatório – Formato (XX) XXXXX-XXXX | —           |
+| E-mail              | Caixa de Texto | Formato de e-mail                   | —             |
+| Endereço            | Área de Texto  | Obrigatório                         | —             |
+| Nome do aluno       | Caixa de Texto | Obrigatório                         | —             |
+| Escola              | Seleção única  | Lista de escolas cadastradas        | —             |
+| Turno               | Seleção única  | Manhã / Tarde / Integral            | —             |
+| Observações         | Área de Texto  | Opcional                            | —             |
 
-| **Comandos**         |  **Destino**                   | **Tipo** |
-| ---                  | ---                            | ---               |
-| [Nome do botão/link] | Atividade/processo de destino  | (default/cancel/  ) |
-| ***Exemplo:***       |                                |                   |
-| entrar               | Fim do Processo 1              | default           |
-| cadastrar            | Início do proceso de cadastro  |                   |
+| Comandos          | Destino                        | Tipo    |
+| ----------------- | ------------------------------- | ------- |
+| Enviar formulário | Verificar disponibilidade e preço | default |
+| Cancelar          | Fim do processo                 | cancel  |
 
+### Atividade 2 – Verificar Disponibilidade e Gerar Contrato
+| Campo                    | Tipo           | Restrições                         | Valor default |
+| ------------------------ | -------------- | ----------------------------------- | --------------|
+| Status de disponibilidade| Seleção única  | Disponível / Indisponível          | —             |
+| Valor da mensalidade     | Número         | Somente números positivos          | —             |
+| Link para contrato gerado| Link           | Gerado automaticamente             | —             |
+| Chave PIX                | Caixa de Texto | Obrigatório                        | —             |
+| Prazo para pagamento     | Data           | Data limite                        | —             |
 
-**Nome da atividade 2**
+| Comandos                  | Destino                           | Tipo    |
+| ------------------------- | ---------------------------------- | ------- |
+| Enviar contrato e PIX     | Aguardar pagamento                | default |
+| Voltar para cadastro      | Preenchimento do Formulário       | cancel  |
 
-| **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
-| ---             | ---              | ---            | ---               |
-| [Nome do campo] | [tipo de dados]  |                |                   |
-|                 |                  |                |                   |
+### Atividade 3 – Validação do Pagamento
+| Campo                     | Tipo           | Restrições                          | Valor default |
+| ------------------------- | -------------- | ------------------------------------ | --------------|
+| Comprovante de pagamento  | Arquivo        | Obrigatório se PIX não identificado | —             |
+| Status do pagamento       | Seleção única  | Pago / Não pago / Aguardando        | —             |
+| Data de confirmação       | Data e Hora    | Gerado automaticamente              | —             |
 
-| **Comandos**         |  **Destino**                   | **Tipo**          |
-| ---                  | ---                            | ---               |
-| [Nome do botão/link] | Atividade/processo de destino  | (default/cancel/  ) |
-|                      |                                |                   |
+| Comandos                   | Destino                             | Tipo    |
+| -------------------------- | ------------------------------------ | ------- |
+| Confirmar pagamento        | Incluir aluno na rota               | default |
+| Reenviar PIX               | Verificar disponibilidade e gerar contrato | cancel |
+
+### Atividade 4 – Inclusão na Rota
+| Campo                      | Tipo           | Restrições                            | Valor default |
+| -------------------------- | -------------- | -------------------------------------- | --------------|
+| Rota atribuída             | Seleção única  | Obrigatório – Selecionar da lista de rotas | —          |
+| Horário de embarque        | Hora           | Obrigatório                            | —             |
+| Motorista responsável      | Caixa de Texto | Obrigatório                            | —             |
+| Status                     | Seleção única  | Ativo / Pendente / Cancelado           | Ativo         |
+
+| Comandos                   | Destino         | Tipo    |
+| -------------------------- | ----------------| ------- |
+| Finalizar contratação      | Fim do Processo | default |
+| Cancelar contratação       | Fim do Processo | cancel  |
