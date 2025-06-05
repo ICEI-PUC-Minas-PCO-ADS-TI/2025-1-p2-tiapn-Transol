@@ -25,6 +25,14 @@ Eu, Thiago, como supervisor de operações,|preciso analisar indicadores de dese
 |Eu, Carlos, coordenador de vendas, |quero comunicar mudanças de última hora nas rotas de ônibus | para ajustar rapidamente a logística de transporte e informar os participantes.  |
 |Eu, Marcos, diretor de escola,|quero acompanhar em tempo real a localização dos ônibus escolares|para garantir a segurança dos alunos e planejar melhor os horários de entrada e saída.|
 |Eu, Mariana, professora,|quero ter um canal de comunicação com os pais sobre o transporte escolar| para informar sobre alterações nos horários e garantir que os pais estejam cientes.
+| Eu, Fernanda, como avó responsável pelo neto | quero acompanhar em tempo real a localização do transporte | para ter segurança de que meu neto está no trajeto correto e saber o horário de chegada em casa. |
+| Eu, Ricardo, como cliente de fretamento ocasional | preciso solicitar uma viagem diretamente pelo sistema | para ter comodidade na contratação sem precisar de ligações ou mensagens informais. |
+| Eu, Vanessa, como mãe de dois alunos | quero cadastrar ambos os filhos no mesmo contrato | para facilitar o controle dos pagamentos e da logística familiar. |
+| Eu, Cláudia, como tia responsável eventualmente pelos sobrinhos | preciso ser notificada sobre atrasos ou alterações na rota | para garantir que estarei no local certo na hora de recebê-los ou entregá-los. |
+| Eu, Roberto, como cliente de fretamento para eventos | quero gerar um orçamento online de uma viagem | para avaliar rapidamente o custo sem precisar entrar em contato manualmente com a administração. |
+| Eu, Juliana, como mãe | quero ter acesso a um chat com o motorista durante o trajeto | para esclarecer dúvidas ou comunicar situações específicas, como mudança no ponto de embarque. |
+| Eu, Felipe, como pai | quero visualizar o histórico de pagamentos realizados | para manter meu controle financeiro organizado e evitar esquecimentos de mensalidades. |
+| Eu, André, como motorista | quero visualizar facilmente a lista dos alunos de cada rota | para garantir que todos foram embarcados e desembarcados corretamente, evitando esquecimentos ou erros. |
 
 
 
