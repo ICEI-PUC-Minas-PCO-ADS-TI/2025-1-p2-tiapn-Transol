@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trocar Senha - Transol</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <!-- CORREÇÃO: 'xintegrity' para 'integrity' no link do Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" xintegrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKx3KxQ2jGg/sL/MhYF4nB0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Pode reutilizar o CSS do login ou criar um novo para trocar-senha.css -->
+  <style>
+    /* Estilos básicos para o container e elementos, similar ao login */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .change-password-container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 100%;
+      max-width: 450px; /* Um pouco mais largo para o texto de instrução */
+      box-sizing: border-box;
+    }
+    .change-password-container img {
+      width: 120px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+    h1 {
+      color: #ff9800;
+      margin-bottom: 15px;
+      font-size: 1.8em;
+    }
+    p {
+      color: #555;
+      font-size: 0.9em;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+    .input-container {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    .input-container .icon {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #aaa;
+    }
+    .input-container input {
+      width: calc(100% - 60px);
+      padding: 12px 15px 12px 45px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1em;
+      box-sizing: border-box;
+      /* ADIÇÕES PARA GARANTIR VISIBILIDADE DO TEXTO E PLACEHOLDER */
+      color: #333; /* Cor do texto digitado */
+      -webkit-text-security: disc; /* Garante as "bolinhas" no Chrome/Safari */
+    }
+    /* Estilo para quando o tipo do input é 'text' (para mostrar a senha) */
+    .input-container input[type="text"] {
+      -webkit-text-security: none;
+    }
+    .toggle-password {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #aaa;
+    }
+    .change-btn {
+      background: #ff9800;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.1em;
+      font-weight: bold;
+      width: 100%;
+      transition: background 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .change-btn:hover {
+      background: #e68900;
+      transform: translateY(-2px);
+    }
+    .message-box {
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 8px;
+        font-weight: bold;
+        text-align: center;
+        display: none;
+        font-size: 0.9em;
+    }
+    .message-box.success {
+        background-color: #d4edda;
+        color: #155724;
+        border-color: #c3e6cb;
+    }
+    .message-box.error {
+        background-color: #f8d7da;
+        color: #721c24;
+        border-color: #f5c6cb;
+    }
+    /* --- ADIÇÕES PARA DEBUG DE INPUTS (Mantenha para garantir) --- */
+    input[type="password"]::placeholder {
+        color: #888 !important; /* Força a cor do placeholder para ser visível */
+        opacity: 1 !important; /* Garante que não está transparente */
+    }
+    input[type="password"] {
+        pointer-events: auto !important; /* Garante que o input é clicável/digitável */
+        opacity: 1 !important; /* Garante que não está oculto */
+        z-index: auto !important; /* Garante que não está por baixo de outros elementos */
+    }
+    /* --- FIM DAS ADIÇÕES --- */
+  </style>
+</head>
+<body>
+
+  <div class="change-password-container">
+    <img src="assets/img/logo.png" alt="Logo Transol" onerror="this.onerror=null;this.src='https://placehold.co/120x120/ff9800/ffffff?text=LOGO';">
+
+    <h1>Trocar Senha</h1>
+    <p>É seu primeiro acesso. Por favor, defina uma nova senha segura.</p>
+    <p>A nova senha deve conter:</p>
+    <ul>
+        <li><p>Pelo menos uma letra maiúscula.</p></li>
+        <li><p>Pelo menos um caractere especial (!@#$%...).</p></li>
+        <li><p>Mínimo de 8 caracteres.</p></li>
+        <li><p>Não pode conter seu CPF.</p></li>
+    </ul>
+
+    <div id="messageBox" class="message-box"></div>
+
+    <form id="changePasswordForm">
+      <div class="input-container">
+        <i class="fas fa-lock icon"></i>
+        <input type="password" placeholder="Senha Antiga" id="oldPasswordInput" required>
+        <i class="fas fa-eye toggle-password" id="toggleOldPassword"></i>
+      </div>
+
+      <div class="input-container">
+        <i class="fas fa-lock icon"></i>
+        <input type="password" placeholder="Nova Senha" id="newPasswordInput" required>
+        <i class="fas fa-eye toggle-password" id="toggleNewPassword"></i>
+      </div>
+
+      <div class="input-container">
+        <i class="fas fa-lock icon"></i>
+        <input type="password" placeholder="Confirmar Nova Senha" id="confirmNewPasswordInput" required>
+        <i class="fas fa-eye toggle-password" id="toggleConfirmNewPassword"></i>
+      </div>
+      
+      <div>
+        <button type="submit" class="change-btn">Trocar Senha</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="assets/js/trocar-senha.js"></script>
+</body>
+</html>

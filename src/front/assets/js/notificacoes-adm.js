@@ -1,28 +1,48 @@
+// src/front/assets/js/notificacoes-adm.js
+
 import { collection, onSnapshot, orderBy, query } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 // Certifique-se de que 'db' foi inicializado globalmente no HTML ou passe-o como argumento.
 // Se você seguiu o passo anterior, 'window.db' estará disponível.
-const db = window.db;
+const db = window.db; // Acessa o objeto db inicializado no HTML
 
 const notificacoesUl = document.getElementById('notificacoes');
+
+// --- ADIÇÃO PARA DEBUG ---
+console.log('DEBUG (notificacoes-adm.js): Script iniciado.');
+console.log('DEBUG (notificacoes-adm.js): Elemento notificacoesUl encontrado:', !!notificacoesUl);
+console.log('DEBUG (notificacoes-adm.js): Objeto db do Firebase encontrado:', !!db);
+// --- FIM DA ADIÇÃO ---
 
 if (notificacoesUl && db) {
   // Cria uma query para buscar orçamentos, ordenados pela data de envio
   const q = query(collection(db, "orcamentos"), orderBy("dataEnvio", "desc"));
 
-  // onSnapshot cria um listener em tempo real:
-  // toda vez que um orçamento é adicionado, modificado ou removido,
-  // a função callback é executada e a lista é atualizada automaticamente.
+  // --- ADIÇÃO PARA DEBUG ---
+  console.log('DEBUG (notificacoes-adm.js): Listener onSnapshot configurado para a coleção "orcamentos".');
+  // --- FIM DA ADIÇÃO ---
+
   onSnapshot(q, (snapshot) => {
+    // --- ADIÇÃO PARA DEBUG ---
+    console.log('DEBUG (notificacoes-adm.js): onSnapshot callback acionado. Número de documentos:', snapshot.size);
+    // --- FIM DA ADIÇÃO ---
+
     notificacoesUl.innerHTML = ''; // Limpa a lista antes de adicionar os novos itens
 
     if (snapshot.empty) {
-      notificacoesUl.innerHTML = '<li class="notification-item">Nenhum orçamento pendente no momento.</li>';
+      // --- ADIÇÃO PARA DEBUG ---
+      console.log('DEBUG (notificacoes-adm.js): Nenhum documento encontrado na coleção "orcamentos".');
+      // --- FIM DA ADIÇÃO ---
+      notificacoesUl.innerHTML = '<li class="notification-item">Nenhuma notificação de orçamento pendente no momento.</li>';
       return;
     }
 
     snapshot.forEach((doc) => {
       const orcamento = doc.data();
+      // --- ADIÇÃO PARA DEBUG ---
+      console.log('DEBUG (notificacoes-adm.js): Documento de orçamento processado:', orcamento);
+      // --- FIM DA ADIÇÃO ---
+
       const li = document.createElement('li');
       li.classList.add('notification-item'); // Adiciona uma classe para estilização
 

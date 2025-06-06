@@ -18,7 +18,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="/transol-main/assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
 
 </head>
 
@@ -40,6 +40,7 @@
 <div>
     <a href="#contact" class="get-started-btn scrollto contato-btn">Contato</a>
     <a href="login.html" class="get-started-btn scrollto login-btn">Login</a>
+    
 </div>
 
     </div>
@@ -361,77 +362,87 @@
 
       </div>
     </section>
-    <div class="col-lg-8 mt-5 mt-lg-0">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form" id="orcamentoForm">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="nome" class="form-control" id="nome" placeholder="Seu Nome" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Seu Email" required>
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Seu Telefone (WhatsApp)" required>
-              </div>
-
-              <div class="form-group mt-3">
-                <label for="tipoOrcamento">Tipo de Orçamento:</label>
-                <select name="tipoOrcamento" class="form-control" id="tipoOrcamento" required>
-                  <option value="">Selecione o tipo de orçamento</option>
-                  <option value="escolar">Transporte Escolar</option>
-                  <option value="viagem">Fretamento / Viagem</option>
-                  <option value="outro">Outro</option>
-                </select>
-              </div>
-
-              <div id="camposEscolar" style="display: none;">
-                <div class="form-group mt-3">
-                   <select name="escola" class="form-control" id="escola">
-                    <option value="">Escola</option>
-                    <option value="manha">Madre</option>
-                    <option value="tarde">Francisca</option>
-                    <option value="noite">Miguel</option>
-                    <option value="integral">Gloria</option>
-                  </select>
-                </div>
-                <div class="form-group mt-3">
-                  <select name="turno" class="form-control" id="turno">
-                    <option value="">Turno</option>
-                    <option value="manha">Manhã</option>
-                    <option value="tarde">Tarde</option>
-                    <option value="noite">Noite</option>
-                    <option value="integral">Integral</option>
-                  </select>
-                </div>
-                <div class="form-group mt-3">
-                  <input type="text" class="form-control" name="cepEscolar" id="cepEscolar" placeholder="CEP da Residência">
-                </div>
-              </div>
-
-              <div id="camposViagem" style="display: none;">
-                <div class="form-group mt-3">
-                  <input type="text" class="form-control" name="destino" id="destino" placeholder="Destino da Viagem" >
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-6 form-group">
-                        <label for="dataIda">Data de Ida:</label>
-                        <input type="date" class="form-control" name="dataIda" id="dataIda">
-                    </div>
-                    <div class="col-md-6 form-group">
-                        <label for="dataVolta">Data de Volta:</label>
-                        <input type="date" class="form-control" name="dataVolta" id="dataVolta">
-                    </div>
-                </div>
-              </div>
-
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="mensagem" rows="5" placeholder="Sua Mensagem / Detalhes Adicionais" id="mensagem" required></textarea>
-              </div>
-             
-              <div class="text-center"><button type="submit">Solicitar Orçamento</button></div>
-            </form>
+    <div class="col-lg-8 mx-auto mt-5"> <form action="forms/contact.php" method="post" role="form" class="php-email-form" id="orcamentoForm">
+      <h3 class="text-center mb-4">Solicite seu Orçamento</h3>
+      <div class="row">
+          <div class="col-md-6 form-group">
+              <input type="text" name="nome" class="form-control" id="nome" placeholder="Seu Nome" required>
           </div>
+          <div class="col-md-6 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Seu Email" required>
+          </div>
+      </div>
+      <div class="form-group mt-3">
+          <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Seu Telefone (WhatsApp)" required>
+      </div>
+
+      <div class="form-group mt-3">
+          <label for="tipoOrcamento" class="form-label">Tipo de Orçamento:</label>
+          <select name="tipoOrcamento" class="form-select" id="tipoOrcamento" required>
+              <option value="">Selecione o tipo de orçamento</option>
+              <option value="escolar">Transporte Escolar</option>
+              <option value="viagem">Fretamento / Viagem</option>
+              <option value="outro">Outro</option>
+          </select>
+      </div>
+
+      <div id="camposEscolar" style="display: none;">
+          <div class="form-group mt-3">
+              <label for="escola" class="form-label">Escola:</label>
+              <select name="escola" class="form-select" id="escola">
+                  <option value="">Selecione a Escola</option>
+                  <option value="Madre">Madre</option>
+                  <option value="Francisca">Francisca</option>
+                  <option value="Miguel">Miguel</option>
+                  <option value="Gloria">Gloria</option>
+              </select>
+          </div>
+          <div class="form-group mt-3">
+              <label for="turno" class="form-label">Turno:</label>
+              <select name="turno" class="form-select" id="turno">
+                  <option value="">Selecione o Turno</option>
+                  <option value="manha">Manhã</option>
+                  <option value="tarde">Tarde</option>
+                  <option value="noite">Noite</option>
+                  <option value="integral">Integral</option>
+              </select>
+          </div>
+          <div class="form-group mt-3">
+              <input type="text" class="form-control" name="cepEscolar" id="cepEscolar" placeholder="CEP da Residência">
+          </div>
+      </div>
+
+      <div id="camposViagem" style="display: none;">
+          <div class="form-group mt-3">
+              <input type="text" class="form-control" name="destino" id="destino" placeholder="Destino da Viagem">
+          </div>
+          <div class="row mt-3">
+              <div class="col-md-6 form-group">
+                  <label for="dataIda" class="form-label">Data de Ida:</label>
+                  <input type="date" class="form-control" name="dataIda" id="dataIda">
+              </div>
+              <div class="col-md-6 form-group">
+                  <label for="dataVolta" class="form-label">Data de Volta:</label>
+                  <input type="date" class="form-control" name="dataVolta" id="dataVolta">
+              </div>
+          </div>
+      </div>
+
+      <div class="form-group mt-3">
+          <textarea class="form-control" name="mensagem" rows="5" placeholder="Sua Mensagem / Detalhes Adicionais" id="mensagem"></textarea>
+      </div>
+
+      <div class="my-3">
+          <div class="loading" style="display: none;">Carregando</div>
+          <div class="error-message" style="display: none;"></div>
+          <div class="sent-message" style="display: none;">Sua mensagem foi enviada. Obrigado!</div>
+      </div>
+
+      <div class="text-center">
+          <button type="submit" class="btn btn-primary">Solicitar Orçamento</button>
+      </div>
+  </form>
+</div>
 
   </main>
 
@@ -489,141 +500,10 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
- 
+  <script type="module" src="assets/js/firebase-script.js"></script>
+  <script src="assets/js/clientes.js"></script>
   <script src="assets/js/main.js"></script>
-<!-- Firebase e Firestore -->
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-  // Configuração do Firebase
-  const firebaseConfig = {
-    apiKey: "AIzaSyCWhINHI-vP34KRhDmd3tXojtdUR4c98TE",
-    authDomain: "transolapp-c9c1a.firebaseapp.com",
-    projectId: "transolapp-c9c1a",
-    storageBucket: "transolapp-c9c1a.firebasestorage.app",
-    messagingSenderId: "727466146759",
-    appId: "1:727466146759:web:e300dab41004a002a737e2"
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-
-  const form = document.getElementById('orcamentoForm');
-  const tipoOrcamentoSelect = document.getElementById('tipoOrcamento');
-  const camposEscolar = document.getElementById('camposEscolar');
-  const camposViagem = document.getElementById('camposViagem');
-
-  // Seleciona os elementos de feedback do formulário
-  const loadingDiv = form.querySelector('.loading');
-  const errorMessageDiv = form.querySelector('.error-message');
-  const sentMessageDiv = form.querySelector('.sent-message');
-
-  // Função para mostrar/esconder campos com base na seleção
-  tipoOrcamentoSelect.addEventListener('change', function() {
-    const selectedType = this.value;
-
-    camposEscolar.style.display = 'none';
-    camposViagem.style.display = 'none';
-
-    // Limpa os campos opcionais ao mudar a seleção
-    document.getElementById('escola').value = '';
-    document.getElementById('turno').value = '';
-    document.getElementById('cepEscolar').value = '';
-    document.getElementById('destino').value = '';
-    document.getElementById('dataIda').value = '';
-    document.getElementById('dataVolta').value = '';
-
-    // Remove o atributo 'required' de todos os campos opcionais
-    Array.from(camposEscolar.querySelectorAll('input, select')).forEach(input => input.removeAttribute('required'));
-    Array.from(camposViagem.querySelectorAll('input')).forEach(input => input.removeAttribute('required'));
-
-    if (selectedType === 'escolar') {
-      camposEscolar.style.display = 'block';
-      // Adiciona 'required' aos campos específicos de escolar
-      document.getElementById('escola').setAttribute('required', 'required');
-      document.getElementById('turno').setAttribute('required', 'required');
-      document.getElementById('cepEscolar').setAttribute('required', 'required');
-    } else if (selectedType === 'viagem') {
-      camposViagem.style.display = 'block';
-      // Adiciona 'required' aos campos específicos de viagem
-      document.getElementById('destino').setAttribute('required', 'required');
-      document.getElementById('dataIda').setAttribute('required', 'required');
-      document.getElementById('dataVolta').setAttribute('required', 'required');
-    }
-  });
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    // Resetar mensagens de feedback
-    loadingDiv.style.display = 'block';
-    errorMessageDiv.style.display = 'none';
-    sentMessageDiv.style.display = 'none';
-    errorMessageDiv.innerHTML = '';
-
-    const nome = document.getElementById('nome').value;
-    const email = document.getElementById('email').value;
-    const telefone = document.getElementById('telefone').value;
-    const tipoOrcamento = tipoOrcamentoSelect.value;
-    const mensagem = document.getElementById('mensagem').value;
-
-    let dadosOrcamento = {
-      nome,
-      email,
-      telefone,
-      tipoOrcamento,
-      mensagem,
-      data: new Date()
-    };
-
-    // Adicionar campos específicos do tipo de orçamento
-    if (tipoOrcamento === 'escolar') {
-      dadosOrcamento.escola = document.getElementById('escola').value;
-      dadosOrcamento.turno = document.getElementById('turno').value;
-      dadosOrcamento.cepEscolar = document.getElementById('cepEscolar').value;
-    } else if (tipoOrcamento === 'viagem') {
-      dadosOrcamento.destino = document.getElementById('destino').value;
-      dadosOrcamento.dataIda = document.getElementById('dataIda').value;
-      dadosOrcamento.dataVolta = document.getElementById('dataVolta').value;
-    }
-
-    try {
-      await addDoc(collection(db, "orcamentos"), dadosOrcamento);
-      
-      loadingDiv.style.display = 'none';
-      sentMessageDiv.style.display = 'block'; // Mostra a mensagem de sucesso
-      form.reset(); // Limpa o formulário
-      tipoOrcamentoSelect.value = ''; // Reseta o select
-      camposEscolar.style.display = 'none'; // Esconde os campos opcionais
-      camposViagem.style.display = 'none';
-
-      // Dispara o envio de e-mail via um serviço de backend (simulação)
-      // ESTE TRECHO NECESSITA DE UM BACKEND REAL PARA FUNCIONAR
-      // A forma mais segura e robusta é usar um serviço como o SendGrid, Mailgun, ou um Cloud Function do Firebase
-      // para enviar e-mails. Por exemplo, uma Cloud Function poderia ser acionada
-      // sempre que um novo documento for adicionado à coleção 'orcamentos'.
-      console.log('Simulando envio de e-mail para mellyssameireless@gmail.com com os dados do orçamento...');
-      // Exemplo de como uma requisição AJAX para um backend seria:
-      /*
-      fetch('/api/send-email', { // Seu endpoint de API no backend
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(dadosOrcamento)
-      })
-      .then(response => response.json())
-      .then(data => console.log('Email backend response:', data))
-      .catch(error => console.error('Error sending email via backend:', error));
-      */
-
-    } catch (error) {
-      loadingDiv.style.display = 'none';
-      errorMessageDiv.style.display = 'block';
-      errorMessageDiv.innerHTML = `Erro ao enviar orçamento: ${error.message}.`;
-      console.error('Erro ao enviar:', error);
-    }
-  });
-</script>
 </body>
 
 </html>

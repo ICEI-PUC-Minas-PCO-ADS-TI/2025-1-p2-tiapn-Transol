@@ -1,49 +1,87 @@
-'use strict';
+// src/back/models/clientes.js
+const bcrypt = require('bcryptjs');
 
 module.exports = (sequelize, DataTypes) => {
-  const Cliente = sequelize.define('Cliente', {
+  const Clientes = sequelize.define('Clientes', {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+      allowNull: false
+    },
     nome: {
       type: DataTypes.STRING,
       allowNull: false
     },
     cpf: {
-      type: DataTypes.STRING(11),
-      allowNull: false
+      type: DataTypes.STRING(11), // CPF tem tamanho específico
+      allowNull: false,
+      unique: true // CPF deve ser único
     },
-    endereco: {
+    endereco: { // <<< ADICIONADO (Baseado na migração)
       type: DataTypes.STRING,
       allowNull: false
     },
-    telefone: {
+    telefone: { // <<< ADICIONADO (Baseado na migração)
       type: DataTypes.STRING,
       allowNull: false
-    }, 
-    id_administrador: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: 'administrador',
-        key: 'id'
+    },
+    email: { // Mantido como estava no seu modelo (assumindo que existe no DB)
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+      validate: {
+        isEmail: true
       }
+    },
+    senha: { // Mantido como estava no seu modelo (assumindo que existe no DB)
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    id_administrador: {
+        type: DataTypes.INTEGER,
+        allowNull: true, // Permitir nulo, conforme a migração
+        references: {
+            model: 'Administradors',
+            key: 'id'
+        }
     }
   }, {
-    tableName: 'clientes', // igual ao nome da tabela na migration
-    timestamps: true       // para createdAt e updatedAt
+    hooks: {
+      beforeCreate: async (cliente) => {
+        if (cliente.senha) {
+          const salt = await bcrypt.genSalt(10);
+          cliente.senha = await bcrypt.hash(cliente.senha, salt);
+        }
+      },
+       // <<< REMOVA O BLOCO beforeUpdate COMPLETO AQUI
+      // Ou comente-o assim:
+      /*
+      beforeUpdate: async (cliente) => {
+        if (cliente.changed('senha')) {
+          const salt = await bcrypt.genSalt(10);
+          cliente.senha = await bcrypt.hash(cliente.senha, salt);
+        }
+      } */
+    },
+    tableName: 'clientes', // Assegura que o Sequelize use o nome 'clientes' na tabela
+    timestamps: true // Adicionado para corresponder às migrações que adicionam timestamps
   });
 
-  Cliente.associate = function(models) {
-    Cliente.belongsTo(models.Administrador, {
-      foreignKey: 'id_administrador',
-      as: 'administrador'
+  Clientes.associate = (models) => {
+    Clientes.hasMany(models.Aluno, {
+      foreignKey: 'id_clientes', // Agora correspondendo ao nome da coluna na migração do aluno
+      as: 'alunos'
     });
-
-    Cliente.hasMany(models.Contrato, {
-      foreignKey: 'clientesId',
-      as: 'contrato'
+    Clientes.belongsTo(models.Administrador, {
+        foreignKey: 'id_administrador',
+        as: 'administrador'
     });
-
-    
+    Clientes.hasOne(models.Contrato, {
+        foreignKey: 'clientesId', // Mantido como estava no seu contrato.js. Certifique-se que o id_cliente no contrato.js é na verdade clientesId.
+        as: 'contrato'
+    });
   };
 
-  return Cliente;
+  return Clientes;
 };

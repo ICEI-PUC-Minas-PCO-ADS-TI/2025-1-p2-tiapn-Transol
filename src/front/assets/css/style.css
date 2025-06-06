@@ -1512,3 +1512,74 @@ section {
   font-size: 13px;
   color: #fff;
 }
+
+
+/* Adicione estas regras ao seu arquivo CSS existente */
+
+#orcamentoForm {
+  padding: 30px;
+  background: #fff; /* Fundo branco para o formulário */
+  border-radius: 8px; /* Cantos arredondados */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+#orcamentoForm .form-group {
+  margin-bottom: 20px; /* Espaçamento entre os grupos de formulário */
+}
+
+#orcamentoForm .form-control,
+#orcamentoForm .form-select {
+  border-radius: 4px; /* Cantos arredondados nos inputs */
+  padding: 10px 15px;
+  border: 1px solid #ced4da;
+}
+
+#orcamentoForm .form-control:focus,
+#orcamentoForm .form-select:focus {
+  border-color: #80bdff; /* Cor da borda ao focar */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+#orcamentoForm .form-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block; /* Garante que a label ocupe a própria linha */
+  color: #333;
+}
+
+#orcamentoForm button[type="submit"] {
+  background: #007bff; /* Cor de fundo do botão */
+  border: 0;
+  padding: 12px 30px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px; /* Botão arredondado */
+}
+
+#orcamentoForm button[type="submit"]:hover {
+  background: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* Estilos para mensagens de feedback */
+#orcamentoForm .loading {
+  display: block;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+#orcamentoForm .error-message {
+  display: block;
+  background: #ed3c0d;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+#orcamentoForm .sent-message {
+  display: block;
+  background: #18d26e;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}

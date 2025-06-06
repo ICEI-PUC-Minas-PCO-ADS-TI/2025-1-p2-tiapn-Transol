@@ -6,7 +6,7 @@
     }
 
     body {
-      background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url('/transol-main/assets/img/cta-bg.jpg') no-repeat center center fixed;
+      background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/img/cta-bg.jpg') no-repeat center center fixed;
       background-size: cover;
       height: 100vh;
       display: flex;

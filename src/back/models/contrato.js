@@ -26,8 +26,9 @@ module.exports = (sequelize, DataTypes) => {
 
     Contrato.associate = function(models) {
         //futuro relacionamento
-        Contrato.belongsTo(models.Cliente, {
+        Contrato.belongsTo(models.Clientes, {
             foreignKey: 'clientesId',
+            as: 'cliente'
         });
     };
 
