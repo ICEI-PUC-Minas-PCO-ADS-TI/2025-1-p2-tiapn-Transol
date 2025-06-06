@@ -26,13 +26,83 @@ Além disso, o sistema visa implementar funcionalidades que melhorem o acompanha
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+###1. Credenciais de Teste Essenciais:###
+Utilize estas credenciais para acessar as diferentes partes do sistema:
 
-Não deixe de informar o link onde a aplicação estará disponível para acesso (por exemplo: https://adota-pet.herokuapp.com/src/index.html).
+Login de Administrador:
+CPF/Email: adm1@transol.com
+Senha: adm123@
+(Após login, você acessará o Painel do Administrador.)
 
-Se houver usuário de teste, o login e a senha também deverão ser informados aqui (por exemplo: usuário - admin / senha - admin).
+Clientes Teste (Para Login e Troca de Senha):
 
-O link e o usuário/senha descritos acima são apenas exemplos de como tais informações deverão ser apresentadas.
+Cliente 1:
+Email: clienteteste1@pucminas.com
+Senha: transol1234 (senha padrão inicial)
+
+Cliente 2:
+Email: clienteteste2@pucminas.com
+Senha: transol1234 (senha padrão inicial)
+
+Cliente 3:
+Email: clienteteste3@pucminas.com
+Senha: transol1234 (senha padrão inicial)
+
+Cliente 4:
+Email: clienteteste4@pucminas.com
+Senha: transol1234 (senha padrão inicial)
+
+(Para o primeiro acesso com qualquer um desses clientes, o sistema solicitará a troca de senha. Depois, use a nova senha para acessar o perfil.)
+
+####Se todos os "Clientes Teste" fornecidos já tiverem a senha alterada (e, portanto, não forem mais para a tela de troca de senha no primeiro login), você pode:####
+
+Acessar o Painel do Administrador.
+Clicar em "Cadastrar Cliente" para acessar cadastrar-cliente.html.
+Cadastrar um NOVO cliente com um CPF/Email e a senha padrão transol1234.
+Voltar para login.html e tentar fazer login com as credenciais deste novo cliente. Ele será redirecionado para a Tela de Troca de Senha (trocar-senha.html). Defina uma nova senha seguindo as regras de segurança.
+Após a troca, o sistema o levará de volta para login.html. Faça login novamente com a nova senha para acessar o Perfil do Cliente (perfil-cliente.html).
+
+###2. Primeiros Passos (Configuração Única - Necessário para Rodar o Back-end):###
+Para que o sistema funcione, o back-end precisa estar ativo. Siga estes passos apenas uma vez no computador de teste:
+
+Baixe o arquivo ZIP do projeto que será fornecido a você (via GitHub, por exemplo).
+
+Descompacte o ZIP em uma pasta de sua preferência no seu computador (ex: C:\Projetos\Transol).
+
+Instale o Node.js e o npm: Se ainda não tiver, baixe e instale a versão LTS (Long Term Support) em https://nodejs.org/en/download/.
+
+Abra o Windows PowerShell (ou Prompt de Comando).
+
+Navegue até a pasta do back-end do projeto:
+cd [CAMINHO_DA_SUA_PASTA_PROJETO]\src\back
+(Exemplo: cd C:\Projetos\Transol\src\back)
+
+Instale as dependências:
+
+npm install
+
+Execute as migrações do banco de dados: (Isso garante que a estrutura do banco está atualizada.)
+
+npx sequelize-cli db:migrate --env production
+
+Se houver erro de validação de migração (por dados existentes), o grupo pode fornecer um script para limpar/repopular dados de teste no DB.
+
+###3. Como Iniciar o Sistema (A cada sessão de teste):###
+Inicie o Servidor Back-end:
+
+No PowerShell (na pasta src\back do projeto, onde você fez os passos anteriores), execute:
+
+$env:NODE_ENV="production" ; node app.js
+
+Mantenha esta janela do PowerShell aberta. Você deve ver a mensagem: Conexão com o banco de dados estabelecida com sucesso. Servidor rodando na porta 3000.
+
+Acesse o Front-end no Navegador:
+
+Abra seu navegador (Chrome, Edge, Firefox).
+
+No Explorador de Arquivos, navegue até a pasta [CAMINHO_DA_SUA_PASTA_PROJETO]\src\front\
+
+Arraste o arquivo login.html para a barra de endereço do seu navegador. O sistema será carregado!
 
 # Documentação
 
