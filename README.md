@@ -55,15 +55,19 @@ Senha: transol1234 (senha padrão inicial)
 
 (Para o primeiro acesso com qualquer um desses clientes, o sistema solicitará a troca de senha. Depois, use a nova senha para acessar o perfil.)
 
-####Se todos os "Clientes Teste" fornecidos já tiverem a senha alterada (e, portanto, não forem mais para a tela de troca de senha no primeiro login), você pode:####
+Se todos os "Clientes Teste" fornecidos já tiverem a senha alterada (e, portanto, não forem mais para a tela de troca de senha no primeiro login), você pode:
 
 Acessar o Painel do Administrador.
+
 Clicar em "Cadastrar Cliente" para acessar cadastrar-cliente.html.
+
 Cadastrar um NOVO cliente com um CPF/Email e a senha padrão transol1234.
+
 Voltar para login.html e tentar fazer login com as credenciais deste novo cliente. Ele será redirecionado para a Tela de Troca de Senha (trocar-senha.html). Defina uma nova senha seguindo as regras de segurança.
+
 Após a troca, o sistema o levará de volta para login.html. Faça login novamente com a nova senha para acessar o Perfil do Cliente (perfil-cliente.html).
 
-###2. Primeiros Passos (Configuração Única - Necessário para Rodar o Back-end):###
+2. Primeiros Passos (Configuração Única - Necessário para Rodar o Back-end):
 Para que o sistema funcione, o back-end precisa estar ativo. Siga estes passos apenas uma vez no computador de teste:
 
 Baixe o arquivo ZIP do projeto que será fornecido a você (via GitHub, por exemplo).
