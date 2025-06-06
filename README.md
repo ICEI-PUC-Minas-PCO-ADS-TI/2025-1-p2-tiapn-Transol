@@ -30,6 +30,7 @@ Além disso, o sistema visa implementar funcionalidades que melhorem o acompanha
 Utilize estas credenciais para acessar as diferentes partes do sistema:
 
 Login de Administrador:
+
 CPF/Email: adm1@transol.com
 Senha: adm123@
 (Após login, você acessará o Painel do Administrador.)
