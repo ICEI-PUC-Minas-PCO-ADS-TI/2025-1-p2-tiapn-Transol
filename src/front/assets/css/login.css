@@ -3,7 +3,6 @@
    padding: 0;
    box-sizing: border-box;
    font-family: 'Roboto', sans-serif;
-
  }
 
  html,
@@ -26,12 +25,10 @@
    margin: 0;
    box-sizing: border-box;
    padding-top: 80px;
-
  }
 
- 
  .header {
-   background-color: rgba(0, 0, 0, 0.2);
+   background-color: rgba(0, 0, 0, 0.4);
    padding: 10px 20px;
    width: 100%;
    display: flex;
@@ -47,7 +44,6 @@
  .header .logo img {
    height: 60px;
    width: auto;
-
  }
 
  .header .nav-button button {
@@ -70,7 +66,6 @@
    width: 100%;
    flex-grow: 1;
    padding: 0 20px;
-
  }
 
  .header .nav-button button:hover {
@@ -121,7 +116,6 @@
    box-sizing: border-box;
    color: #333;
    -webkit-text-security: disc;
-
  }
 
  .input-container input[type="password"]::placeholder,
@@ -169,8 +163,6 @@
    font-size: 18px;
  }
 
-
-
  .toggle-password {
    position: absolute;
    right: 15px;
@@ -191,7 +183,6 @@
    font-size: 16px;
    outline: none;
  }
-
 
  .form-group input {
    width: 100%;
@@ -221,7 +212,6 @@
  .remember input {
    margin-right: 8px;
    width: auto;
-
  }
 
  .login-btn {
@@ -287,7 +277,7 @@
  }
 
  footer {
-   background-color: black;
+  background-color: rgba(0, 0, 0, 0.6);
    color: white;
    font-size: 12px;
    padding: 7px 20px;
@@ -327,13 +317,11 @@
    justify-content: space-between;
    align-items: center;
    flex-wrap: wrap;
-
  }
 
  .footer-left-contacts {
    text-align: left;
    flex-grow: 1;
-
  }
 
  .footer-left-contacts p {
@@ -346,7 +334,6 @@
    display: flex;
    gap: 15px;
    justify-content: flex-end;
-
  }
 
  .social-icons a {
@@ -395,3 +382,4 @@
      margin: 80px 20px;
    }
  }
+ 
