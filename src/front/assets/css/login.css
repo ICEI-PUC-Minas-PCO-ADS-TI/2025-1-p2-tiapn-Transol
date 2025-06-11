@@ -1,8 +1,9 @@
  * {
    margin: 0;
+   padding: 0;
    box-sizing: border-box;
    font-family: 'Roboto', sans-serif;
-   color: white;
+
  }
 
  html,
@@ -19,30 +20,81 @@
    height: 100vh;
    display: flex;
    flex-direction: column;
-   justify-content: center;
+   justify-content: flex-start;
    align-items: center;
    min-height: 100vh;
    margin: 0;
-   padding: 0px;
    box-sizing: border-box;
+   padding-top: 80px;
 
+ }
+
+ 
+ .header {
+   background-color: rgba(0, 0, 0, 0.2);
+   padding: 10px 20px;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 1000;
+   box-sizing: border-box;
+ }
+
+ .header .logo img {
+   height: 60px;
+   width: auto;
+
+ }
+
+ .header .nav-button button {
+   background-color: #ff9800;
+   color: white;
+   border: none;
+   padding: 8px 15px;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 0.9em;
+   margin-right: 30px;
+   transition: background-color 0.3s ease;
+ }
+
+ main {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   flex-grow: 1;
+   padding: 0 20px;
+
+ }
+
+ .header .nav-button button:hover {
+   background-color: #e68900;
  }
 
  .login-container {
    max-width: 600px;
-   margin: auto;
+   margin: 30px auto;
+   display: flex;
    background-color: rgba(255, 255, 255, 0.05);
    padding: 30px;
    border-radius: 20px;
    border: 1px solid rgba(255, 255, 255, 0.4);
    backdrop-filter: blur(10px);
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+   flex-direction: column;
+   justify-content: center;
    color: white;
    text-align: center;
  }
 
  .login-container img {
-   width: 200px;
+   width: 400px;
    text-align: center;
    margin-bottom: 20px;
  }
@@ -114,7 +166,6 @@
    left: 10px;
    transform: translateY(-50%);
    color: #FFA726;
-   /* mesma cor do botão */
    font-size: 18px;
  }
 
@@ -132,7 +183,7 @@
  .input-container input {
    width: 100%;
    padding: 10px 10px 10px 35px;
-   /* espaço para o ícone */
+
    border: none;
    border-bottom: 1px solid #fff;
    background: transparent;
@@ -161,9 +212,9 @@
    display: flex;
    align-items: center;
    justify-content: flex-start;
-   margin-bottom: 20px;
-   margin-top: 10px;
-   color: #555;
+   margin-bottom: 0px;
+   margin-top: 5px;
+   color: #FFA726;
    font-size: 0.9em;
  }
 
@@ -178,10 +229,10 @@
    color: white;
    border: none;
    border-radius: 12px;
-   padding: 12px 20px;
+   padding: 12px 10px;
    width: 100%;
    font-size: 16px;
-   margin-top: 20px;
+   margin-top: 10px;
    cursor: pointer;
    font-weight: bold;
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -267,7 +318,7 @@
    color: white;
    font-size: 1.1em;
    text-transform: uppercase;
-   
+
  }
 
  .footer-details {
@@ -290,8 +341,6 @@
    margin: 3px 0;
    font-size: 0.85em;
  }
-
- .footer-right-social {}
 
  .social-icons {
    display: flex;
