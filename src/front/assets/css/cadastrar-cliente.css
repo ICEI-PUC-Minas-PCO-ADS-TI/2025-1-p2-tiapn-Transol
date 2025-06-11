@@ -1,0 +1,326 @@
+
+    body {
+    font-family: 'Roboto', sans-serif;
+    background: #1b1f24;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #333; 
+    }
+
+    .container {
+    background: #bd4646;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #302f31;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    text-align: center;
+    box-sizing: border-box; 
+    }
+
+    .container  .logo {
+      width: 120px; 
+      margin-bottom: 20px;
+      border-radius: 8px; 
+    }
+
+    h1 {
+      color: #ff9800;
+      margin-bottom: 25px;
+      font-size: 2em; 
+    }
+    h2 {
+      color: #ff9800;
+      margin-top: 25px;
+      border-bottom: 2px solid #ff9800; 
+      padding-bottom: 15px;
+      text-align: left;
+      font-size: 1.5em;
+      width: 100%;
+    }
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 5px;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #555;
+    }
+    input, select {
+      width: calc(100% - 22px); /* Ajuste para padding */
+      padding: 10px;
+      margin-top: 8px;
+      border-radius: 8px; /* Cantos mais arredondados */
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-size: 1em;
+    }
+    input[type="date"], input[type="time"] {
+      width: auto; /* Permite que se ajustem ao conteúdo */
+    }
+    button {
+      background: #ff9800;
+      color: white;
+      border: none;
+      padding: 12px 25px; /* Padding ajustado */
+      margin-top: 25px;
+      border-radius: 8px; /* Cantos mais arredondados */
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: background 0.3s ease, transform 0.2s ease; /* Transição suave */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para botões */
+    }
+    button:hover {
+      background: #e68900;
+      transform: translateY(-2px); /* Efeito de "levantar" */
+    }
+    button:active {
+      transform: translateY(0); /* Efeito de "clicar" */
+    }
+    .child-entry {
+      margin-bottom: 20px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fafafa;
+      text-align: left;
+    }
+    .message-box {
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 8px;
+        font-weight: bold;
+        text-align: center;
+        display: none; /* Escondido por padrão */
+    }
+    .message-box.success {
+        background-color: #d4edda;
+        color: #155724;
+        border-color: #c3e6cb;
+    }
+    .message-box.error {
+        background-color: #f8d7da;
+        color: #721c24;
+        border-color: #f5c6cb;
+    }
+
+    footer {
+        background-color: rgba(0, 0, 0, 0.6);
+         color: white;
+         font-size: 12px;
+         padding: 7px 20px;
+         text-align: center;
+         width: 100%;
+         box-sizing: border-box;
+         margin-top: auto;
+       }
+      
+       .footer-content {
+         width: 100%;
+         margin: 0 auto;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         padding-bottom: 5px;
+       }
+      
+       .footer-center-title {
+         width: 100%;
+         text-align: center;
+         margin-bottom: 10px;
+      
+       }
+      
+       .footer-center-title h3 {
+         color: white;
+         font-size: 1.1em;
+         text-transform: uppercase;
+      
+       }
+      
+       .footer-details {
+         width: 100%;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         flex-wrap: wrap;
+       }
+      
+       .footer-left-contacts {
+         text-align: left;
+         flex-grow: 1;
+       }
+      
+       .footer-left-contacts p {
+         color: white;
+         margin: 3px 0;
+         font-size: 0.85em;
+       }
+      
+       .social-icons {
+         display: flex;
+         gap: 15px;
+         justify-content: flex-end;
+       }
+      
+       .social-icons a {
+         color: white;
+         font-size: 1.8em;
+         transition: color 0.3s ease;
+       }
+      
+       .social-icons a:hover {
+         color: #ff9800;
+       }
+      
+       .footer-copyright {
+         color: white;
+         font-size: 0.8em;
+       }
+    /* Responsividade */
+    @media (max-width: 768px) {
+        .container {
+            margin: 10px;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 1.8em;
+        }
+        h2 {
+            font-size: 1.3em;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+        }
+    }
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    input[type="time"],
+    input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        font-size: 1em;
+        box-sizing: border-box;
+        color: #333; /* Cor do texto digitado */
+    }
+    
+    input:focus {
+        outline: none;
+        border-color: #ff9800;
+        box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
+    }
+    
+    /* Estilos da caixa de mensagem */
+    .message-box {
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 8px;
+        font-weight: bold;
+        text-align: center;
+        display: none;
+        font-size: 0.9em;
+    }
+    
+    .message-box.success {
+        background-color: #d4edda;
+        color: #155724;
+        border-color: #c3e6cb;
+    }
+    
+    .message-box.error {
+        background-color: #f8d7da;
+        color: #721c24;
+        border-color: #f5c6cb;
+    }
+    
+    /* Estilos dos botões */
+    button[type="submit"],
+    button[type="button"] {
+        background: #ff9800;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1.1em;
+        font-weight: bold;
+        width: 100%;
+        transition: background 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        margin-top: 20px;
+    }
+    
+    button[type="submit"]:hover,
+    button[type="button"]:hover {
+        background: #e68900;
+        transform: translateY(-2px);
+    }
+    
+    /* --- Novos estilos para os blocos horizontais --- */
+    .form-sections {
+        display: flex; /* Habilita Flexbox para os blocos */
+        flex-wrap: wrap; /* Permite que os blocos quebrem para a próxima linha em telas menores */
+        gap: 30px; /* Espaço entre os blocos */
+        justify-content: space-between; /* Distribui o espaço entre os blocos (responsável e aluno) */
+        margin-bottom: 30px;
+    }
+    
+    .section-responsavel,
+    .section-aluno {
+        flex: 1; /* Permite que cada bloco cresça e ocupe o espaço disponível */
+        min-width: 300px; /* Largura mínima para evitar que os campos fiquem muito estreitos */
+        background-color: #f9f9f9; /* Fundo leve para destacar as seções */
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        text-align: left; /* Alinha o conteúdo da seção à esquerda */
+    }
+    
+    /* Estilos específicos para child-entry (seções de aluno adicionais) */
+    .child-entry {
+        border-top: 1px dashed #ccc; /* Linha tracejada para separar crianças */
+        padding-top: 20px;
+        margin-top: 20px;
+    }
+    
+    /* Para o botão de adicionar criança, para não ocupar 100% da largura do bloco */
+    .section-aluno button[type="button"] {
+        width: auto; /* Deixa o botão adicionar criança se ajustar ao seu conteúdo */
+        padding: 10px 15px;
+        font-size: 0.95em;
+        margin-left: auto; /* Alinha o botão à direita dentro do seu bloco flex */
+        margin-right: auto; /* Alinha o botão à esquerda dentro do seu bloco flex */
+        display: block; /* Para margin-left/right auto funcionarem */
+        /* Ou, se quiser alinhar à esquerda do bloco, pode remover margin-left/right auto e usar text-align: left no pai */
+    }
+    
+    
+    /* Responsividade */
+    @media (max-width: 768px) {
+        .form-sections {
+            flex-direction: column; /* Empilha os blocos em telas menores */
+            gap: 20px; /* Ajusta o espaçamento */
+        }
+    
+        .section-responsavel,
+        .section-aluno {
+            min-width: unset; /* Remove a largura mínima em telas menores */
+        }
+    }

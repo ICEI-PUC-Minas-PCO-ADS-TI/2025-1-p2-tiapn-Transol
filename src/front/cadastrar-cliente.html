@@ -4,192 +4,74 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cadastro - Transol</title>
-  <style>
-    body {
-      font-family: 'Inter', sans-serif; /* Usando Inter como sugerido */
-      background: #f8f8f8;
-      margin: 0;
-      padding: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-    .container {
-      max-width: 600px;
-      width: 100%;
-      margin: 0 auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra mais suave */
-      text-align: center;
-      box-sizing: border-box; /* Garante que padding não aumente a largura */
-    }
-    .logo {
-      width: 120px; /* Tamanho ajustado para melhor proporção */
-      margin-bottom: 20px;
-      border-radius: 8px; /* Cantos arredondados para a logo */
-    }
-    h1 {
-      color: #ff9800;
-      margin-bottom: 15px;
-      font-size: 2em; /* Tamanho maior para o título principal */
-    }
-    h2 {
-      color: #ff9800;
-      margin-top: 25px;
-      border-bottom: 2px solid #ff9800; /* Linha laranja mais forte */
-      padding-bottom: 10px;
-      text-align: left;
-      font-size: 1.5em;
-    }
-    label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-      text-align: left;
-      color: #555;
-    }
-    input, select {
-      width: calc(100% - 22px); /* Ajuste para padding */
-      padding: 10px;
-      margin-top: 8px;
-      border-radius: 8px; /* Cantos mais arredondados */
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-      font-size: 1em;
-    }
-    input[type="date"], input[type="time"] {
-      width: auto; /* Permite que se ajustem ao conteúdo */
-    }
-    button {
-      background: #ff9800;
-      color: white;
-      border: none;
-      padding: 12px 25px; /* Padding ajustado */
-      margin-top: 25px;
-      border-radius: 8px; /* Cantos mais arredondados */
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 1.1em;
-      transition: background 0.3s ease, transform 0.2s ease; /* Transição suave */
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para botões */
-    }
-    button:hover {
-      background: #e68900;
-      transform: translateY(-2px); /* Efeito de "levantar" */
-    }
-    button:active {
-      transform: translateY(0); /* Efeito de "clicar" */
-    }
-    .child-entry {
-      margin-bottom: 20px;
-      padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      background: #fafafa;
-      text-align: left;
-    }
-    .message-box {
-        margin-top: 20px;
-        padding: 15px;
-        border-radius: 8px;
-        font-weight: bold;
-        text-align: center;
-        display: none; /* Escondido por padrão */
-    }
-    .message-box.success {
-        background-color: #d4edda;
-        color: #155724;
-        border-color: #c3e6cb;
-    }
-    .message-box.error {
-        background-color: #f8d7da;
-        color: #721c24;
-        border-color: #f5c6cb;
-    }
-    /* Responsividade */
-    @media (max-width: 768px) {
-        .container {
-            margin: 10px;
-            padding: 20px;
-        }
-        h1 {
-            font-size: 1.8em;
-        }
-        h2 {
-            font-size: 1.3em;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 1em;
-        }
-    }
-  </style>
+  <link href="assets/css/cadastrar-cliente.css" rel="stylesheet">
+  
 </head>
 <body>
 
-<div class="container">
-  <img src="assets/img/logo.png" alt="Logo Transol" class="logo" onerror="this.onerror=null;this.src='assets/img/logo.png'">
+  <body>
 
-  <h1>Cadastro de Cliente</h1>
-
-  <div id="messageBox" class="message-box"></div>
-
-  <h2>Dados do Responsável</h2>
-  <form id="cadastroClienteForm">
-    <label for="nomeResponsavel">Nome Completo:</label>
-    <input type="text" id="nomeResponsavel" required>
-
-    <label for="endereco">Endereço:</label>
-    <input type="text" id="endereco" required>
+    <div class="container">
+      <img src="assets/img/logo.png" alt="Logo Transol" class="logo" onerror="this.onerror=null;this.src='assets/img/logo.png'">
     
-    <label for="telefone">Telefone:</label>
-    <input type="tel" id="telefone" required>
-
-    <label for="cpf">CPF:</label>
-    <input type="text" id="cpf" required>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" required>
-
-    <label for="senha">Criar Senha:</label>
-    <input type="password" id="senha" value="transol1234" readonly> <!-- Senha padrão -->
-
-    <h2>Dados do Aluno</h2>
-    <div id="childrenContainer">
-      <div class="child-entry">
-        <label for="nomeCrianca_0">Nome do Aluno:</label>
-        <input type="text" class="nomeCrianca" id="nomeCrianca_0" required>
-
-        <label for="dtNasc_0">Data de Nascimento:</label>
-        <input type="date" class="dtNasc" id="dtNasc_0" required>
-
-        <label for="escola_0">Nome da Escola:</label>
-        <input type="text" class="escola" id="escola_0" required>
-
-        <label for="entrada_0">Horário de Entrada:</label>
-        <input type="time" class="entrada" id="entrada_0" required>
-
-        <label for="saida_0">Horário de Saída:</label>
-        <input type="time" class="saida" id="saida_0" required>
-
-        <!-- Campo id_escolar: Por enquanto, será um valor fixo para teste -->
-        <label for="idEscolar_0">ID da Escola (para teste):</label>
-        <input type="number" class="idEscolar" id="idEscolar_0" value="3" readonly required>
-      </div>
+      <h1>Cadastro de Cliente</h1>
+    
+      <div id="messageBox" class="message-box"></div>
+    
+      <form id="cadastroClienteForm">
+            <div class="form-sections">
+                <div class="section-responsavel">
+            <h2>Dados do Responsável</h2>
+            <label for="nomeResponsavel">Nome Completo:</label>
+            <input type="text" id="nomeResponsavel" required>
+    
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" required>
+            
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" required>
+    
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+    
+            <label for="senha">Criar Senha:</label>
+            <input type="password" id="senha" value="transol1234" readonly>       </div>
+    
+                <div class="section-aluno">
+            <h2>Dados do Aluno</h2>
+            <div id="childrenContainer">
+              <div class="child-entry">
+                <label for="nomeCrianca_0">Nome do Aluno:</label>
+                <input type="text" class="nomeCrianca" id="nomeCrianca_0" required>
+    
+                <label for="dtNasc_0">Data de Nascimento:</label>
+                <input type="date" class="dtNasc" id="dtNasc_0" required>
+    
+                <label for="escola_0">Nome da Escola:</label>
+                <input type="text" class="escola" id="escola_0" required>
+    
+                <label for="entrada_0">Horário de Entrada:</label>
+                <input type="time" class="entrada" id="entrada_0" required>
+    
+                <label for="saida_0">Horário de Saída:</label>
+                <input type="time" class="saida" id="saida_0" required>
+    
+                <label for="idEscolar_0">ID da Escola (para teste):</label>
+                <input type="number" class="idEscolar" id="idEscolar_0" value="3" readonly required>
+              </div>
+            </div>
+            <button type="button" onclick="adicionarCrianca()">Adicionar Outra Criança</button>
+          </div>
+        </div>     <h2>Anexar Contrato (Funcionalidade Futura)</h2>
+        <input type="file" id="contrato" disabled title="Funcionalidade de upload de contrato será implementada em breve.">
+        <p style="font-size: 0.9em; color: #777; margin-top: 5px; text-align: left;">O upload do contrato será implementado em uma fase futura.</p>
+    
+        <button type="submit">Finalizar Cadastro</button>
+      </form>
     </div>
-
-    <button type="button" onclick="adicionarCrianca()">Adicionar Outra Criança</button>
-
-    <h2>Anexar Contrato (Funcionalidade Futura)</h2>
-    <input type="file" id="contrato" disabled title="Funcionalidade de upload de contrato será implementada em breve.">
-    <p style="font-size: 0.9em; color: #777; margin-top: 5px; text-align: left;">O upload do contrato será implementado em uma fase futura.</p>
-
-    <button type="submit">Finalizar Cadastro</button>
-  </form>
-</div>
 
 <script>
   let childCounter = 0; // Para IDs únicos dos campos de aluno
@@ -337,6 +219,27 @@
     }
   });
 </script>
-
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-center-title">
+      <h3>TRANSOL ESCOLAR E FRETAMENTO</h3>
+    </div>
+    <div class="footer-details">
+      <div class="footer-left-contacts">
+        <p>Telefone: (31) 99561-8613</p>
+        <p>Email: transol2014@hotmail.com</p>
+      </div>
+      <div class="footer-right-social">
+        <div class="social-icons">
+          <a href="https://www.instagram.com/transol__/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/5531995618613" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <p>&copy; Copyright 2025</p>
+  </div>
+</footer>
 </body>
 </html>
