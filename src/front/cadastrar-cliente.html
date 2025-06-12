@@ -146,13 +146,13 @@
     </footer>
 
     <script>
-      // Seu JavaScript existente para adicionar criança e finalizar cadastro (sem alterações)
+      
       let childCounter = 0;
       function showMessage(message, type) { /* ... */ }
       function adicionarCrianca() { /* ... */ }
       document.getElementById('cadastroClienteForm').addEventListener('submit', async function (event) { /* ... */ });
 
-      // --- Novo JavaScript para o menu lateral ---
+      // --- JavaScript para o menu lateral ---
       document.addEventListener('DOMContentLoaded', () => {
         const menuItems = document.querySelectorAll('.sidebar-nav .menu-item');
         const contentSections = document.querySelectorAll('.main-content .content-section');
@@ -169,23 +169,19 @@
 
         menuItems.forEach(item => {
           item.addEventListener('click', (event) => {
-            event.preventDefault(); // Impede o comportamento padrão do link
+            event.preventDefault(); 
 
-            // Remove a classe 'active' de todos os itens do menu
+            
             menuItems.forEach(mi => mi.classList.remove('active'));
 
-            // Adiciona a classe 'active' ao item clicado
+            
             item.classList.add('active');
 
-            // Mostra a seção correspondente
             const targetId = item.dataset.target;
             showSection(targetId);
           });
         });
 
-        // Opcional: Mostrar a primeira seção ativa ao carregar a página
-        // Isso já é tratado pela classe 'active' no HTML inicial
-        // showSection('cadastroCliente'); 
       });
     </script>
 
