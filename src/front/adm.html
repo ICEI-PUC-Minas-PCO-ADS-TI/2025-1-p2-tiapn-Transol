@@ -1,267 +1,120 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Painel Administrador - Transol</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Painel Administrativo - Transol</title>
   <link href="assets/css/adm.css" rel="stylesheet">
-  <style>
-    /* Estilos adicionais ou ajustes para garantir consistência visual */
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: #f0f2f5;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start; /* Alinhar ao topo */
-      min-height: 100vh;
-      margin: 0;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-    .container {
-      background: #fff;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      text-align: center;
-      width: 100%;
-      max-width: 900px; /* Mais largo para o painel do admin */
-      box-sizing: border-box;
-    }
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 30px;
-    }
-    .logo {
-      width: 100px;
-      margin-right: 20px;
-      border-radius: 8px;
-    }
-    .admin-title {
-      color: #ff9800;
-      font-size: 2.5em;
-      margin: 0;
-    }
-    .search-bar {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 30px;
-      flex-wrap: wrap; /* Para responsividade */
-    }
-    .search-bar input {
-      flex-grow: 1;
-      padding: 12px 15px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      font-size: 1em;
-      box-sizing: border-box;
-    }
-    .search-bar button {
-      background: #ff9800;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 1em;
-      font-weight: bold;
-      transition: background 0.3s ease, transform 0.2s ease;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .search-bar button:hover {
-      background: #e68900;
-      transform: translateY(-1px);
-    }
-    .section {
-      margin-bottom: 30px;
-      text-align: left;
-    }
-    .section h3 {
-      color: #ff9800;
-      border-bottom: 2px solid #ff9800;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-      font-size: 1.8em;
-    }
-    .client-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .client-list li {
-      background: #fafafa;
-      border: 1px solid #eee;
-      border-radius: 8px;
-      padding: 15px;
-      margin-bottom: 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 1.1em;
-      color: #333;
-    }
-    .client-actions button {
-      background: #007bff;
-      color: white;
-      border: none;
-      padding: 8px 15px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 0.9em;
-      margin-left: 10px;
-      transition: background 0.3s ease;
-    }
-    .client-actions button:hover {
-      background: #0056b3;
-    }
-    .client-actions .delete-btn {
-      background: #dc3545;
-    }
-    .client-actions .delete-btn:hover {
-      background: #c82333;
-    }
-    .notifications {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .notifications li {
-      background: #fff3cd; /* Amarelo claro para notificação */
-      border: 1px solid #ffeeba;
-      border-radius: 8px;
-      padding: 15px;
-      margin-bottom: 10px;
-      color: #856404;
-      font-size: 1em;
-    }
-    .message-box {
-        margin-top: 20px;
-        padding: 15px;
-        border-radius: 8px;
-        font-weight: bold;
-        text-align: center;
-        display: none;
-        font-size: 0.9em;
-    }
-    .message-box.success {
-        background-color: #d4edda;
-        color: #155724;
-        border-color: #c3e6cb;
-    }
-    .message-box.error {
-        background-color: #f8d7da;
-        color: #721c24;
-        border-color: #f5c6cb;
-    }
-    .logout-btn {
-      background: #6c757d; /* Cinza para Logout */
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      margin-top: 30px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 1.1em;
-      font-weight: bold;
-      width: 100%;
-      transition: background 0.3s ease, transform 0.2s ease;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-    .logout-btn:hover {
-      background: #5a6268;
-      transform: translateY(-2px);
-    }
-    /* Responsividade */
-    @media (max-width: 768px) {
-        .container {
-            padding: 20px 10px;
-        }
-        header {
-            flex-direction: column;
-        }
-        .admin-title {
-            font-size: 2em;
-            margin-top: 15px;
-        }
-        .search-bar {
-            flex-direction: column;
-        }
-        .search-bar input, .search-bar button {
-            width: 100%;
-        }
-        .client-list li {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-        .client-actions {
-            margin-top: 10px;
-            width: 100%;
-            display: flex;
-            justify-content: space-around;
-        }
-        .client-actions button {
-            margin-left: 0;
-            margin-right: 5px;
-            flex-grow: 1;
-        }
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
+
 <body>
-
-  <div class="container">
-
-    <header>
-      <img src="assets/img/logo.png" alt="Logo Transol" class="logo" onerror="this.onerror=null;this.src='https://placehold.co/100x100/ff9800/ffffff?text=LOGO';">
-      <h2 class="admin-title">Administrador</h2> <!-- NOME REMOVIDO -->
+  <div class="page-wrapper">
+    <header class="header">
+      <div class="logo">
+        <img src="assets/img/logo.png" alt="Logo Transol"
+          onerror="this.onerror=null;this.src='https://placehold.co/100x40/ff9800/ffffff?text=LOGO';">
+      </div>
+      <div class="nav-button">
+        <button onclick="location.href='index.html'">Home</button>
+      </div>
     </header>
 
-    <div id="messageBox" class="message-box"></div>
+    <div class="content-and-sidebar-wrapper">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li class="menu-item active" data-target="busca">
+              <a href="#" class="link-menu-com-icone"><i class="fas fa-search"></i> Buscar Clientes</a>
+            </li>
+            <li class="menu-item" data-target="clientesCadastrados">
+              <a href="#" class="link-menu-com-icone"><i class="fas fa-users"></i> Clientes Cadastrados</a>
+            </li>
+            <li class="menu-item" data-target="notificacoes">
+              <a href="#" class="link-menu-com-icone"><i class="fas fa-bell"></i> Notificações </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
 
-    <div class="search-bar">
-      <input type="text" id="searchInput" placeholder="Buscar cliente por nome...">
-      <button id="searchBtn">Buscar</button>
-      <a href="cadastrar-cliente.html">
-        <button id="addClientBtn">Cadastrar Cliente</button>
-      </a>
+      <main class="main-content">
+        <section id="busca" class="content-section active">
+          <h1>Busca de Clientes</h1>
+          <div class="search-form-container container">
+            <input type="text" id="searchInput" placeholder="Buscar por CPF, Email ou Nome do Cliente">
+            <button id="searchButton" class="action-button">Buscar</button>
+            <div id="searchResults" class="results-container">
+              <p class="no-results-message">Nenhum resultado encontrado.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="clientesCadastrados" class="content-section">
+          <h1>Clientes Cadastrados</h1>
+          <div class="table-container container">
+            <table id="clientesTable">
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>CPF</th>
+                  <th>Email</th>
+                  <th>Telefone</th>
+                  <th>Endereço</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+            <p class="no-results-message" id="noClientsMessage">Nenhum cliente cadastrado.</p>
+          </div>
+        </section>
+
+        <section id="notificacoes" class="content-section">
+          <h1>Notificações de Orçamentos</h1>
+          <div class="notifications-container container">
+            <ul id="notificationsList">
+            </ul>
+            <p class="no-results-message" id="noNotificationsMessage" style="display:none;">Nenhuma notificação de
+              orçamento.</p>
+          </div>
+        </section>
+
+      </main>
     </div>
-
-    <!-- SEÇÃO DE RESULTADOS DA BUSCA (AGORA PRIMEIRO) -->
-    <div class="section">
-      <h3>Resultados da Busca</h3>
-      <ul class="client-list" id="searchClientList">
-        <li>Use a barra de busca para encontrar clientes.</li>
-      </ul>
-    </div>
-
-    <!-- SEÇÃO DE ÚLTIMOS CLIENTES CADASTRADOS (AGORA SEGUNDO) -->
-    <div class="section">
-      <h3>Últimos Clientes Cadastrados</h3>
-      <ul class="client-list" id="recentClientList">
-        <li>Carregando últimos clientes...</li>
-      </ul>
-    </div>
-
-     <div class="section">
-      <h3>Notificações de Orçamentos</h3>
-      <ul id="notificacoes" class="notifications">
-        <li>Nenhuma notificação de orçamento pendente.</li>
-      </ul>
-    </div>
-
-    <button id="logoutBtn" class="logout-btn">Sair</button>
-
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-center-title">
+          <h3>TRANSOL ESCOLAR E FRETAMENTO</h3>
+        </div>
+        <div class="footer-details">
+          <div class="footer-left-contacts">
+            <p>Telefone: (31) 99561-8613</p>
+            <p>Email: transol2014@hotmail.com</p>
+          </div>
+          <div class="footer-right-social">
+            <div class="social-icons">
+              <a href="https://www.instagram.com/transol__/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/5531995618613" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; Copyright 2025</p>
+      </div>
+    </footer>
   </div>
 
-  <!-- Inicialização do Firebase -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
     import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
-  
+
     // Sua configuração do Firebase
     const firebaseConfig = {
       apiKey: "AIzaSyCWhINHI-vP34KRhDmd3tXojtdUR4c98TE",
@@ -271,15 +124,15 @@
       messagingSenderId: "727466146759",
       appId: "1:727466146759:web:e300dab41004a002a737e2"
     };
-  
+
     // Inicializa o Firebase e o Firestore globalmente
     window.firebaseApp = initializeApp(firebaseConfig);
     window.db = getFirestore(window.firebaseApp);
   </script>
-  
-  <!-- Scripts do Administrador e Notificações -->
+
   <script type="module" src="assets/js/adm.js"></script>
-  <script type="module" src="assets/js/notificacoes-adm.js"></script> <!-- Novo script para notificações -->
- 
+  <script type="module" src="assets/js/notificacoes-adm.js"></script>
+
 </body>
+
 </html>
