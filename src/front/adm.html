@@ -29,8 +29,11 @@
         </div>
         <nav class="sidebar-nav">
           <ul>
-            <li class="menu-item active" data-target="busca">
-              <a href="#" class="link-menu-com-icone"><i class="fas fa-search"></i> Buscar Clientes</a>
+            <li class="menu-item">
+              <a href="cadastrar-cliente.html" class="link-menu-com-icone"><i class="fas fa-user-plus"></i> Cadastrar</a>
+            </li>
+            <li class="menu-item" data-target="busca">
+              <a href="#" class="link-menu-com-icone"><i class="fas fa-search"></i> Busca</a>
             </li>
             <li class="menu-item" data-target="clientesCadastrados">
               <a href="#" class="link-menu-com-icone"><i class="fas fa-users"></i> Clientes Cadastrados</a>
@@ -38,6 +41,7 @@
             <li class="menu-item" data-target="notificacoes">
               <a href="#" class="link-menu-com-icone"><i class="fas fa-bell"></i> Notificações </a>
             </li>
+            
           </ul>
         </nav>
       </aside>
@@ -115,7 +119,6 @@
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
     import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-    // Sua configuração do Firebase
     const firebaseConfig = {
       apiKey: "AIzaSyCWhINHI-vP34KRhDmd3tXojtdUR4c98TE",
       authDomain: "transolapp-c9c1a.firebaseapp.com",
@@ -124,8 +127,6 @@
       messagingSenderId: "727466146759",
       appId: "1:727466146759:web:e300dab41004a002a737e2"
     };
-
-    // Inicializa o Firebase e o Firestore globalmente
     window.firebaseApp = initializeApp(firebaseConfig);
     window.db = getFirestore(window.firebaseApp);
   </script>

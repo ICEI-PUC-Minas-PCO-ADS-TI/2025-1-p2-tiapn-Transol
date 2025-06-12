@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const userRole = localStorage.getItem('userRole');
 
     if (!jwtToken || userRole !== 'admin') {
-      alert('Você não está logado como administrador. Redirecionando para o login...'); // Usar alert temporariamente para debug
+      alert('Você não está logado como administrador. Redirecionando para o login...');
       window.location.href = 'login.html';
       return false;
     }
@@ -76,7 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
               <strong>Nome:</strong> ${client.nome || 'N/A'}<br>
               <strong>CPF:</strong> ${client.cpf || 'N/A'}<br>
               <strong>Email:</strong> ${client.email || 'N/A'}<br>
-              <div class="client-actions-search"> <button class="action-button-small view-client-btn" data-id="${client.id || ''}">Ver</button> <button class="action-button-small edit-client-btn" data-id="${client.id || ''}">Editar</button>
+              <div class="client-actions-search"> <button class="action-button-small view-client-btn" data-id="${client.id || ''}">Ver</button>
+                  <button class="action-button-small edit-client-btn" data-id="${client.id || ''}">Editar</button>
                   <button class="action-button-small delete-client-btn" data-id="${client.id || ''}">Excluir</button>
               </div>
           `;
@@ -85,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
     searchResults.appendChild(ul);
 
     // Adicionar event listeners para os novos botões gerados dinamicamente na busca
-    searchResults.querySelectorAll('.view-client-btn').forEach(button => { // NOVO: Event listener para o botão 'Ver'
+    searchResults.querySelectorAll('.view-client-btn').forEach(button => {
       button.addEventListener('click', (event) => viewClient(event.target.dataset.id));
     });
     searchResults.querySelectorAll('.edit-client-btn').forEach(button => {
@@ -191,7 +192,8 @@ document.addEventListener('DOMContentLoaded', () => {
                       <td>${client.telefone || 'N/A'}</td>
                       <td>${client.endereco || 'N/A'}</td>
                       <td>
-                          <button class="action-button-small view-client-btn" data-id="${client.id || ''}">Ver</button> <button class="action-button-small edit-client-btn" data-id="${client.id || ''}">Editar</button>
+                          <button class="action-button-small view-client-btn" data-id="${client.id || ''}">Ver</button>
+                          <button class="action-button-small edit-client-btn" data-id="${client.id || ''}">Editar</button>
                           <button class="action-button-small delete-client-btn" data-id="${client.id || ''}">Excluir</button>
                       </td>
                   `;
@@ -309,13 +311,29 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. Adicionar Event Listeners para o menu lateral
   menuItems.forEach(item => {
     item.addEventListener('click', (event) => {
-      event.preventDefault();
+      const link = item.querySelector('a'); // Pega o link real dentro do <li>
 
+      // Verifica se o link tem um href que não é '#'
+      if (link && link.getAttribute('href') !== '#') {
+        // Se for um link direto (como cadastrar-cliente.html), DEIXA O COMPORTAMENTO PADRÃO DO NAVEGADOR
+        // E NÃO EXECUTA MAIS NADA DESTE BLOCO DE JS
+        return; // O navegador vai seguir o href normalmente
+      }
+
+      // Se o link for '#' ou não tiver href (para as seções internas)
+      event.preventDefault(); // Impede o comportamento padrão (para não ir para o topo da página)
+
+      // Remove a classe 'active' de todos os itens do menu
       menuItems.forEach(mi => mi.classList.remove('active'));
+
+      // Adiciona a classe 'active' ao item clicado
       item.classList.add('active');
 
+      // Mostra a seção correspondente (somente se houver um data-target)
       const targetId = item.dataset.target;
-      showSection(targetId);
+      if (targetId) {
+        showSection(targetId);
+      }
     });
   });
 
@@ -333,7 +351,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const target = event.target;
     const clientId = target.dataset.id; // Pega o ID do cliente do atributo data-id do botão
 
-    if (target.classList.contains('view-client-btn')) { // NOVO: Event listener para o botão 'Ver'
+    if (target.classList.contains('view-client-btn')) {
       viewClient(clientId);
     } else if (target.classList.contains('edit-client-btn')) {
       editClient(clientId);
@@ -345,7 +363,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 5. Adicionar Event Listener para o botão de Logout
   logoutBtn.addEventListener('click', () => {
     localStorage.clear();
-    alert('Sessão encerrada. Redirecionando...'); // Usar alert temporariamente para debug
+    alert('Sessão encerrada. Redirecionando...');
     window.location.href = 'index.html'; // Ou 'login.html'
   });
 

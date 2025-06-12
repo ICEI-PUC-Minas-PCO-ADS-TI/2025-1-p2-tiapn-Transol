@@ -17,32 +17,22 @@ body {
   color: #333;
 }
 
-/* Wrapper principal que contém header, sidebar e main-content */
 .page-wrapper {
   display: flex;
   flex-direction: column;
-  /* Organiza header, content-and-sidebar-wrapper e footer em coluna */
   min-height: 100vh;
   width: 100%;
-  /* O background da imagem e gradiente deve vir para cá */
-  /* Assumindo que o background está no HTML ou será adicionado aqui */
-  /* Exemplo: background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.6)), url('../img/cta-bg.jpg') no-repeat center center fixed; */
-  background-size: cover;
+  
 }
 
-/* Wrapper para o conteúdo (sidebar + main) */
 .content-and-sidebar-wrapper {
   display: flex;
-  /* Para que sidebar e main-content fiquem lado a lado */
   flex-grow: 1;
-  /* Permite que ocupe o espaço restante entre o header e o footer */
 }
 
-
-/* Estilos do Header */
 .header {
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 0px;
+  padding: 0 5px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -52,16 +42,13 @@ body {
   z-index: 1000;
   box-sizing: border-box;
   height: 60px;
-  /* Definir altura explícita para o header */
   flex-shrink: 0;
-  /* Impede que o header encolha */
 }
 
 .header .logo img {
   height: 70px;
   width: auto;
   
-  /* Adicionado padding para a logo não encostar na borda */
 }
 
 .header .nav-button button {
@@ -80,8 +67,6 @@ body {
   background-color: #e68900;
 }
 
-
-/* Estilos do Menu Lateral (Sidebar) */
 .sidebar {
   width: 250px;
   background-color: #222;
@@ -95,7 +80,6 @@ body {
   position: sticky;
   top: 0;
   height: 100vh;
-  /* Ocupa a altura total da viewport (ajustar em mobile) */
   overflow-y: auto;
 }
 
@@ -137,13 +121,11 @@ body {
 }
 
 .link-menu-com-icone {
-  /* Mantido para seu uso no HTML, se necessário */
   display: flex;
   align-items: center;
 }
 
 .icone-menu-veiculo {
-  /* Mantido para seu SVG de veículo */
   margin-right: 10px;
   vertical-align: middle;
 }
@@ -155,7 +137,6 @@ body {
   border-radius: 0 5px 5px 0;
 }
 
-/* Estilos do Conteúdo Principal */
 .main-content {
   flex-grow: 1;
   padding: 30px;
@@ -166,19 +147,16 @@ body {
   justify-content: flex-start;
 }
 
-/* Estilos das Seções de Conteúdo (para mostrar/esconder com JS) */
 .content-section {
   display: none;
   width: 100%;
   max-width: 1200px;
-  /* Aumentado para mais espaço */
 }
 
 .content-section.active {
   display: block;
 }
 
-/* Container de formulários e tabelas */
 .container {
   background: #fff;
   padding: 40px;
@@ -187,13 +165,11 @@ body {
   text-align: center;
   width: 100%;
   max-width: 1200px;
-  /* Aumentado para mais espaço */
   box-sizing: border-box;
   color: #333;
   margin: 0 auto;
 }
 
-/* Títulos e elementos de formulário */
 h1 {
   color: #ff9800;
   margin-bottom: 25px;
@@ -243,7 +219,6 @@ input:focus {
   box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
 }
 
-/* Mensagens de feedback */
 .message-box {
   margin-top: 20px;
   padding: 15px;
@@ -266,10 +241,8 @@ input:focus {
   border-color: #f5c6cb;
 }
 
-/* Botões */
 button[type="submit"],
 .action-button {
-  /* .action-button é para botões gerais como "Buscar" */
   background: #ff9800;
   color: white;
   border: none;
@@ -285,9 +258,7 @@ button[type="submit"],
 }
 
 button[type="button"] {
-  /* Botão de adicionar criança e outros */
   background: #4CAF50;
-  /* Verde, exemplo */
   color: white;
   border: none;
   padding: 10px 15px;
@@ -310,8 +281,6 @@ button[type="button"]:hover {
   background: #45a049;
 }
 
-
-/* Seções de formulário (responsável/aluno - se mantiverem nesta página) */
 .form-sections {
   display: flex;
   flex-wrap: wrap;
@@ -344,9 +313,6 @@ button[type="button"]:hover {
   display: block;
 }
 
-/* --- Novos estilos para as seções ADM --- */
-
-/* Seção de Busca */
 .search-form-container {
   padding: 20px;
   display: flex;
@@ -357,7 +323,6 @@ button[type="button"]:hover {
 
 #searchInput {
   margin-bottom: 0px;
-  /* Ajuste o margin-bottom para inputs de busca */
 }
 
 .results-container {
@@ -390,21 +355,16 @@ button[type="button"]:hover {
 
 .error-message {
   color: #D32F2F;
-  /* Cor de erro */
 }
 
-
-/* Seção de Clientes Cadastrados (Tabela) */
 .table-container {
   overflow-x: auto;
-  /* Permite rolagem horizontal em tabelas grandes */
   margin-top: 20px;
 }
 
 #clientesTable {
   width: 100%;
   border-collapse: collapse;
-  /* Remove espaçamento entre células */
   margin-top: 15px;
 }
 
@@ -414,7 +374,6 @@ button[type="button"]:hover {
   padding: 12px 15px;
   text-align: left;
   color: #333;
-  /* Cor do texto da tabela */
 }
 
 #clientesTable th {
@@ -427,24 +386,18 @@ button[type="button"]:hover {
 
 #clientesTable tbody tr:nth-child(even) {
   background-color: #f9f9f9;
-  /* Fundo zebrado */
 }
 
 #clientesTable tbody tr:hover {
   background-color: #e9e9e9;
 }
 
-/* NOVO: Estilo para a coluna de Ações */
 #clientesTable th:last-child,
 #clientesTable td:last-child {
   width: 180px;
-  /* Aumente este valor conforme necessário para acomodar os botões */
   min-width: 180px;
-  /* Garante que a coluna não encolha demais */
   text-align: center;
-  /* Centraliza os botões dentro da célula */
   white-space: nowrap;
-  /* Impede que os botões quebrem linha, se houver espaço */
 }
 
 .action-button-small {
@@ -456,18 +409,14 @@ button[type="button"]:hover {
   cursor: pointer;
   font-size: 0.8em;
   margin-right: 5px;
-  /* Espaço entre os botões */
   transition: background 0.3s ease;
   display: inline-block;
-  /* Garante que os botões fiquem lado a lado */
-  /* Remove width: auto se estiver em algum lugar e conflitar */
 }
 
 .action-button-small:hover {
   background: #8b9195;
 }
 
-/* Cores específicas para botões de ação */
 .action-button-small.view-client-btn {
   background: #47545a;
 }
@@ -477,22 +426,17 @@ button[type="button"]:hover {
   color: #333;
 }
 
-/* Amarelo com texto escuro */
 .action-button-small.delete-client-btn {
   background: #8d140c;
   padding: 6px 5px;
-  /* Diminua o padding horizontal para metade */
   font-size: 0.75em;
-  /* Opcional: diminua um pouco a fonte se o texto ficar apertado */
   min-width: 45px;
-  /* Define uma largura mínima para o botão de Excluir */
 }
 
 .action-button-small.delete-client-btn:hover {
   background: #c82333;
 }
 
-/* Seção de Notificações */
 .notifications-container ul {
   list-style: none;
   padding: 0;
@@ -501,7 +445,6 @@ button[type="button"]:hover {
 
 .notification-item {
   background-color: #FFFDE7;
-  /* Amarelo claro, para destacar */
   border: 1px solid #FFECB3;
   padding: 15px;
   border-radius: 8px;
@@ -527,8 +470,6 @@ button[type="button"]:hover {
   margin-top: 10px;
 }
 
-
-/* Footer (Mantido inalterado) */
 footer {
   background-color: black;
   color: white;
@@ -581,7 +522,9 @@ footer {
   margin: 3px 0;
   font-size: 0.85em;
 }
-
+.footer-left-contacts p:hover {
+  color: #ff9800;
+}
 .social-icons {
   display: flex;
   gap: 15px;
@@ -605,7 +548,6 @@ footer {
   padding-top: 10px;
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
   .page-wrapper {
     flex-direction: column;
@@ -615,7 +557,6 @@ footer {
     position: static;
     height: auto;
     padding: 10px 20px;
-    /* Adiciona padding para mobile */
   }
 
   .content-and-sidebar-wrapper {
@@ -663,7 +604,6 @@ footer {
   }
 
   .login-container img {
-    /* Parece ser um resquício, rever se precisa ser aqui */
     width: 100%;
   }
 }
