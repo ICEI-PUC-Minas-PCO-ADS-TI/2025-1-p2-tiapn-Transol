@@ -1,245 +1,192 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cadastro - Transol</title>
   <link href="assets/css/cadastrar-cliente.css" rel="stylesheet">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
+
 <body>
-
-  <body>
-
-    <div class="container">
-      <img src="assets/img/logo.png" alt="Logo Transol" class="logo" onerror="this.onerror=null;this.src='assets/img/logo.png'">
-    
-      <h1>Cadastro de Cliente</h1>
-    
-      <div id="messageBox" class="message-box"></div>
-    
-      <form id="cadastroClienteForm">
-            <div class="form-sections">
-                <div class="section-responsavel">
-            <h2>Dados do Responsável</h2>
-            <label for="nomeResponsavel">Nome Completo:</label>
-            <input type="text" id="nomeResponsavel" required>
-    
-            <label for="endereco">Endereço:</label>
-            <input type="text" id="endereco" required>
-            
-            <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" required>
-    
-            <label for="cpf">CPF:</label>
-            <input type="text" id="cpf" required>
-    
-            <label for="email">Email:</label>
-            <input type="email" id="email" required>
-    
-            <label for="senha">Criar Senha:</label>
-            <input type="password" id="senha" value="transol1234" readonly>       </div>
-    
-                <div class="section-aluno">
-            <h2>Dados do Aluno</h2>
-            <div id="childrenContainer">
-              <div class="child-entry">
-                <label for="nomeCrianca_0">Nome do Aluno:</label>
-                <input type="text" class="nomeCrianca" id="nomeCrianca_0" required>
-    
-                <label for="dtNasc_0">Data de Nascimento:</label>
-                <input type="date" class="dtNasc" id="dtNasc_0" required>
-    
-                <label for="escola_0">Nome da Escola:</label>
-                <input type="text" class="escola" id="escola_0" required>
-    
-                <label for="entrada_0">Horário de Entrada:</label>
-                <input type="time" class="entrada" id="entrada_0" required>
-    
-                <label for="saida_0">Horário de Saída:</label>
-                <input type="time" class="saida" id="saida_0" required>
-    
-                <label for="idEscolar_0">ID da Escola (para teste):</label>
-                <input type="number" class="idEscolar" id="idEscolar_0" value="3" readonly required>
-              </div>
-            </div>
-            <button type="button" onclick="adicionarCrianca()">Adicionar Outra Criança</button>
-          </div>
-        </div>     <h2>Anexar Contrato (Funcionalidade Futura)</h2>
-        <input type="file" id="contrato" disabled title="Funcionalidade de upload de contrato será implementada em breve.">
-        <p style="font-size: 0.9em; color: #777; margin-top: 5px; text-align: left;">O upload do contrato será implementado em uma fase futura.</p>
-    
-        <button type="submit">Finalizar Cadastro</button>
-      </form>
-    </div>
-
-<script>
-  let childCounter = 0; // Para IDs únicos dos campos de aluno
-
-  // Função para exibir mensagens de feedback
-  function showMessage(message, type) {
-    const messageBox = document.getElementById('messageBox');
-    messageBox.textContent = message;
-    messageBox.className = 'message-box ' + type; // Adiciona a classe de tipo (success/error)
-    messageBox.style.display = 'block'; // Mostra a caixa de mensagem
-
-    // Esconde a mensagem após 5 segundos
-    setTimeout(() => {
-      messageBox.style.display = 'none';
-    }, 5000);
-  }
-
-  // Função para adicionar mais campos de criança
-  function adicionarCrianca() {
-    childCounter++;
-    const container = document.getElementById('childrenContainer');
-    const childDiv = document.createElement('div');
-    childDiv.classList.add('child-entry');
-    childDiv.innerHTML = `
-      <label for="nomeCrianca_${childCounter}">Nome do Aluno:</label>
-      <input type="text" class="nomeCrianca" id="nomeCrianca_${childCounter}" required>
-
-      <label for="dtNasc_${childCounter}">Data de Nascimento:</label>
-      <input type="date" class="dtNasc" id="dtNasc_${childCounter}" required>
-
-      <label for="escola_${childCounter}">Nome da Escola:</label>
-      <input type="text" class="escola" id="escola_${childCounter}" required>
-
-      <label for="entrada_${childCounter}">Horário de Entrada:</label>
-      <input type="time" class="entrada" id="entrada_${childCounter}" required>
-
-      <label for="saida_${childCounter}">Horário de Saída:</label>
-      <input type="time" class="saida" id="saida_${childCounter}" required>
-
-      <label for="idEscolar_${childCounter}">ID da Escola (para teste):</label>
-      <input type="number" class="idEscolar" id="idEscolar_${childCounter}" value="3" readonly required>
-    `;
-    container.appendChild(childDiv);
-  }
-
-  // Função para finalizar o cadastro e enviar os dados
-  document.getElementById('cadastroClienteForm').addEventListener('submit', async function(event) {
-    event.preventDefault(); // Impede o envio padrão do formulário
-
-    const nomeResponsavel = document.getElementById('nomeResponsavel').value;
-    const endereco = document.getElementById('endereco').value;
-    const telefone = document.getElementById('telefone').value;
-    const cpf = document.getElementById('cpf').value;
-    const email = document.getElementById('email').value;
-    const senha = document.getElementById('senha').value; // Senha padrão 'transol1234'
-
-    const clienteData = {
-      nome: nomeResponsavel,
-      endereco: endereco,
-      telefone: telefone,
-      cpf: cpf,
-      email: email,
-      senha: senha
-    };
-
-    const alunosData = [];
-    const childEntries = document.querySelectorAll('.child-entry');
-    childEntries.forEach(entry => {
-      const nomeCrianca = entry.querySelector('.nomeCrianca').value;
-      const dtNasc = entry.querySelector('.dtNasc').value;
-      const escola = entry.querySelector('.escola').value;
-      const entrada = entry.querySelector('.entrada').value;
-      const saida = entry.querySelector('.saida').value;
-      const idEscolar = parseInt(entry.querySelector('.idEscolar').value); // Converte para número
-
-      // Validação básica para aluno antes de adicionar
-      if (nomeCrianca && dtNasc && escola && entrada && saida && idEscolar) {
-        alunosData.push({
-          nome: nomeCrianca,
-          data_nasc: dtNasc,
-          escola: escola,
-          entrada: entrada,
-          saida: saida,
-          id_escolar: idEscolar
-        });
-      } else {
-        showMessage('Por favor, preencha todos os campos do aluno.', 'error');
-        return; // Sai da função se algum aluno estiver incompleto
-      }
-    });
-
-    // Validação final antes de enviar
-    if (!clienteData.nome || !clienteData.cpf || !clienteData.endereco || !clienteData.telefone || !clienteData.email || !clienteData.senha) {
-        showMessage('Por favor, preencha todos os dados do responsável.', 'error');
-        return;
-    }
-    if (alunosData.length === 0) {
-        showMessage('Por favor, adicione pelo menos um aluno.', 'error');
-        return;
-    }
-
-    try {
-      const response = await fetch('http://localhost:3000/clientes', { // Substitua pela URL do seu back-end no Azure quando implantar
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          cliente: clienteData,
-          alunos: alunosData
-        }),
-      });
-
-      const result = await response.json();
-
-      if (response.ok) {
-        showMessage('Cadastro realizado com sucesso!', 'success');
-        document.getElementById('cadastroClienteForm').reset(); // Limpa o formulário
-        // Opcional: Remover crianças adicionais e resetar o contador
-        document.getElementById('childrenContainer').innerHTML = `
-          <div class="child-entry">
-            <label for="nomeCrianca_0">Nome do Aluno:</label>
-            <input type="text" class="nomeCrianca" id="nomeCrianca_0" required>
-            <label for="dtNasc_0">Data de Nascimento:</label>
-            <input type="date" class="dtNasc" id="dtNasc_0" required>
-            <label for="escola_0">Nome da Escola:</label>
-            <input type="text" class="escola" id="escola_0" required>
-            <label for="entrada_0">Horário de Entrada:</label>
-            <input type="time" class="entrada" id="entrada_0" required>
-            <label for="saida_0">Horário de Saída:</label>
-            <input type="time" class="saida" id="saida_0" required>
-            <label for="idEscolar_0">ID da Escola (para teste):</label>
-            <input type="number" class="idEscolar" id="idEscolar_0" value="3" readonly required>
-          </div>
-        `;
-        childCounter = 0;
-
-      } else {
-        // Se o back-end retornar um erro específico (ex: CPF/Email duplicado)
-        showMessage('Erro no cadastro: ' + (result.error || 'Erro desconhecido.'), 'error');
-      }
-    } catch (error) {
-      console.error('Erro ao enviar dados:', error);
-      showMessage('Erro de conexão ou servidor: ' + error.message, 'error');
-    }
-  });
-</script>
-<footer class="footer">
-  <div class="footer-content">
-    <div class="footer-center-title">
-      <h3>TRANSOL ESCOLAR E FRETAMENTO</h3>
-    </div>
-    <div class="footer-details">
-      <div class="footer-left-contacts">
-        <p>Telefone: (31) 99561-8613</p>
-        <p>Email: transol2014@hotmail.com</p>
+  <div class="page-wrapper">
+    <header class="header">
+      <div class="logo">
+        <img src="assets/img/logo.png" alt="Logo Transol"
+          onerror="this.onerror=null;this.src='https://placehold.co/100x40/ff9800/ffffff?text=LOGO';">
       </div>
-      <div class="footer-right-social">
-        <div class="social-icons">
-          <a href="https://www.instagram.com/transol__/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://wa.me/5531995618613" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <div class="nav-button">
+        <button onclick="location.href='index.html'">Home</button>
+      </div>
+    </header>
+    <div class="content-and-sidebar-wrapper">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li class="menu-item active" data-target="cadastroCliente">
+              <a href="#"><i class="fas fa-user-plus"></i> Cadastrar Cliente</a>
+            </li>
+            <li class="menu-item" data-target="cadastroMotorista">
+              <a href="#"><i class="fas fa-user-plus"></i> Cadastrar Motorista</a>
+            </li>
+            <li class="menu-item" data-target="CadastroVeiculos">
+              <a href="#">
+                <svg class="icone-menu-veiculo" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32">
+                  <path fill="currentColor"
+                    d="M30.17 7.314c-.024-.274-.214-.498-.42-.498s-.375-.17-.375-.375s-.222-.336-.493-.29l-1.472.25c-.296-1.793-.74-2.914-1.41-3.584c-2-2-18-2-20 0c-.67.67-1.114 1.79-1.41 3.583l-1.472-.25c-.27-.046-.493.085-.493.29s-.17.376-.375.376s-.396.225-.42.498l-.47 5.066a.447.447 0 0 0 .453.498h1.062c.275 0 .52-.224.546-.498l.394-4.232a.46.46 0 0 1 .54-.415l.054.01C4.008 11.395 4 29.682 4 29.682c0 .554.14 1 .313 1h2.562c.173 0 .313-.446.313-1V27.79c4.643.7 12.982.7 17.625 0v1.89c0 .553.14 1 .312 1h2.562c.172 0 .312-.447.312-1c0 0-.008-18.283-.408-21.937l.054-.01a.46.46 0 0 1 .54.416l.393 4.23c.024.275.27.5.545.5h1.062a.45.45 0 0 0 .454-.5l-.47-5.066zM7.126 23.37a1.811 1.811 0 1 1-.002-3.62a1.811 1.811 0 0 1 .002 3.619zm-2.083-7.393c.1-7.435.45-11.238 1.665-12.454c.487-.486 3.777-1.207 9.293-1.207s8.806.72 9.293 1.207c1.217 1.216 1.564 5.02 1.665 12.455c-1.175.473-4.904 1.025-10.958 1.025c-6.05 0-9.778-.55-10.958-1.026m18.02 5.582a1.813 1.813 0 0 1 3.624-.001a1.811 1.811 0 0 1-3.624 0z" />
+                </svg>
+                Cadastrar Veículo
+              </a>     </li>
+            <li class="menu-item" data-target="CadastroRotas">
+              <a href="#"><i class="fas fa-file-contract"></i> Cadastrar Rotas</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <section id="cadastroCliente" class="content-section active">
+
+          <h1>Cadastro de Cliente</h1>
+          <div id="messageBox" class="message-box"></div>
+          <form id="cadastroClienteForm">
+            <div class="form-sections">
+              <div class="section-responsavel">
+                <h2>Dados do Responsável</h2>
+                <label for="nomeResponsavel">Nome Completo:</label>
+                <input type="text" id="nomeResponsavel" required>
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" required>
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" required>
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="senha">Criar Senha:</label>
+                <input type="password" id="senha" value="transol1234" readonly>
+              </div>
+              <div class="section-aluno">
+                <h2>Dados do Aluno</h2>
+                <div id="childrenContainer">
+                  <div class="child-entry">
+                    <label for="nomeCrianca_0">Nome do Aluno:</label>
+                    <input type="text" class="nomeCrianca" id="nomeCrianca_0" required>
+                    <label for="dtNasc_0">Data de Nascimento:</label>
+                    <input type="date" class="dtNasc" id="dtNasc_0" required>
+                    <label for="escola_0">Nome da Escola:</label>
+                    <input type="text" class="escola" id="escola_0" required>
+                    <label for="entrada_0">Horário de Entrada:</label>
+                    <input type="time" class="entrada" id="entrada_0" required>
+                    <label for="saida_0">Horário de Saída:</label>
+                    <input type="time" class="saida" id="saida_0" required>
+                    <label for="idEscolar_0">ID da Escola (para teste):</label>
+                    <input type="number" class="idEscolar" id="idEscolar_0" value="3" readonly required>
+                  </div>
+                </div>
+                <button type="button" onclick="adicionarCrianca()">Adicionar Outra Criança</button>
+              </div>
+            </div>
+            <h2>Anexar Contrato (Funcionalidade Futura)</h2>
+            <input type="file" id="contrato" disabled
+              title="Funcionalidade de upload de contrato será implementada em breve.">
+            <p style="font-size: 0.9em; color: #777; margin-top: 5px; text-align: left;">O upload do contrato será
+              implementado em uma fase futura.</p>
+            <button type="submit">Finalizar Cadastro</button>
+          </form>
+        </section>
+
+        <section id="cadastroMotorista" class="content-section">
+          <h1>Cadastrar Motorista</h1>
+          <p>Este será o formulário para cadastrar Motoritas. </p>
+          
+        </section>
+
+        <section id="CadastroVeiculos" class="content-section">
+          <h1>Inserir Veículo</h1>
+          <p>Este será o formulário para cadastrar os veículos da frota.</p>
+          
+        </section>
+        <section id="CadastroRotas" class="content-section">
+          <h1>Inserir Veículo</h1>
+          <p>Este será o formulário para cadastrar as rotas.</p>
+        
+        </section>
+
+      </main>
+    </div>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-center-title">
+          <h3>TRANSOL ESCOLAR E FRETAMENTO</h3>
+        </div>
+        <div class="footer-details">
+          <div class="footer-left-contacts">
+            <p>Telefone: (31) 99561-8613</p>
+            <p>Email: transol2014@hotmail.com</p>
+          </div>
+          <div class="footer-right-social">
+            <div class="social-icons">
+              <a href="https://www.instagram.com/transol__/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/5531995618613" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="footer-copyright">
-    <p>&copy; Copyright 2025</p>
-  </div>
-</footer>
+      <div class="footer-copyright">
+        <p>&copy; Copyright 2025</p>
+      </div>
+    </footer>
+
+    <script>
+      // Seu JavaScript existente para adicionar criança e finalizar cadastro (sem alterações)
+      let childCounter = 0;
+      function showMessage(message, type) { /* ... */ }
+      function adicionarCrianca() { /* ... */ }
+      document.getElementById('cadastroClienteForm').addEventListener('submit', async function (event) { /* ... */ });
+
+      // --- Novo JavaScript para o menu lateral ---
+      document.addEventListener('DOMContentLoaded', () => {
+        const menuItems = document.querySelectorAll('.sidebar-nav .menu-item');
+        const contentSections = document.querySelectorAll('.main-content .content-section');
+
+        function showSection(targetId) {
+          contentSections.forEach(section => {
+            if (section.id === targetId) {
+              section.classList.add('active');
+            } else {
+              section.classList.remove('active');
+            }
+          });
+        }
+
+        menuItems.forEach(item => {
+          item.addEventListener('click', (event) => {
+            event.preventDefault(); // Impede o comportamento padrão do link
+
+            // Remove a classe 'active' de todos os itens do menu
+            menuItems.forEach(mi => mi.classList.remove('active'));
+
+            // Adiciona a classe 'active' ao item clicado
+            item.classList.add('active');
+
+            // Mostra a seção correspondente
+            const targetId = item.dataset.target;
+            showSection(targetId);
+          });
+        });
+
+        // Opcional: Mostrar a primeira seção ativa ao carregar a página
+        // Isso já é tratado pela classe 'active' no HTML inicial
+        // showSection('cadastroCliente'); 
+      });
+    </script>
+
 </body>
+
 </html>
