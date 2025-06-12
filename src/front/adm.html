@@ -29,9 +29,6 @@
         </div>
         <nav class="sidebar-nav">
           <ul>
-            <li class="menu-item">
-              <a href="cadastrar-cliente.html" class="link-menu-com-icone"><i class="fas fa-user-plus"></i> Cadastrar</a>
-            </li>
             <li class="menu-item" data-target="busca">
               <a href="#" class="link-menu-com-icone"><i class="fas fa-search"></i> Busca</a>
             </li>
@@ -41,12 +38,17 @@
             <li class="menu-item" data-target="notificacoes">
               <a href="#" class="link-menu-com-icone"><i class="fas fa-bell"></i> Notificações </a>
             </li>
-            
+            <li class="menu-item">
+              <a href="cadastrar-cliente.html" class="link-menu-com-icone"><i class="fas fa-user-plus"></i>
+                Cadastrar</a>
+            </li>
           </ul>
         </nav>
       </aside>
 
       <main class="main-content">
+        <div id="messageBox" class="message-box"></div>
+
         <section id="busca" class="content-section active">
           <h1>Busca de Clientes</h1>
           <div class="search-form-container container">

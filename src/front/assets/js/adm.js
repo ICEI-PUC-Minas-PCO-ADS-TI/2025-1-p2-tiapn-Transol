@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const menuItems = document.querySelectorAll('.sidebar-nav .menu-item');
-  const contentSections = document.querySelectorAll('.main-content .content-section');
-
   // Seletores de elementos DOM (para todas as seções)
+  // Agora messageBox é selecionada de um local mais global no HTML
+  const messageBox = document.getElementById('messageBox');
   const searchInput = document.getElementById('searchInput');
   const searchButton = document.getElementById('searchButton');
   const searchResults = document.getElementById('searchResults');
@@ -11,19 +10,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const notificationsList = document.getElementById('notificationsList');
   const noNotificationsMessage = document.getElementById('noNotificationsMessage');
   const logoutBtn = document.getElementById('logoutBtn');
-  const messageBox = document.getElementById('messageBox'); // Para mensagens gerais
+
+  // Seletores do menu lateral e seções de conteúdo
+  const menuItems = document.querySelectorAll('.sidebar-nav .menu-item');
+  const contentSections = document.querySelectorAll('.main-content .content-section');
 
   // --- Funções Auxiliares ---
 
   // Função para exibir mensagens de feedback na caixa de mensagem
   function showMessage(message, type) {
-    messageBox.textContent = message;
-    messageBox.className = 'message-box ' + type;
-    messageBox.style.display = 'block';
+    // Garantir que messageBox existe antes de usar
+    if (messageBox) {
+      messageBox.textContent = message;
+      messageBox.className = 'message-box ' + type;
+      messageBox.style.display = 'block';
 
-    setTimeout(() => {
-      messageBox.style.display = 'none';
-    }, 5000);
+      setTimeout(() => {
+        messageBox.style.display = 'none';
+      }, 5000);
+    } else {
+      console.error("Erro: Elemento messageBox não encontrado!");
+      alert(message); // Fallback para alert se a caixa não existir
+    }
   }
 
   // Função para verificar autenticação e role
@@ -32,8 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const userRole = localStorage.getItem('userRole');
 
     if (!jwtToken || userRole !== 'admin') {
-      alert('Você não está logado como administrador. Redirecionando para o login...');
-      window.location.href = 'login.html';
+      showMessage('Você não está logado como administrador. Redirecionando para o login...', 'error');
+      setTimeout(() => {
+        window.location.href = 'login.html';
+      }, 2000);
       return false;
     }
     return true;
@@ -64,7 +74,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Função auxiliar para exibir clientes em searchResults (reutilizável para busca e últimos 5)
   function displayClientsInSearchResults(clients) {
-    searchResults.innerHTML = ''; // Limpa antes de adicionar
+    if (!searchResults) {
+      console.error("Erro: Elemento searchResults não encontrado!");
+      return;
+    }
+    searchResults.innerHTML = '';
     if (!clients || clients.length === 0) {
       searchResults.innerHTML = '<p class="no-results-message">Nenhum resultado encontrado.</p>';
       return;
@@ -76,7 +90,8 @@ document.addEventListener('DOMContentLoaded', () => {
               <strong>Nome:</strong> ${client.nome || 'N/A'}<br>
               <strong>CPF:</strong> ${client.cpf || 'N/A'}<br>
               <strong>Email:</strong> ${client.email || 'N/A'}<br>
-              <div class="client-actions-search"> <button class="action-button-small view-client-btn" data-id="${client.id || ''}">Ver</button>
+              <div class="client-actions-search">
+                  <button class="action-button-small view-client-btn" data-id="${client.id || ''}">Ver</button>
                   <button class="action-button-small edit-client-btn" data-id="${client.id || ''}">Editar</button>
                   <button class="action-button-small delete-client-btn" data-id="${client.id || ''}">Excluir</button>
               </div>
@@ -101,27 +116,31 @@ document.addEventListener('DOMContentLoaded', () => {
   async function loadLastFiveClients() {
     if (!checkAuthenticationAndRole()) return;
 
+    if (!searchResults) { // Adicionado verificação
+      console.error("Erro: Elemento searchResults não encontrado para loadLastFiveClients!");
+      return;
+    }
     searchResults.innerHTML = '<p class="no-results-message">Carregando últimos clientes...</p>';
     searchResults.style.display = 'block';
 
     const jwtToken = localStorage.getItem('jwtToken');
 
     try {
-      // Conectando à sua API para obter os últimos 5 clientes
       const response = await fetch('http://localhost:3000/clientes?_sort=id&_order=desc&_limit=5', {
         headers: {
           'Authorization': `Bearer ${jwtToken}`
         }
       });
       if (!response.ok) {
-        throw new Error(`Erro HTTP! Status: ${response.status}`);
+        const errorData = await response.json().catch(() => ({ message: 'Erro desconhecido.' }));
+        throw new Error(`Erro HTTP! Status: ${response.status} - ${errorData.message}`);
       }
       const clients = await response.json();
 
-      displayClientsInSearchResults(clients); // Exibe os clientes na lista de busca
+      displayClientsInSearchResults(clients);
     } catch (error) {
       console.error('Erro ao carregar últimos clientes:', error);
-      showMessage('Erro ao carregar últimos clientes. Verifique o servidor.', 'error');
+      showMessage(`Erro ao carregar últimos clientes: ${error.message}. Verifique o servidor e a URL da API.`, 'error');
       searchResults.innerHTML = '<p class="no-results-message error-message">Erro ao carregar últimos clientes. Tente novamente.</p>';
     }
   }
@@ -130,6 +149,10 @@ document.addEventListener('DOMContentLoaded', () => {
   async function performSearch() {
     if (!checkAuthenticationAndRole()) return;
 
+    if (!searchInput || !searchResults) { // Adicionado verificação
+      console.error("Erro: Elemento searchInput ou searchResults não encontrado para performSearch!");
+      return;
+    }
     const query = searchInput.value.trim();
     searchResults.innerHTML = '<p class="no-results-message">Buscando...</p>';
     searchResults.style.display = 'block';
@@ -137,26 +160,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const jwtToken = localStorage.getItem('jwtToken');
 
     if (!query) {
-      loadLastFiveClients(); // Se a busca estiver vazia, recarrega os últimos 5
+      loadLastFiveClients();
       return;
     }
 
     try {
-      // Conectando à sua API de busca de clientes
       const response = await fetch(`http://localhost:3000/clientes/search?q=${encodeURIComponent(query)}`, {
         headers: {
           'Authorization': `Bearer ${jwtToken}`
         }
       });
       if (!response.ok) {
-        throw new Error(`Erro HTTP! Status: ${response.status}`);
+        const errorData = await response.json().catch(() => ({ message: 'Erro desconhecido.' }));
+        throw new Error(`Erro HTTP! Status: ${response.status} - ${errorData.message}`);
       }
       const clients = await response.json();
 
-      displayClientsInSearchResults(clients); // Exibe os clientes na lista de busca
+      displayClientsInSearchResults(clients);
     } catch (error) {
       console.error('Erro na busca:', error);
-      showMessage(`Erro ao buscar clientes: ${error.message}. Verifique o servidor.`, 'error');
+      showMessage(`Erro ao buscar clientes: ${error.message}. Verifique o servidor e a URL da API.`, 'error');
       searchResults.innerHTML = '<p class="no-results-message error-message">Erro ao buscar clientes. Tente novamente.</p>';
     }
   }
@@ -165,20 +188,24 @@ document.addEventListener('DOMContentLoaded', () => {
   async function loadClientes() {
     if (!checkAuthenticationAndRole()) return;
 
-    clientesTableBody.innerHTML = ''; // Limpa a tabela
-    noClientsMessage.style.display = 'none'; // Esconde a mensagem de "nenhum cliente"
+    if (!clientesTableBody || !noClientsMessage) { // Adicionado verificação
+      console.error("Erro: Elemento clientesTableBody ou noClientsMessage não encontrado para loadClientes!");
+      return;
+    }
+    clientesTableBody.innerHTML = '';
+    noClientsMessage.style.display = 'none';
 
     const jwtToken = localStorage.getItem('jwtToken');
 
     try {
-      // Conectando à sua API para obter TODOS os clientes
       const response = await fetch('http://localhost:3000/clientes', {
         headers: {
           'Authorization': `Bearer ${jwtToken}`
         }
       });
       if (!response.ok) {
-        throw new Error(`Erro HTTP! Status: ${response.status}`);
+        const errorData = await response.json().catch(() => ({ message: 'Erro desconhecido.' }));
+        throw new Error(`Erro HTTP! Status: ${response.status} - ${errorData.message}`);
       }
       const allClients = await response.json();
 
@@ -199,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   `;
         });
       } else {
-        noClientsMessage.style.display = 'block'; // Mostra a mensagem
+        noClientsMessage.style.display = 'block';
       }
     } catch (error) {
       console.error('Erro ao carregar clientes:', error);
@@ -226,7 +253,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (confirm(`Tem certeza que deseja excluir o cliente com ID ${clientId}?`)) {
       try {
-        // Conectando à sua API para excluir o cliente
         const response = await fetch(`http://localhost:3000/clientes/${clientId}`, {
           method: 'DELETE',
           headers: {
@@ -234,14 +260,14 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
         if (!response.ok) {
-          throw new Error(`Erro ao excluir! Status: ${response.status}`);
+          const errorData = await response.json().catch(() => ({ message: 'Erro desconhecido.' }));
+          throw new Error(`Erro ao excluir! Status: ${response.status} - ${errorData.message}`);
         }
         showMessage('Cliente excluído com sucesso!', 'success');
-        // Recarrega a lista de clientes (se a seção estiver ativa)
         if (document.getElementById('clientesCadastrados').classList.contains('active')) {
           loadClientes();
         } else if (document.getElementById('busca').classList.contains('active')) {
-          loadLastFiveClients(); // Recarrega os últimos 5 se a busca estiver ativa
+          loadLastFiveClients();
         }
       } catch (error) {
         console.error('Erro ao excluir cliente:', error);
@@ -254,20 +280,24 @@ document.addEventListener('DOMContentLoaded', () => {
   async function loadNotifications() {
     if (!checkAuthenticationAndRole()) return;
 
-    notificationsList.innerHTML = ''; // Limpa a lista
-    noNotificationsMessage.style.display = 'none'; // Esconde a mensagem de "nenhuma notificação"
+    if (!notificationsList || !noNotificationsMessage) { // Adicionado verificação
+      console.error("Erro: Elemento notificationsList ou noNotificationsMessage não encontrado para loadNotifications!");
+      return;
+    }
+    notificationsList.innerHTML = '';
+    noNotificationsMessage.style.display = 'none';
 
     const jwtToken = localStorage.getItem('jwtToken');
 
     try {
-      // Conectando à sua API para obter notificações de orçamento
-      const response = await fetch('http://localhost:3000/notifications', { // Exemplo de URL
+      const response = await fetch('http://localhost:3000/notifications', {
         headers: {
           'Authorization': `Bearer ${jwtToken}`
         }
       });
       if (!response.ok) {
-        throw new Error(`Erro HTTP! Status: ${response.status}`);
+        const errorData = await response.json().catch(() => ({ message: 'Erro desconhecido.' }));
+        throw new Error(`Erro HTTP! Status: ${response.status} - ${errorData.message}`);
       }
       const notifications = await response.json();
 
@@ -287,11 +317,10 @@ document.addEventListener('DOMContentLoaded', () => {
         notificationsList.querySelectorAll('.action-button-small').forEach(button => {
           button.addEventListener('click', (e) => {
             alert('Ver detalhes da notificação ID: ' + e.target.dataset.id);
-            // Implementar lógica para exibir detalhes da notificação (ex: modal)
           });
         });
       } else {
-        noNotificationsMessage.style.display = 'block'; // Mostra mensagem se não houver notificações
+        noNotificationsMessage.style.display = 'block';
       }
     } catch (error) {
       console.error('Erro ao carregar notificações:', error);
@@ -305,31 +334,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 1. Verificar autenticação ao carregar a página
   if (!checkAuthenticationAndRole()) {
-    return; // Sai se o usuário não for admin
+    return;
   }
 
   // 2. Adicionar Event Listeners para o menu lateral
   menuItems.forEach(item => {
     item.addEventListener('click', (event) => {
-      const link = item.querySelector('a'); // Pega o link real dentro do <li>
+      const link = item.querySelector('a');
 
-      // Verifica se o link tem um href que não é '#'
       if (link && link.getAttribute('href') !== '#') {
-        // Se for um link direto (como cadastrar-cliente.html), DEIXA O COMPORTAMENTO PADRÃO DO NAVEGADOR
-        // E NÃO EXECUTA MAIS NADA DESTE BLOCO DE JS
-        return; // O navegador vai seguir o href normalmente
+        return;
       }
 
-      // Se o link for '#' ou não tiver href (para as seções internas)
-      event.preventDefault(); // Impede o comportamento padrão (para não ir para o topo da página)
+      event.preventDefault();
 
-      // Remove a classe 'active' de todos os itens do menu
       menuItems.forEach(mi => mi.classList.remove('active'));
-
-      // Adiciona a classe 'active' ao item clicado
       item.classList.add('active');
 
-      // Mostra a seção correspondente (somente se houver um data-target)
       const targetId = item.dataset.target;
       if (targetId) {
         showSection(targetId);
@@ -338,34 +359,49 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // 3. Adicionar Event Listeners para a busca
-  searchButton.addEventListener('click', performSearch);
-  searchInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-      performSearch();
-    }
-  });
+  // Apenas adicione os listeners se os elementos existirem
+  if (searchButton && searchInput) {
+    searchButton.addEventListener('click', performSearch);
+    searchInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        performSearch();
+      }
+    });
+  } else {
+    console.warn("Elementos de busca (searchButton ou searchInput) não encontrados. A busca pode não funcionar.");
+  }
 
-  // 4. Adicionar Event Listener para botões de ação na tabela de clientes (delegando para o tbody)
-  // Isso é mais eficiente, pois os botões são adicionados dinamicamente
-  clientesTableBody.addEventListener('click', async (event) => {
-    const target = event.target;
-    const clientId = target.dataset.id; // Pega o ID do cliente do atributo data-id do botão
 
-    if (target.classList.contains('view-client-btn')) {
-      viewClient(clientId);
-    } else if (target.classList.contains('edit-client-btn')) {
-      editClient(clientId);
-    } else if (target.classList.contains('delete-client-btn')) {
-      deleteClient(clientId);
-    }
-  });
+  // 4. Adicionar Event Listener para botões de ação na tabela de clientes
+  if (clientesTableBody) {
+    clientesTableBody.addEventListener('click', async (event) => {
+      const target = event.target;
+      const clientId = target.dataset.id;
+
+      if (target.classList.contains('view-client-btn')) {
+        viewClient(clientId);
+      } else if (target.classList.contains('edit-client-btn')) {
+        editClient(clientId);
+      } else if (target.classList.contains('delete-client-btn')) {
+        deleteClient(clientId);
+      }
+    });
+  } else {
+    console.warn("Elemento clientesTableBody não encontrado. Ações de cliente podem não funcionar.");
+  }
+
 
   // 5. Adicionar Event Listener para o botão de Logout
-  logoutBtn.addEventListener('click', () => {
-    localStorage.clear();
-    alert('Sessão encerrada. Redirecionando...');
-    window.location.href = 'index.html'; // Ou 'login.html'
-  });
+  if (logoutBtn) {
+    logoutBtn.addEventListener('click', () => {
+      localStorage.clear();
+      alert('Sessão encerrada. Redirecionando...');
+      window.location.href = 'index.html';
+    });
+  } else {
+    console.warn("Elemento logoutBtn não encontrado.");
+  }
+
 
   // 6. Carregar a seção inicial (Busca) e seus dados ao carregar a página.
   showSection('busca');
