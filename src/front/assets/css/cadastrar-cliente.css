@@ -89,18 +89,30 @@ body {
 }
 
 .sidebar-nav a {
-  display: block;
+
   padding: 12px 10px;
   color: white;
   text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
-  display: flex;
-  align-items: l;
+  align-items: center;
+  gap: 10px;
 }
 
 .sidebar-nav a i {
-  margin-right: 10px;
   font-size: 1.1em;
+}
+
+.icone-menu-veiculo {
+  width: 23px;
+  height: 23px;
+  flex-shrink: 0;
+}
+
+.link-menu-com-icone {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
 }
 
 .sidebar-nav li:hover a,
@@ -147,6 +159,8 @@ h1 {
   color: #ff9800;
   margin-bottom: 25px;
   font-size: 2em;
+  text-align: center;
+  font-weight: bold;
 }
 
 h2 {
@@ -238,9 +252,9 @@ button[type="button"]:hover {
 .form-sections {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
   justify-content: space-between;
-  margin-bottom: 30px;
+  
 }
 
 .section-responsavel,
@@ -343,10 +357,6 @@ footer {
   font-size: 0.8em;
 }
 
-.icone-menu-veiculo {
-  margin-right: 10px;
-  vertical-align: middle;
-}
 
 
 /* Media Queries */
