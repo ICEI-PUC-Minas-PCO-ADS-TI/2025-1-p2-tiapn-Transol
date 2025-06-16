@@ -64,12 +64,19 @@ As tags foram utilizadas para marcar versões importantes do projeto, facilitand
 - Relatório Extensão e Diagrama de Classes: Mellyssa
 - Atualizações GitHub - Todas
 
-  #### Sprint 3
+  #### Sprint 4
 - _Scrum master_: Ana Caroline
 - Feedback e integração com o banco: Lilianne
 - Documentação: Ana Caroline
 - Front End: Mellyssa
 - Back End: Tatiane
+
+#### Sprint 5
+- _Scrum master_: Tatiane
+- Feedback e ajustes front-end: Lilianne
+- Testes: Ana Caroline
+- Deploy: Mellyssa
+- Back End e vídeo apresentação: Tatiane
 
 ###  Quadro de tarefas
 
@@ -123,6 +130,18 @@ Atualizado em: 05/06/2025
 | Mellyssa         | Gerenciamento de Clientes pelo Administrador  |  10/05/2025    |04/06/2025 | ✔️    | 04/06/2025      |
 | Tatiane       | Infraestrutura de Banco de Dados e Modelos Core |  10/05/2025    |04/06/2025 | ✔️    | 04/06/2025      |
 
+
+#### Sprint 5
+
+Atualizado em: 26/06/2025
+
+
+| Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
+| :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
+| Ana Caroline       |  Plano e registro de testes | 10/06/2025    |26/06/2025 | ✔️    | 25/06/2025      |
+| Lilianne           | Front-end e feedbacks  |  10/06/2025    |26/06/2025 | ✔️    | 25/06/2025      |
+| Mellyssa         | Deploy  |   10/06/2025    |26/06/2025 | ✔️    | 25/06/2025      |
+| Tatiane       | Testes e apresentação |   10/06/2025    |26/06/2025 | ✔️    | 25/06/2025      |
 
 
 Legenda:
