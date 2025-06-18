@@ -374,9 +374,6 @@ h6 {
     display: block;
 }
 
-/*--------------------------------------------------------------
-  # Hero Section
-  --------------------------------------------------------------*/
 #hero {
     width: 100%;
     min-height: 100vh;
@@ -474,9 +471,6 @@ h6 {
     }
 }
 
-/*--------------------------------------------------------------
-  # Sections General
-  --------------------------------------------------------------*/
 section {
     padding: 60px 0;
     overflow: hidden;
@@ -517,9 +511,6 @@ section {
     color: #151515;
 }
 
-/*--------------------------------------------------------------
-  # About
-  --------------------------------------------------------------*/
 .about .content h3 {
     font-weight: 700;
     font-size: 28px;
@@ -548,9 +539,6 @@ section {
     margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------
-  # Clients
-  --------------------------------------------------------------*/
 .clients {
     padding-top: 20px;
 }
@@ -583,9 +571,6 @@ section {
     background-color: #ffc451;
 }
 
-/*--------------------------------------------------------------
-  # Features
-  --------------------------------------------------------------*/
 .features {
     padding-top: 20px;
 }
@@ -619,9 +604,6 @@ section {
     min-height: 400px;
 }
 
-/*--------------------------------------------------------------
-  # Services
-  --------------------------------------------------------------*/
 .services .icon-box {
     text-align: center;
     border: 1px solid #ebebeb;
@@ -712,9 +694,6 @@ section {
     color: #151515;
 }
 
-/*--------------------------------------------------------------
-  # Portfolio
-  --------------------------------------------------------------*/
 .portfolio .portfolio-item {
     margin-bottom: 30px;
 }
@@ -835,9 +814,6 @@ section {
     opacity: 1;
 }
 
-/*--------------------------------------------------------------
-  # Portfolio Details
-  --------------------------------------------------------------*/
 .portfolio-details {
     padding-top: 40px;
 }
@@ -900,9 +876,6 @@ section {
     padding: 0;
 }
 
-/*--------------------------------------------------------------
-  # Counts
-  --------------------------------------------------------------*/
 .counts .content {
     padding: 30px 0;
 }
@@ -983,9 +956,6 @@ section {
 }
 
 
-/*--------------------------------------------------------------
-  # Testimonials
-  --------------------------------------------------------------*/
 .testimonials {
     padding: 80px 0;
     background: url("../img/testimonials-bg.jpg") no-repeat;
@@ -1092,9 +1062,6 @@ section {
     }
 }
 
-/*--------------------------------------------------------------
-  # Team
-  --------------------------------------------------------------*/
 .team {
     background: #fff;
     padding: 60px 0;
@@ -1178,9 +1145,6 @@ section {
     bottom: 15px;
 }
 
-/*--------------------------------------------------------------
-  # Contact
-  --------------------------------------------------------------*/
 .contact .info {
     width: 100%;
     background: #fff;
@@ -1314,9 +1278,6 @@ section {
     }
 }
 
-/*--------------------------------------------------------------
-  # Breadcrumbs
-  --------------------------------------------------------------*/
 .breadcrumbs {
     padding: 15px 0;
     background: whitesmoke;
@@ -1366,9 +1327,6 @@ section {
     }
 }
 
-/*--------------------------------------------------------------
-  # Footer
-  --------------------------------------------------------------*/
 #footer {
     background: black;
     padding: 0 0 30px 0;
@@ -1519,28 +1477,20 @@ section {
     color: #fff;
 }
 
-
-/* Adicione estas regras ao seu arquivo CSS existente */
-
 #orcamentoForm {
     padding: 30px;
     background: #fff;
-    /* Fundo branco para o formulário */
     border-radius: 8px;
-    /* Cantos arredondados */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    /* Sombra suave */
 }
 
 #orcamentoForm .form-group {
     margin-bottom: 20px;
-    /* Espaçamento entre os grupos de formulário */
 }
 
 #orcamentoForm .form-control,
 #orcamentoForm .form-select {
     border-radius: 4px;
-    /* Cantos arredondados nos inputs */
     padding: 10px 15px;
     border: 1px solid #ced4da;
 }
@@ -1548,7 +1498,6 @@ section {
 #orcamentoForm .form-control:focus,
 #orcamentoForm .form-select:focus {
     border-color: #80bdff;
-    /* Cor da borda ao focar */
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
@@ -1556,27 +1505,22 @@ section {
     font-weight: 600;
     margin-bottom: 8px;
     display: block;
-    /* Garante que a label ocupe a própria linha */
     color: #333;
 }
 
 #orcamentoForm button[type="submit"] {
     background: #007bff;
-    /* Cor de fundo do botão */
     border: 0;
     padding: 12px 30px;
     color: #fff;
     transition: 0.4s;
     border-radius: 50px;
-    /* Botão arredondado */
 }
 
 #orcamentoForm button[type="submit"]:hover {
     background: #0056b3;
-    /* Cor de fundo do botão ao passar o mouse */
 }
 
-/* Estilos para mensagens de feedback */
 #orcamentoForm .loading {
     display: block;
     background: #fff;
@@ -1619,14 +1563,14 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 100%;
-    max-width: 700px;
+    max-width: 900px;
     box-sizing: border-box;
 }
 
 .logo {
     width: 300px;
     max-width: 100%;
-    
+
     border-radius: 8px;
 }
 
@@ -1742,9 +1686,4 @@ button:active {
     font-size: 0.8em;
     margin-top: 10px;
     float: right;
-    /* Alinha à direita */
-}
-
-.delete-child-btn:hover {
-    background: #c82333;
 }
