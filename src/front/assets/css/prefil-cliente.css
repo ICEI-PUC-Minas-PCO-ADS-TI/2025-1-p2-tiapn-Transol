@@ -102,11 +102,12 @@ h2 {
 }
 
 .payment-item {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
     align-items: center;
     padding: 10px 0;
     border-bottom: 1px dashed #eee;
+    gap: 10px;
 }
 
 .payment-item:last-child {
@@ -116,6 +117,9 @@ h2 {
 .payment-status {
     font-weight: bold;
     color: #555;
+    display: inline-block;
+    min-width: 90px;
+    text-align: left;
 }
 
 .payment-status.paid {
@@ -136,6 +140,8 @@ h2 {
     font-size: 0.9em;
     margin-left: 10px;
     transition: background 0.3s;
+    min-width: 120px;
+    box-sizing: border-box;
 }
 
 .payment-actions button:hover {
@@ -144,10 +150,30 @@ h2 {
 
 .payment-actions .attach-btn {
     background: #6c757d;
+    min-width: 120px;
+    box-sizing: border-box;
 }
 
 .payment-actions .attach-btn:hover {
     background: #5a6268;
+}
+
+.payment-actions .paid-btn {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-left: 10px;
+    transition: background 0.3s;
+    min-width: 120px;
+    box-sizing: border-box;
+}
+
+.payment-actions .paid-btn:hover {
+    background: #218838;
 }
 
 .logout-btn {

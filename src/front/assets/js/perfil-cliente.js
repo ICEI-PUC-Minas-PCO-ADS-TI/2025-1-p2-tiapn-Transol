@@ -86,8 +86,8 @@ document.addEventListener('DOMContentLoaded', async () => {
           contratoValor.textContent = cliente.contrato.valor_Servico ? `R$ ${parseFloat(cliente.contrato.valor_Servico).toFixed(2).replace('.', ',')}` : 'N/A';
           contratoDataInicio.textContent = cliente.contrato.data_servico ? new Date(cliente.contrato.data_servico).toLocaleDateString('pt-BR') : 'N/A';
           viewContractBtn.onclick = () => {
-              // Lógica para visualizar contrato (abrir PDF, modal, etc.)
-              alert('Funcionalidade de visualizar contrato em desenvolvimento!');
+            // Lógica para visualizar contrato (abrir PDF, modal, etc.)
+            alert('Funcionalidade de visualizar contrato em desenvolvimento!');
           };
         } else {
           contratoStatus.textContent = 'Nenhum contrato associado.';
@@ -116,12 +116,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             paymentDiv.classList.add('payment-item');
             const statusClass = payment.status === 'Pago' ? 'paid' : 'pending';
             const statusIcon = payment.status === 'Pago' ? '<i class="fas fa-check-circle"></i>' : '<i class="fas fa-times-circle"></i>';
-            
+
             paymentDiv.innerHTML = `
               <span>Mês: ${payment.month}</span>
               <span class="payment-status ${statusClass}">${payment.status} ${statusIcon}</span>
               <div class="payment-actions">
-                <button ${payment.status === 'Pago' ? 'disabled' : ''} onclick="handlePayment(${payment.id})">${payment.status === 'Pago' ? 'Pago' : 'Pagar'}</button>
+                <button class="${payment.status === 'Pago' ? 'paid-btn' : ''}" ${payment.status === 'Pago' ? 'disabled' : ''} onclick="handlePayment(${payment.id})">${payment.status === 'Pago' ? 'Pago' : 'Pagar'}</button>
                 <button class="attach-btn" onclick="handleAttachProof(${payment.id})">Anexar Comprovante</button>
               </div>
             `;
