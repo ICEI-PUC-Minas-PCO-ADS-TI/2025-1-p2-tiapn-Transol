@@ -142,7 +142,8 @@
 
       const alunosData = [];
       const childEntries = document.querySelectorAll('.child-entry');
-      childEntries.forEach(entry => {
+      for (let i = 0; i < childEntries.length; i++) {
+        const entry = childEntries[i];
         const nomeCrianca = entry.querySelector('.nomeCrianca').value;
         const dtNasc = entry.querySelector('.dtNasc').value;
         const escola = entry.querySelector('.escola').value;
@@ -164,7 +165,7 @@
           showMessage('Por favor, preencha todos os campos do aluno.', 'error');
           return; // Sai da função se algum aluno estiver incompleto
         }
-      });
+      }
 
       // Validação final antes de enviar
       if (!clienteData.nome || !clienteData.cpf || !clienteData.endereco || !clienteData.telefone || !clienteData.email || !clienteData.senha) {
