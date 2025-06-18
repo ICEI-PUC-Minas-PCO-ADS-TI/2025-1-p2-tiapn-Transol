@@ -8,150 +8,8 @@
   <!-- CORREÇÃO: 'xintegrity' para 'integrity' no link do Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" xintegrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKx3KxQ2jGg/sL/MhYF4nB0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="assets/css/login.css" rel="stylesheet">
-
-  <style>
-    /* Estilos básicos para o container e elementos, caso login.css não cubra tudo ou para sobrepor */
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: #f0f2f5; /* Fundo mais suave */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      margin: 0;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-    .login-container {
-      background: #fff;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      text-align: center;
-      width: 100%;
-      max-width: 400px;
-      box-sizing: border-box;
-    }
-    .login-container img {
-      width: 150px;
-      margin-bottom: 30px;
-      border-radius: 8px; /* Cantos arredondados para a logo */
-    }
-    .input-container {
-      position: relative;
-      margin-bottom: 20px;
-    }
-    .input-container .icon {
-      position: absolute;
-      left: 15px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: #aaa;
-    }
-    .input-container input {
-      width: calc(100% - 60px); /* Ajuste para ícones e padding */
-      padding: 12px 15px 12px 45px; /* Padding para o ícone */
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      font-size: 1em;
-      box-sizing: border-box;
-      /* ADIÇÕES PARA GARANTIR VISIBILIDADE DO TEXTO E PLACEHOLDER */
-      color: #333; /* Cor do texto digitado */
-      -webkit-text-security: disc; /* Garante as "bolinhas" no Chrome/Safari para type="password" */
-    }
-    /* Estilo para o campo de input geral (CPF ou Email) */
-    .input-container input[type="text"] {
-        -webkit-text-security: none; /* Garante que o texto seja visível */
-    }
-    /* Estilo para quando o tipo do input é 'text' (para mostrar a senha) */
-    .input-container input[type="password"]::placeholder,
-    .input-container input[type="text"]::placeholder {
-        color: #888 !important; /* Força a cor do placeholder para ser visível */
-        opacity: 1 !important; /* Garante que não está transparente */
-    }
-    .input-container input[type="password"],
-    .input-container input[type="text"] {
-        pointer-events: auto !important; /* Garante que o input é clicável/digitável */
-        opacity: 1 !important; /* Garante que não está oculto */
-        z-index: auto !important; /* Garante que não está por baixo de outros elementos */
-    }
-    /* --- FIM DAS ADIÇÕES --- */
-
-    .toggle-password {
-      position: absolute;
-      right: 15px;
-      top: 50%;
-      transform: translateY(-50%);
-      cursor: pointer;
-      color: #aaa;
-    }
-    .remember {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start; /* Alinhar à esquerda */
-      margin-bottom: 20px;
-      font-size: 0.9em;
-      color: #555;
-    }
-    .remember input {
-      width: auto; /* Para checkbox */
-      margin-right: 8px;
-    }
-    .login-btn {
-      background: #ff9800;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 1.1em;
-      font-weight: bold;
-      width: 100%;
-      transition: background 0.3s ease, transform 0.2s ease;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-    .login-btn:hover {
-      background: #e68900;
-      transform: translateY(-2px);
-    }
-    .login-btn:active {
-      transform: translateY(0);
-    }
-    /* Removido o estilo .admin-login-btn pois o botão será único */
-    .links {
-      margin-top: 25px;
-      font-size: 0.9em;
-    }
-    .links a {
-      color: #ff9800;
-      text-decoration: none;
-      margin: 5px 0;
-      display: block; /* Cada link em sua própria linha */
-    }
-    .links a:hover {
-      text-decoration: underline;
-    }
-    .message-box {
-        margin-top: 20px;
-        padding: 15px;
-        border-radius: 8px;
-        font-weight: bold;
-        text-align: center;
-        display: none; /* Escondido por padrão */
-        font-size: 0.9em;
-    }
-    .message-box.success {
-        background-color: #d4edda;
-        color: #155724;
-        border-color: #c3e6cb;
-    }
-    .message-box.error {
-        background-color: #f8d7da;
-        color: #721c24;
-        border-color: #f5c6cb;
-    }
-  </style>
 </head>
+
 <body>
 
   <div class="login-container">
@@ -177,7 +35,7 @@
       </div>
       
       <div>
-        <button type="submit" class="login-btn">LOGIN</button> <!-- Botão único de login -->
+        <button type="submit" class="login-btn">LOGIN</button> 
       </div><br>
     </form>
 

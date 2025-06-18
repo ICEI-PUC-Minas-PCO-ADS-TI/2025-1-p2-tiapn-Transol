@@ -1,219 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cadastro - Transol</title>
-  <style>
-    body {
-      font-family: 'Inter', sans-serif; /* Usando Inter como sugerido */
-      background: #f8f8f8;
-      margin: 0;
-      padding: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-    .container {
-      max-width: 600px;
-      width: 100%;
-      margin: 0 auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra mais suave */
-      text-align: center;
-      box-sizing: border-box; /* Garante que padding não aumente a largura */
-    }
-    .logo {
-      width: 120px; /* Tamanho ajustado para melhor proporção */
-      margin-bottom: 20px;
-      border-radius: 8px; /* Cantos arredondados para a logo */
-    }
-    h1 {
-      color: #ff9800;
-      margin-bottom: 15px;
-      font-size: 2em; /* Tamanho maior para o título principal */
-    }
-    h2 {
-      color: #ff9800;
-      margin-top: 25px;
-      border-bottom: 2px solid #ff9800; /* Linha laranja mais forte */
-      padding-bottom: 10px;
-      text-align: left;
-      font-size: 1.5em;
-    }
-    label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-      text-align: left;
-      color: #555;
-    }
-    input, select {
-      width: calc(100% - 22px); /* Ajuste para padding */
-      padding: 10px;
-      margin-top: 8px;
-      border-radius: 8px; /* Cantos mais arredondados */
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-      font-size: 1em;
-    }
-    input[type="date"], input[type="time"] {
-      width: auto; /* Permite que se ajustem ao conteúdo */
-    }
-    button {
-      background: #ff9800;
-      color: white;
-      border: none;
-      padding: 12px 25px; /* Padding ajustado */
-      margin-top: 25px;
-      border-radius: 8px; /* Cantos mais arredondados */
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 1.1em;
-      transition: background 0.3s ease, transform 0.2s ease; /* Transição suave */
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para botões */
-    }
-    button:hover {
-      background: #e68900;
-      transform: translateY(-2px); /* Efeito de "levantar" */
-    }
-    button:active {
-      transform: translateY(0); /* Efeito de "clicar" */
-    }
-    .child-entry {
-      margin-bottom: 20px;
-      padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      background: #fafafa;
-      text-align: left;
-    }
-    .message-box {
-        margin-top: 20px;
-        padding: 15px;
-        border-radius: 8px;
-        font-weight: bold;
-        text-align: center;
-        display: none; /* Escondido por padrão */
-    }
-    .message-box.success {
-        background-color: #d4edda;
-        color: #155724;
-        border-color: #c3e6cb;
-    }
-    .message-box.error {
-        background-color: #f8d7da;
-        color: #721c24;
-        border-color: #f5c6cb;
-    }
-    /* Responsividade */
-    @media (max-width: 768px) {
-        .container {
-            margin: 10px;
-            padding: 20px;
-        }
-        h1 {
-            font-size: 1.8em;
-        }
-        h2 {
-            font-size: 1.3em;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 1em;
-        }
-    }
-  </style>
+  <link href="assets/css/cadastrar-cliente.css" rel="stylesheet">
 </head>
+
 <body>
 
-<div class="container">
-  <img src="assets/img/logo.png" alt="Logo Transol" class="logo" onerror="this.onerror=null;this.src='assets/img/logo.png'">
+  <div class="container">
+    <img src="assets/img/logo.png" alt="Logo Transol" class="logo"
+      onerror="this.onerror=null;this.src='assets/img/logo.png'">
 
-  <h1>Cadastro de Cliente</h1>
+    <h1>Cadastro de Cliente</h1>
 
-  <div id="messageBox" class="message-box"></div>
+    <div id="messageBox" class="message-box"></div>
 
-  <h2>Dados do Responsável</h2>
-  <form id="cadastroClienteForm">
-    <label for="nomeResponsavel">Nome Completo:</label>
-    <input type="text" id="nomeResponsavel" required>
+    <h2>Dados do Responsável</h2>
+    <form id="cadastroClienteForm">
+      <label for="nomeResponsavel">Nome Completo:</label>
+      <input type="text" id="nomeResponsavel" required>
 
-    <label for="endereco">Endereço:</label>
-    <input type="text" id="endereco" required>
-    
-    <label for="telefone">Telefone:</label>
-    <input type="tel" id="telefone" required>
+      <label for="endereco">Endereço:</label>
+      <input type="text" id="endereco" required>
 
-    <label for="cpf">CPF:</label>
-    <input type="text" id="cpf" required>
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" required>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" required>
+      <label for="cpf">CPF:</label>
+      <input type="text" id="cpf" required>
 
-    <label for="senha">Criar Senha:</label>
-    <input type="password" id="senha" value="transol1234" readonly> <!-- Senha padrão -->
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
 
-    <h2>Dados do Aluno</h2>
-    <div id="childrenContainer">
-      <div class="child-entry">
-        <label for="nomeCrianca_0">Nome do Aluno:</label>
-        <input type="text" class="nomeCrianca" id="nomeCrianca_0" required>
+      <label for="senha">Criar Senha:</label>
+      <input type="password" id="senha" value="transol1234" readonly> <!-- Senha padrão -->
 
-        <label for="dtNasc_0">Data de Nascimento:</label>
-        <input type="date" class="dtNasc" id="dtNasc_0" required>
+      <h2>Dados do Aluno</h2>
+      <div id="childrenContainer">
+        <div class="child-entry">
+          <label for="nomeCrianca_0">Nome do Aluno:</label>
+          <input type="text" class="nomeCrianca" id="nomeCrianca_0" required>
 
-        <label for="escola_0">Nome da Escola:</label>
-        <input type="text" class="escola" id="escola_0" required>
+          <label for="dtNasc_0">Data de Nascimento:</label>
+          <input type="date" class="dtNasc" id="dtNasc_0" required>
 
-        <label for="entrada_0">Horário de Entrada:</label>
-        <input type="time" class="entrada" id="entrada_0" required>
+          <label for="escola_0">Nome da Escola:</label>
+          <input type="text" class="escola" id="escola_0" required>
 
-        <label for="saida_0">Horário de Saída:</label>
-        <input type="time" class="saida" id="saida_0" required>
+          <label for="entrada_0">Horário de Entrada:</label>
+          <input type="time" class="entrada" id="entrada_0" required>
 
-        <!-- Campo id_escolar: Por enquanto, será um valor fixo para teste -->
-        <label for="idEscolar_0">ID da Escola (para teste):</label>
-        <input type="number" class="idEscolar" id="idEscolar_0" value="3" readonly required>
+          <label for="saida_0">Horário de Saída:</label>
+          <input type="time" class="saida" id="saida_0" required>
+
+          <!-- Campo id_escolar: Por enquanto, será um valor fixo para teste -->
+          <label for="idEscolar_0">ID da Escola (para teste):</label>
+          <input type="number" class="idEscolar" id="idEscolar_0" value="3" readonly required>
+        </div>
       </div>
-    </div>
 
-    <button type="button" onclick="adicionarCrianca()">Adicionar Outra Criança</button>
+      <button type="button" onclick="adicionarCrianca()">Adicionar Outra Criança</button>
 
-    <h2>Anexar Contrato (Funcionalidade Futura)</h2>
-    <input type="file" id="contrato" disabled title="Funcionalidade de upload de contrato será implementada em breve.">
-    <p style="font-size: 0.9em; color: #777; margin-top: 5px; text-align: left;">O upload do contrato será implementado em uma fase futura.</p>
+      <h2>Anexar Contrato (Funcionalidade Futura)</h2>
+      <input type="file" id="contrato" disabled
+        title="Funcionalidade de upload de contrato será implementada em breve.">
+      <p style="font-size: 0.9em; color: #777; margin-top: 5px; text-align: left;">O upload do contrato será
+        implementado em uma fase futura.</p>
 
-    <button type="submit">Finalizar Cadastro</button>
-  </form>
-</div>
+      <button type="submit">Finalizar Cadastro</button>
+      <button type="button" onclick="window.location.href='adm.html'"
+        style="margin-left: 10px; background: #6c757d; color: #fff;">Voltar</button>
+    </form>
+  </div>
 
-<script>
-  let childCounter = 0; // Para IDs únicos dos campos de aluno
+  <script>
+    let childCounter = 0; // Para IDs únicos dos campos de aluno
 
-  // Função para exibir mensagens de feedback
-  function showMessage(message, type) {
-    const messageBox = document.getElementById('messageBox');
-    messageBox.textContent = message;
-    messageBox.className = 'message-box ' + type; // Adiciona a classe de tipo (success/error)
-    messageBox.style.display = 'block'; // Mostra a caixa de mensagem
+    // Função para exibir mensagens de feedback
+    function showMessage(message, type) {
+      const messageBox = document.getElementById('messageBox');
+      messageBox.textContent = message;
+      messageBox.className = 'message-box ' + type; // Adiciona a classe de tipo (success/error)
+      messageBox.style.display = 'block'; // Mostra a caixa de mensagem
 
-    // Esconde a mensagem após 5 segundos
-    setTimeout(() => {
-      messageBox.style.display = 'none';
-    }, 5000);
-  }
+      // Esconde a mensagem após 5 segundos
+      setTimeout(() => {
+        messageBox.style.display = 'none';
+      }, 5000);
+    }
 
-  // Função para adicionar mais campos de criança
-  function adicionarCrianca() {
-    childCounter++;
-    const container = document.getElementById('childrenContainer');
-    const childDiv = document.createElement('div');
-    childDiv.classList.add('child-entry');
-    childDiv.innerHTML = `
+    // Função para adicionar mais campos de criança
+    function adicionarCrianca() {
+      childCounter++;
+      const container = document.getElementById('childrenContainer');
+      const childDiv = document.createElement('div');
+      childDiv.classList.add('child-entry');
+      childDiv.innerHTML = `
       <label for="nomeCrianca_${childCounter}">Nome do Aluno:</label>
       <input type="text" class="nomeCrianca" id="nomeCrianca_${childCounter}" required>
 
@@ -232,84 +117,85 @@
       <label for="idEscolar_${childCounter}">ID da Escola (para teste):</label>
       <input type="number" class="idEscolar" id="idEscolar_${childCounter}" value="3" readonly required>
     `;
-    container.appendChild(childDiv);
-  }
+      container.appendChild(childDiv);
+    }
 
-  // Função para finalizar o cadastro e enviar os dados
-  document.getElementById('cadastroClienteForm').addEventListener('submit', async function(event) {
-    event.preventDefault(); // Impede o envio padrão do formulário
+    // Função para finalizar o cadastro e enviar os dados
+    document.getElementById('cadastroClienteForm').addEventListener('submit', async function (event) {
+      event.preventDefault(); // Impede o envio padrão do formulário
 
-    const nomeResponsavel = document.getElementById('nomeResponsavel').value;
-    const endereco = document.getElementById('endereco').value;
-    const telefone = document.getElementById('telefone').value;
-    const cpf = document.getElementById('cpf').value;
-    const email = document.getElementById('email').value;
-    const senha = document.getElementById('senha').value; // Senha padrão 'transol1234'
+      const nomeResponsavel = document.getElementById('nomeResponsavel').value;
+      const endereco = document.getElementById('endereco').value;
+      const telefone = document.getElementById('telefone').value;
+      const cpf = document.getElementById('cpf').value;
+      const email = document.getElementById('email').value;
+      const senha = document.getElementById('senha').value; // Senha padrão 'transol1234'
 
-    const clienteData = {
-      nome: nomeResponsavel,
-      endereco: endereco,
-      telefone: telefone,
-      cpf: cpf,
-      email: email,
-      senha: senha
-    };
+      const clienteData = {
+        nome: nomeResponsavel,
+        endereco: endereco,
+        telefone: telefone,
+        cpf: cpf,
+        email: email,
+        senha: senha
+      };
 
-    const alunosData = [];
-    const childEntries = document.querySelectorAll('.child-entry');
-    childEntries.forEach(entry => {
-      const nomeCrianca = entry.querySelector('.nomeCrianca').value;
-      const dtNasc = entry.querySelector('.dtNasc').value;
-      const escola = entry.querySelector('.escola').value;
-      const entrada = entry.querySelector('.entrada').value;
-      const saida = entry.querySelector('.saida').value;
-      const idEscolar = parseInt(entry.querySelector('.idEscolar').value); // Converte para número
+      const alunosData = [];
+      const childEntries = document.querySelectorAll('.child-entry');
+      for (let i = 0; i < childEntries.length; i++) {
+        const entry = childEntries[i];
+        const nomeCrianca = entry.querySelector('.nomeCrianca').value;
+        const dtNasc = entry.querySelector('.dtNasc').value;
+        const escola = entry.querySelector('.escola').value;
+        const entrada = entry.querySelector('.entrada').value;
+        const saida = entry.querySelector('.saida').value;
+        const idEscolar = parseInt(entry.querySelector('.idEscolar').value); // Converte para número
 
-      // Validação básica para aluno antes de adicionar
-      if (nomeCrianca && dtNasc && escola && entrada && saida && idEscolar) {
-        alunosData.push({
-          nome: nomeCrianca,
-          data_nasc: dtNasc,
-          escola: escola,
-          entrada: entrada,
-          saida: saida,
-          id_escolar: idEscolar
-        });
-      } else {
-        showMessage('Por favor, preencha todos os campos do aluno.', 'error');
-        return; // Sai da função se algum aluno estiver incompleto
+        // Validação básica para aluno antes de adicionar
+        if (nomeCrianca && dtNasc && escola && entrada && saida && idEscolar) {
+          alunosData.push({
+            nome: nomeCrianca,
+            data_nasc: dtNasc,
+            escola: escola,
+            entrada: entrada,
+            saida: saida,
+            id_escolar: idEscolar
+          });
+        } else {
+          showMessage('Por favor, preencha todos os campos do aluno.', 'error');
+          return; // Sai da função se algum aluno estiver incompleto
+        }
       }
-    });
 
-    // Validação final antes de enviar
-    if (!clienteData.nome || !clienteData.cpf || !clienteData.endereco || !clienteData.telefone || !clienteData.email || !clienteData.senha) {
+      // Validação final antes de enviar
+      if (!clienteData.nome || !clienteData.cpf || !clienteData.endereco || !clienteData.telefone || !clienteData.email || !clienteData.senha) {
         showMessage('Por favor, preencha todos os dados do responsável.', 'error');
         return;
-    }
-    if (alunosData.length === 0) {
+      }
+      if (alunosData.length === 0) {
         showMessage('Por favor, adicione pelo menos um aluno.', 'error');
         return;
-    }
+      }
 
-    try {
-      const response = await fetch('http://localhost:3000/clientes', { // Substitua pela URL do seu back-end no Azure quando implantar
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          cliente: clienteData,
-          alunos: alunosData
-        }),
-      });
+      try {
+        const response = await fetch('http://localhost:3000/clientes', { // Substituir pela URL do seu back-end no Azure quando implantar
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            cliente: clienteData,
+            alunos: alunosData
+          }),
+        });
 
-      const result = await response.json();
+        const result = await response.json();
 
-      if (response.ok) {
-        showMessage('Cadastro realizado com sucesso!', 'success');
-        document.getElementById('cadastroClienteForm').reset(); // Limpa o formulário
-        // Opcional: Remover crianças adicionais e resetar o contador
-        document.getElementById('childrenContainer').innerHTML = `
+        if (response.ok) {
+          showMessage('Cadastro realizado com sucesso!', 'success');
+          document.getElementById('cadastroClienteForm').reset(); // Limpa o formulário
+          // Opcional: Remover crianças adicionais e resetar o contador
+          document.getElementById('childrenContainer').innerHTML = `
           <div class="child-entry">
             <label for="nomeCrianca_0">Nome do Aluno:</label>
             <input type="text" class="nomeCrianca" id="nomeCrianca_0" required>
@@ -325,18 +211,19 @@
             <input type="number" class="idEscolar" id="idEscolar_0" value="3" readonly required>
           </div>
         `;
-        childCounter = 0;
+          childCounter = 0;
 
-      } else {
-        // Se o back-end retornar um erro específico (ex: CPF/Email duplicado)
-        showMessage('Erro no cadastro: ' + (result.error || 'Erro desconhecido.'), 'error');
+        } else {
+          // Se o back-end retornar um erro específico (ex: CPF/Email duplicado)
+          showMessage('Erro no cadastro: ' + (result.error || 'Erro desconhecido.'), 'error');
+        }
+      } catch (error) {
+        console.error('Erro ao enviar dados:', error);
+        showMessage('Erro de conexão ou servidor: ' + error.message, 'error');
       }
-    } catch (error) {
-      console.error('Erro ao enviar dados:', error);
-      showMessage('Erro de conexão ou servidor: ' + error.message, 'error');
-    }
-  });
-</script>
+    });
+  </script>
 
 </body>
+
 </html>

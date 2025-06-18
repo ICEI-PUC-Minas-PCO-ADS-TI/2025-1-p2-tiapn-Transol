@@ -1,0 +1,153 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url('../img/cta-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.change-password-container {
+    background: rgba(255, 255, 255, 0.10);
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
+    color: #ffffff;
+    margin: auto;
+    border: px solid #fff;
+
+    backdrop-filter: blur(10px);
+}
+
+.change-password-container img {
+    width: 300px;
+
+}
+
+h1 {
+    color: #ff9800;
+    margin-bottom: 5px;
+    font-size: 1.8em;
+}
+
+p {
+    color: #f7f6f6;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    line-height: 1.5;
+
+}
+
+p.nova-senha-instrucao {
+    text-align: left;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-container .icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.input-container input {
+    width: 100%;
+    height: 56px;
+    padding: 16px 20px 16px 56px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.2em;
+    color: #333;
+    background: #fff;
+    box-sizing: border-box;
+    -webkit-text-security: disc;
+    display: block;
+}
+
+.input-container input[type="text"] {
+    -webkit-text-security: none;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #aaa;
+}
+
+.change-btn {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    width: 100%;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.change-btn:hover {
+    background: #e68900;
+    transform: translateY(-2px);
+}
+
+.message-box {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    display: none;
+    font-size: 0.9em;
+}
+
+.message-box.success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+.message-box.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+input[type="password"]::placeholder {
+    color: #888 !important;
+    opacity: 1 !important;
+}
+
+input[type="password"] {
+    pointer-events: auto !important;
+    opacity: 1 !important;
+    z-index: auto !important;
+}
+
+ul {
+    list-style: none;
+    justify-items: left;
+    padding-left: 0;
+    margin-left: 0;
+}

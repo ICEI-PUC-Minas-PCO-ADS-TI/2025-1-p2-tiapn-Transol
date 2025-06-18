@@ -1,0 +1,231 @@
+body {
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+    color: #444;
+    background: #4f4f50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+a {
+    color: #ffc451;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffd584;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+}
+
+.profile-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 900px;
+    box-sizing: border-box;
+}
+
+.profile-container img {
+    width: 300px;
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #ff9800;
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #ff9800;
+    margin-top: 10px;
+    border-bottom: 2px solid #ff9800;
+    padding-bottom: 10px;
+    text-align: left;
+    font-size: 1.8em;
+}
+
+.profile-info,
+.student-list,
+.payment-section,
+.contract-section {
+    text-align: left;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.profile-info p,
+.student-item p {
+    margin: 8px 0;
+    color: #333;
+    font-size: 1.1em;
+}
+
+.profile-info p strong,
+.student-item p strong {
+    color: #ff9800;
+    min-width: 100px;
+    display: inline-block;
+}
+
+.student-item {
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.student-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.payment-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.payment-item:last-child {
+    border-bottom: none;
+}
+
+.payment-status {
+    font-weight: bold;
+    color: #555;
+}
+
+.payment-status.paid {
+    color: #28a745;
+}
+
+.payment-status.pending {
+    color: #dc3545;
+}
+
+.payment-actions button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-left: 10px;
+    transition: background 0.3s;
+}
+
+.payment-actions button:hover {
+    background: #0056b3;
+}
+
+.payment-actions .attach-btn {
+    background: #6c757d;
+}
+
+.payment-actions .attach-btn:hover {
+    background: #5a6268;
+}
+
+.logout-btn {
+    background: #6c757d;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    width: 100%;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logout-btn:hover {
+    background: #c82333;
+    transform: translateY(-2px);
+}
+
+.message-box {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    display: none;
+    font-size: 0.9em;
+}
+
+.message-box.success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+.message-box.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .profile-info p,
+    .student-item p {
+        font-size: 1em;
+    }
+
+    .payment-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .payment-actions {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .payment-actions button {
+        margin-left: 0;
+        margin-right: 5px;
+        flex-grow: 1;
+    }
+}
