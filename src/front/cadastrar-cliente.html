@@ -4,130 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cadastro - Transol</title>
-  <style>
-    body {
-      font-family: 'Inter', sans-serif; /* Usando Inter como sugerido */
-      background: #f8f8f8;
-      margin: 0;
-      padding: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-    .container {
-      max-width: 600px;
-      width: 100%;
-      margin: 0 auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra mais suave */
-      text-align: center;
-      box-sizing: border-box; /* Garante que padding não aumente a largura */
-    }
-    .logo {
-      width: 120px; /* Tamanho ajustado para melhor proporção */
-      margin-bottom: 20px;
-      border-radius: 8px; /* Cantos arredondados para a logo */
-    }
-    h1 {
-      color: #ff9800;
-      margin-bottom: 15px;
-      font-size: 2em; /* Tamanho maior para o título principal */
-    }
-    h2 {
-      color: #ff9800;
-      margin-top: 25px;
-      border-bottom: 2px solid #ff9800; /* Linha laranja mais forte */
-      padding-bottom: 10px;
-      text-align: left;
-      font-size: 1.5em;
-    }
-    label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-      text-align: left;
-      color: #555;
-    }
-    input, select {
-      width: calc(100% - 22px); /* Ajuste para padding */
-      padding: 10px;
-      margin-top: 8px;
-      border-radius: 8px; /* Cantos mais arredondados */
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-      font-size: 1em;
-    }
-    input[type="date"], input[type="time"] {
-      width: auto; /* Permite que se ajustem ao conteúdo */
-    }
-    button {
-      background: #ff9800;
-      color: white;
-      border: none;
-      padding: 12px 25px; /* Padding ajustado */
-      margin-top: 25px;
-      border-radius: 8px; /* Cantos mais arredondados */
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 1.1em;
-      transition: background 0.3s ease, transform 0.2s ease; /* Transição suave */
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para botões */
-    }
-    button:hover {
-      background: #e68900;
-      transform: translateY(-2px); /* Efeito de "levantar" */
-    }
-    button:active {
-      transform: translateY(0); /* Efeito de "clicar" */
-    }
-    .child-entry {
-      margin-bottom: 20px;
-      padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      background: #fafafa;
-      text-align: left;
-    }
-    .message-box {
-        margin-top: 20px;
-        padding: 15px;
-        border-radius: 8px;
-        font-weight: bold;
-        text-align: center;
-        display: none; /* Escondido por padrão */
-    }
-    .message-box.success {
-        background-color: #d4edda;
-        color: #155724;
-        border-color: #c3e6cb;
-    }
-    .message-box.error {
-        background-color: #f8d7da;
-        color: #721c24;
-        border-color: #f5c6cb;
-    }
-    /* Responsividade */
-    @media (max-width: 768px) {
-        .container {
-            margin: 10px;
-            padding: 20px;
-        }
-        h1 {
-            font-size: 1.8em;
-        }
-        h2 {
-            font-size: 1.3em;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 1em;
-        }
-    }
-  </style>
+  <link href="assets/css/cadastrar-cliente.css" rel="stylesheet">
 </head>
+
 <body>
 
 <div class="container">
@@ -292,7 +171,7 @@
     }
 
     try {
-      const response = await fetch('http://localhost:3000/clientes', { // Substitua pela URL do seu back-end no Azure quando implantar
+      const response = await fetch('http://localhost:3000/clientes', { // Substituir pela URL do seu back-end no Azure quando implantar
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
