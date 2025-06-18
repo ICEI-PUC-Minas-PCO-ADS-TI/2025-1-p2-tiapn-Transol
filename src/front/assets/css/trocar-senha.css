@@ -47,10 +47,10 @@ p {
 }
 
 p.nova-senha-instrucao {
-  text-align: left;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 10px;
+    text-align: left;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
 }
 
 .input-container {
@@ -67,17 +67,17 @@ p.nova-senha-instrucao {
 }
 
 .input-container input {
-  width: 100%;
-  height: 56px;
-  padding: 16px 20px 16px 56px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 1.2em;
-  color: #333;
-  background: #fff;
-  box-sizing: border-box;
-  -webkit-text-security: disc;
-  display: block;
+    width: 100%;
+    height: 56px;
+    padding: 16px 20px 16px 56px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.2em;
+    color: #333;
+    background: #fff;
+    box-sizing: border-box;
+    -webkit-text-security: disc;
+    display: block;
 }
 
 .input-container input[type="text"] {
