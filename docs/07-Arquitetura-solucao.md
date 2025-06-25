@@ -1,5 +1,7 @@
 # Arquitetura da solução
 
+<span style="color:red">Pré-requisitos: <a href="05-Projeto-interface.md"> Projeto de interface</a></span>
+
 A plataforma será composta por uma aplicação web com frontend e backend separados. A arquitetura utiliza o modelo **cliente-servidor** e será acessada diretamente pelo navegador.
 
 - O **frontend** será desenvolvido com **React**, utilizando **HTML**, **CSS** e **JavaScript**, e ficará hospedado na **Vercel**.
