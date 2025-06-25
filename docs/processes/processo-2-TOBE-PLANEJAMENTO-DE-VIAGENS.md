@@ -1,4 +1,4 @@
-### 3.3.2 Processo 2 – PLANEJAMENTO DE VIAGENS
+### Processo 2 – PLANEJAMENTO DE VIAGENS
 
 Depois de analisar o processo atual (AS-IS), foi possível perceber que ele é totalmente manual, com várias trocas de mensagens no WhatsApp e etapas que exigem acompanhamento constante do atendente. Isso torna o atendimento mais demorado, aumenta o risco de falhas (como esquecer uma confirmação ou errar no orçamento) e dificulta a organização das informações.
 
