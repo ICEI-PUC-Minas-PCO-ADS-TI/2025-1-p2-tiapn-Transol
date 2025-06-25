@@ -71,32 +71,35 @@ Segue o protótipo interativo feito no Figma
 
 ## Interface do sistema
 
-Visão geral da interação do usuário por meio das telas do sistema. Apresente as principais interfaces da plataforma em sua versão final.
 
 ### Tela principal do sistema
-
-Descrição da tela principal do sistema.
-
-> Insira aqui a tela principal do sistema
+<img src="./images/home.png" alt="Página principal" width="600"/>
 
 
-###  Telas do processo 1
-
-Descrição da tela relativa à atividade 1 do processo 1.
-
-> Insira aqui a tela da atividade 1
-
-Descrição da tela relativa à atividade 2 do processo 1.
-
-> Insira aqui a tela da atividade 2
+A tela inicial do sistema Transol apresenta uma interface moderna e intuitiva, com foco na navegação clara e rápida. No topo, estão o logotipo da empresa e o menu principal com links para as seções "Home", "Sobre nós", "Serviços", "Galeria", além dos botões "Contato" e "Login". Ao centro, o nome da empresa e seu serviço principal ("Escolar e Fretamentos") são destacados sobre uma imagem de fundo que remete à estrada, simbolizando mobilidade e confiança. Abaixo, ícones com atalhos visuais direcionam o usuário para as principais funcionalidades do site, promovendo uma experiência acessível e organizada.
 
 
-### Telas do processo 2
+### Tela de Login
+<img src="./images/login.png" alt="Login" width="600"/>
 
-Descrição da tela relativa à atividade 1 do processo 2.
 
-> Insira aqui a tela da atividade 1
+### Alterar a Senha
+<img src="./images/trocarSenha.png" alt="Alterar Senha" width="600"/>
 
-Descrição da tela relativa à atividade 2 do processo 2.
 
-> Insira aqui a tela da atividade 2
+### Tela do Administrador
+<img src="./images/adm1.png" alt="adm parte 1" width="600"/>
+<img src="./images/adm2.png" alt="adm parte 2" width="600"/>
+
+### Cadastro Cliente
+<img src="./images/CadastroCliente1.png" alt="Cadastro Cliente 1" width="600"/>
+<img src="./images/CadastroCliente2.png" alt="Cadastro Cliente 2" width="600"/>
+
+### Editar Cliente
+<img src="./images/editarCliente.png" alt="Editar Cliente 1" width="600"/>
+<img src="./images/editarCliente2.png" alt="Editar Cliente 2" width="600"/>
+
+
+
+
+
