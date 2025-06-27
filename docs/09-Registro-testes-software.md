@@ -9,7 +9,7 @@ Relatório com as evidências dos testes de software realizados pela equipe, com
 | Caso de teste                 | CT-001 – Login de Administrador |
 |------------------------------|---------------------------------|
 | Requisito associado          | RF-001 - A aplicação deve permitir que o administrador realize login. |
-| Registro de evidência        | [Ver evidência](docs/images/Cadastro.pdf) |
+| Registro de evidência        | [Ver evidência](https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2025-1-p2-tiapn-Transol/blob/99b08aa09b76f24f77a6f456fcf004aad485e3ca/docs/images/Cadastro.pdf) |
 
 ---
 
