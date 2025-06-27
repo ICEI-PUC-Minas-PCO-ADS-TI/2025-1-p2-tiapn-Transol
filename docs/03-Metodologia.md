@@ -176,4 +176,4 @@ Os artefatos do projeto foram desenvolvidos utilizando diferentes plataformas, e
 | Projeto de interface                | Figma                              | [Projeto de interface Transol](https://www.figma.com/)                            |
 | Gerenciamento do projeto            | GitHub Projects                    |[ Gerenciamento do projeto Transol ](https://github.com/orgs/ICEI-PUC-Minas-PCO-ADS-TI/projects/33)                          |
 | Desenvolvimento do projeto | Visual Studio Code | <a href="src/README.md">Código</a>                         |
-| Hospedagem                          | Vercel                             | http://....                            |
+| Hospedagem                          | Vercel e Azure App Service                          |  [link da aplicação Transol](https://transol-eta.vercel.app/index.html)                         |
