@@ -1,42 +1,75 @@
 # Plano de testes de software
 
-<span style="color:red">Pré-requisitos: <a href="02-Especificacao.md"> Especificação do projeto</a></span>, <a href="05-Projeto-interface.md"> Projeto de interface</a>
-
-O plano de testes de software é gerado a partir da especificação do sistema e consiste em casos de teste que deverão ser executados quando a implementação estiver parcial ou totalmente pronta. Apresente os cenários de teste utilizados na realização dos testes da sua aplicação. Escolha cenários de teste que demonstrem os requisitos sendo satisfeitos.
-
-Enumere quais cenários de testes foram selecionados para teste. Neste tópico, o grupo deve detalhar quais funcionalidades foram avaliadas, o grupo de usuários que foi escolhido para participar do teste e as ferramentas utilizadas.
-
-Não deixe de enumerar os casos de teste de forma sequencial e garantir que o(s) requisito(s) associado(s) a cada um deles esteja(m) correto(s) — de acordo com o que foi definido na <a href="02-Especificacao.md">Especificação do projeto</a>.
-
-Por exemplo:
-
-| **Caso de teste**  | **CT-001 – Cadastrar perfil**  |
-|:---: |:---: |
-| Requisito associado | RF-00X - A aplicação deve apresentar, na página principal, a funcionalidade de cadastro de usuários para que estes consigam criar e gerenciar seu perfil. |
-| Objetivo do teste | Verificar se o usuário consegue se cadastrar na aplicação. |
-| Passos | - Acessar o navegador <br> - Informar o endereço do site https://adota-pet.herokuapp.com/src/index.html <br> - Clicar em "Criar conta" <br> - Preencher os campos obrigatórios (e-mail, nome, sobrenome, celular, CPF, senha, confirmação de senha) <br> - Aceitar os termos de uso <br> - Clicar em "Registrar" |
-| Critério de êxito | - O cadastro foi realizado com sucesso. |
-| Responsável pela elaboração do caso de teste | Nome do integrante da equipe. |
-
-<br>
-
-| **Caso de teste**  | **CT-002 – Efetuar login**  |
-|:---: |:---: |
-| Requisito associado | RF-00Y - A aplicação deve possuir opção de fazer login, sendo o login o endereço de e-mail. |
-| Objetivo do teste | Verificar se o usuário consegue realizar login. |
-| Passos | - Acessar o navegador <br> - Informar o endereço do site https://adota-pet.herokuapp.com/src/index.html <br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo de senha <br> - Clicar em "Login" |
-| Critério de êxito | - O login foi realizado com sucesso. |
-| Responsável pela elaboração do caso de teste | Nome do integrante da equipe. |
 
 
-## Ferramentas de testes (opcional)
+| **Requisito associado** | CT-001 – Login de Administrador |
+|--------------------------|------------------------------------------------------------|
+| **Objetivo do teste**    | Verificar se o admin consegue acessar o sistema. |
+| **Passos**               | - Acessar `/login` <br> - Inserir email e senha válidos <br> - Clicar em "Entrar" |
+| **Critério de aprovação**| Acesso ao painel de administrador liberado. |
+| **Responsável**          | Ana Caroline |
 
-Comente sobre as ferramentas de testes utilizadas.
- 
-> **Links úteis**:
-> - [IBM - criação e geração de planos de teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Práticas e técnicas de testes ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
-> - [Teste de software: conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
-> - [Criação e geração de planos de teste de software](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Ferramentas de teste para JavaScript](https://geekflare.com/javascript-unit-testing/)
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
+---
+
+
+| **Requisito associado** | CT-002 – Cadastro de Cliente |
+|--------------------------|------------------------------------------------------------|
+| **Objetivo do teste**    | Validar o cadastro de um novo cliente. |
+| **Passos**               | - Acessar painel do admin <br> - Ir até “Cadastrar Cliente” <br> - Preencher dados e salvar |
+| **Critério de aprovação**| Novo cliente registrado com sucesso. |
+| **Responsável**          | Ana Caroline |
+
+---
+
+| **Requisito associado** | CT-003 – Troca de Senha no Primeiro Acesso |
+|--------------------------|------------------------------------------------------------|
+| **Objetivo do teste**    | Verificar se o sistema força a troca de senha no primeiro acesso. |
+| **Passos**               | - Logar com cliente novo <br> - Inserir senha padrão <br> - Redefinir senha nova |
+| **Critério de aprovação**| Redirecionado para troca de senha e senha nova salva. |
+| **Responsável**          | Mellyssa |
+
+---
+
+| **Requisito associado** | CT-004 – Login com nova senha (Cliente) |
+|--------------------------|------------------------------------------------------------|
+| **Objetivo do teste**    | Verificar se o cliente consegue acessar o sistema após trocar a senha. |
+| **Passos**               | - Acessar `/login` <br> - Inserir nova senha <br> - Clicar em "Entrar" |
+| **Critério de aprovação**| Acesso liberado ao perfil do cliente. |
+| **Responsável**          | Mellyssa |
+
+---
+
+| **Requisito associado** | CT-005 – Visualizar Lista de Clientes (Admin) |
+|--------------------------|------------------------------------------------------------|
+| **Objetivo do teste**    | Verificar se o admin consegue visualizar a lista de clientes cadastrados. |
+| **Passos**               | - Acessar painel do admin <br> - Clicar em “Clientes” |
+| **Critério de aprovação**| Lista carregada com os dados dos clientes. |
+| **Responsável**          | Lilianne |
+
+---
+
+| **Requisito associado** | CT-006 – Editar Dados do Cliente (Admin) |
+|--------------------------|------------------------------------------------------------|
+| **Objetivo do teste**    | Verificar se o admin consegue editar os dados de um cliente. |
+| **Passos**               | - Acessar lista de clientes <br> - Clicar em “Editar” <br> - Atualizar dados e salvar |
+| **Critério de aprovação**| Dados atualizados e exibidos corretamente. |
+| **Responsável**          | Lilianne |
+
+---
+
+| **Requisito associado** | CT-007 – Excluir Cliente |
+|--------------------------|------------------------------------------------------------|
+| **Objetivo do teste**    | Verificar se o admin consegue excluir um cliente do sistema. |
+| **Passos**               | - Acessar lista de clientes <br> - Clicar em “Excluir” <br> - Confirmar exclusão |
+| **Critério de aprovação**| Cliente removido da listagem. |
+| **Responsável**          | Tatiane |
+
+---
+
+| **Requisito associado** | CT-008 – Login com Senha Incorreta |
+|--------------------------|------------------------------------------------------------|
+| **Objetivo do teste**    | Garantir que o sistema não permite login com senha errada. |
+| **Passos**               | - Acessar `/login` <br> - Inserir email válido + senha errada <br> - Clicar em "Entrar" |
+| **Critério de aprovação**| Mensagem de erro exibida e acesso negado. |
+| **Responsável**          | Tatiane |
+
