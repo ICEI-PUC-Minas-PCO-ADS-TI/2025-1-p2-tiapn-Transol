@@ -3,19 +3,18 @@ require('dotenv').config();
 
 module.exports = {
   "development": {
-    // Hardcoding values for CLI reliability during development/migrations.
-    // Ensure these match your Azure DB credentials for local CLI operations.
-    "username": 'tatianemares', // Your actual Azure DB username
-    "password": 'Transol123@',   // Your actual Azure DB password
-    "database": 'transol',       // Your actual Azure DB name
-    "host": 'meu-db-pucminas.mysql.database.azure.com', // Your actual Azure DB host
-    "port": 3306, // Your actual Azure DB port
+    // Para desenvolvimento local, pode usar um DB local ou o Azure (como estava para depuracao)
+    "username": process.env.DB_USERNAME_DEV || 'root',
+    "password": process.env.DB_PASSWORD_DEV || null,
+    "database": process.env.DB_NAME_DEV || 'transol_dev',
+    "host": process.env.DB_HOST_DEV || 'localhost',
+    "port": process.env.DB_PORT_DEV || 3306,
     "dialect": 'mysql',
-    "logging": true, // Keep logging on for development
+    "logging": true,
     "dialectOptions": {
       "ssl": {
-        "require": true, // Azure requires SSL
-        "rejectUnauthorized": false // May be needed for local connection without full CA cert setup
+        "require": false, // Nao exigir SSL em desenvolvimento local
+        "rejectUnauthorized": false
       }
     }
   },
@@ -31,19 +30,17 @@ module.exports = {
   },
 
   "production": {
-    // Hardcoding values for CLI reliability during production migrations.
-    // In a deployed application, these should still come from process.env.
-    // Ensure these match your Azure DB credentials!
-    "username": 'tatianemares', // Your actual Azure DB username
-    "password": 'Transol123@',   // Your actual Azure DB password
-    "database": 'transol',       // Your actual Azure DB name
-    "host": 'meu-db-pucminas.mysql.database.azure.com', // Your actual Azure DB host
-    "port": 3306, // Your actual Azure DB port
+    // <<< AGORA BUSCA AS VARIAVEIS DE AMBIENTE PARA PRODUCAO >>>
+    "username": process.env.DB_USERNAME_PROD,
+    "password": process.env.DB_PASSWORD_PROD,
+    "database": process.env.DB_NAME_PROD,
+    "host": process.env.DB_HOST_PROD,
+    "port": process.env.DB_PORT_PROD || 3306, // Use PORT_PROD ou 3306
     "dialect": 'mysql',
-    "logging": false, // Disable logging in production
+    "logging": false,
     "dialectOptions": {
       "ssl": {
-        "require": true
+        "require": true // Azure MySQL exige SSL em producao
       }
     }
   }

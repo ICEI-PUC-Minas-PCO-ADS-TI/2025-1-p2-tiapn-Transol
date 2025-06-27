@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Tentar login de administrador primeiro
       if (loginValue === FIXED_ADMIN_EMAIL && senha === FIXED_ADMIN_PASSWORD) {
         try {
-          const response = await fetch('http://localhost:3000/auth/admin-fixed-login', {
+          const response = await fetch('https://transolback-a0cgf5ezcqcwdqey.brazilsouth-01.azurewebsites.net/auth/admin-fixed-login', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         // Se não for admin fixo, tentar login de cliente (com CPF)
         try {
-          const response = await fetch('http://localhost:3000/auth/login', { // Rota de login do cliente
+          const response = await fetch('https://transolback-a0cgf5ezcqcwdqey.brazilsouth-01.azurewebsites.net/auth/login', { // Rota de login do cliente
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

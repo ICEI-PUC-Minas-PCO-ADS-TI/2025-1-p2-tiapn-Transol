@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:3000/clientes/${clientId}`, {
+      const response = await fetch(`https://transolback-a0cgf5ezcqcwdqey.brazilsouth-01.azurewebsites.net/clientes/${clientId}`, {
         headers: {
           'Authorization': `Bearer ${jwtToken}`
         }
@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 
     try {
-      const response = await fetch(`http://localhost:3000/clientes/${clientId}`, {
+      const response = await fetch(`https://transolback-a0cgf5ezcqcwdqey.brazilsouth-01.azurewebsites.net/clientes/${clientId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

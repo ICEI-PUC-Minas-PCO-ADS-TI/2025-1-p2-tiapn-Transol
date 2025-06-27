@@ -2,8 +2,9 @@
   "name": "projeto-transol",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "start": "npx nodemon app"
+ "scripts": {
+  "start": "node app.js",
+  "test": "echo \"No tests defined, skipping.\" && exit 0"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +20,7 @@
     "sequelize": "^6.37.7"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "cross-env": "^7.0.3"
   }
 }

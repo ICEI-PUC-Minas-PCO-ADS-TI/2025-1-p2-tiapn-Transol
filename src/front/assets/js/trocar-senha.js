@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       try {
-        const response = await fetch('http://localhost:3000/auth/trocar-senha', {
+        const response = await fetch('https://transolback-a0cgf5ezcqcwdqey.brazilsouth-01.azurewebsites.net/auth/trocar-senha', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

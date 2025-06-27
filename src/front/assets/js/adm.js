@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   async function fetchRecentClients() {
     recentClientList.innerHTML = '<li>Carregando últimos clientes...</li>';
     try {
-      const response = await fetch('http://localhost:3000/clientes/ultimos', {
+      const response = await fetch('https://transolback-a0cgf5ezcqcwdqey.brazilsouth-01.azurewebsites.net/clientes/ultimos', {
         headers: {
           'Authorization': `Bearer ${jwtToken}`
         }
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:3000/clientes?${queryParam}`, { // Ajustado o queryParam
+      const response = await fetch(`https://transolback-a0cgf5ezcqcwdqey.brazilsouth-01.azurewebsites.net/clientes?${queryParam}`, { // Ajustado o queryParam
         headers: {
           'Authorization': `Bearer ${jwtToken}`
         }
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   async function deleteClient(clientId) {
     if (confirm(`Tem certeza que deseja excluir o cliente com ID ${clientId}?`)) {
       try {
-        const response = await fetch(`http://localhost:3000/clientes/${clientId}`, {
+        const response = await fetch(`https://transolback-a0cgf5ezcqcwdqey.brazilsouth-01.azurewebsites.net/clientes/${clientId}`, {
           method: 'DELETE',
           headers: {
             'Authorization': `Bearer ${jwtToken}`

@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Função para buscar e exibir os dados do cliente
   async function fetchClienteData() {
     try {
-      const response = await fetch('http://localhost:3000/clientes/me', {
+      const response = await fetch('https://transolback-a0cgf5ezcqcwdqey.brazilsouth-01.azurewebsites.net/clientes/me', {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${jwtToken}` // Envia o token JWT
