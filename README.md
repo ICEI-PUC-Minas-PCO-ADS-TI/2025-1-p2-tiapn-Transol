@@ -26,8 +26,11 @@ Além disso, o sistema visa implementar funcionalidades que melhorem o acompanha
 
 ## Instruções de utilização
 
-###1. Credenciais de Teste Essenciais:###
-Utilize estas credenciais para acessar as diferentes partes do sistema:
+Acesse o site em https://transol-eta.vercel.app/index.html
+
+### Credenciais de Teste Essenciais:
+
+#### Utilize estas credenciais para acessar as diferentes partes do sistema:
 
 Login de Administrador:
 
@@ -67,47 +70,7 @@ Voltar para login.html e tentar fazer login com as credenciais deste novo client
 
 Após a troca, o sistema o levará de volta para login.html. Faça login novamente com a nova senha para acessar o Perfil do Cliente (perfil-cliente.html).
 
-2. Primeiros Passos (Configuração Única - Necessário para Rodar o Back-end):
-Para que o sistema funcione, o back-end precisa estar ativo. Siga estes passos apenas uma vez no computador de teste:
 
-Baixe o arquivo ZIP do projeto que será fornecido a você (via GitHub, por exemplo).
-
-Descompacte o ZIP em uma pasta de sua preferência no seu computador (ex: C:\Projetos\Transol).
-
-Instale o Node.js e o npm: Se ainda não tiver, baixe e instale a versão LTS (Long Term Support) em https://nodejs.org/en/download/.
-
-Abra o Windows PowerShell (ou Prompt de Comando).
-
-Navegue até a pasta do back-end do projeto:
-cd [CAMINHO_DA_SUA_PASTA_PROJETO]\src\back
-(Exemplo: cd C:\Projetos\Transol\src\back)
-
-Instale as dependências:
-
-npm install
-
-Execute as migrações do banco de dados: (Isso garante que a estrutura do banco está atualizada.)
-
-npx sequelize-cli db:migrate --env production
-
-Se houver erro de validação de migração (por dados existentes), o grupo pode fornecer um script para limpar/repopular dados de teste no DB.
-
-###3. Como Iniciar o Sistema (A cada sessão de teste):###
-Inicie o Servidor Back-end:
-
-No PowerShell (na pasta src\back do projeto, onde você fez os passos anteriores), execute:
-
-$env:NODE_ENV="production" ; node app.js
-
-Mantenha esta janela do PowerShell aberta. Você deve ver a mensagem: Conexão com o banco de dados estabelecida com sucesso. Servidor rodando na porta 3000.
-
-Acesse o Front-end no Navegador:
-
-Abra seu navegador (Chrome, Edge, Firefox).
-
-No Explorador de Arquivos, navegue até a pasta [CAMINHO_DA_SUA_PASTA_PROJETO]\src\front\
-
-Arraste o arquivo login.html para a barra de endereço do seu navegador. O sistema será carregado!
 
 # Documentação
 
